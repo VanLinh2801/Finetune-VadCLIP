@@ -1,0 +1,33 @@
+import argparse
+
+
+parser = argparse.ArgumentParser(description="Train VadCLIP with within-view temporal context")
+parser.add_argument("--seed", default=234, type=int)
+parser.add_argument("--embed-dim", default=512, type=int)
+parser.add_argument("--visual-length", default=256, type=int)
+parser.add_argument("--visual-width", default=512, type=int)
+parser.add_argument("--visual-head", default=1, type=int)
+parser.add_argument("--visual-layers", default=2, type=int)
+parser.add_argument("--attn-window", default=8, type=int)
+parser.add_argument("--prompt-prefix", default=10, type=int)
+parser.add_argument("--prompt-postfix", default=10, type=int)
+parser.add_argument("--classes-num", default=14, type=int)
+parser.add_argument("--context-bin-size", default=32, type=int)
+parser.add_argument("--context-hidden-width", default=128, type=int)
+parser.add_argument("--max-context-delta", default=0.1, type=float)
+parser.add_argument("--lambda-video", default=0.1, type=float)
+parser.add_argument("--video-loss-warmup-epochs", default=2, type=int)
+parser.add_argument("--max-epoch", default=10, type=int)
+parser.add_argument("--videos-per-class-batch", default=2, type=int)
+parser.add_argument("--lr", default=1e-5, type=float)
+parser.add_argument("--scheduler-rate", default=0.1, type=float)
+parser.add_argument("--scheduler-milestones", default=[4, 8], nargs="+", type=int)
+parser.add_argument("--num-workers", default=2, type=int)
+parser.add_argument(
+    "--pin-memory", default=True, type=lambda value: value.lower() in {"1", "true", "yes"}
+)
+parser.add_argument("--feature-root", required=True)
+parser.add_argument("--train-list", required=True)
+parser.add_argument("--output-model-path", required=True)
+parser.add_argument("--epoch-checkpoint-dir", required=True)
+parser.add_argument("--results-dir", required=True)

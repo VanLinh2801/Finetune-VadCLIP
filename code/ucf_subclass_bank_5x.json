@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "name": "ucf_crime_short_subclasses_5x",
+    "dataset": "UCF-Crime",
+    "language": "English",
+    "classes_count": 14,
+    "subclasses_per_class": 5,
+    "source": "Manual class-level design informed by train-split video descriptions; no test descriptions used",
+    "design": "Short, visually grounded subclass names with an explicit original-class anchor; not video-specific captions"
+  },
+  "classes": {
+    "Normal": [
+      "Normal pedestrian movement",
+      "Normal vehicle traffic",
+      "Normal store shopping",
+      "Normal workplace activity",
+      "Normal social interaction"
+    ],
+    "Abuse": [
+      "Abuse of a child",
+      "Abuse of a dependent person",
+      "Abuse by hitting",
+      "Abuse by dragging",
+      "Abuse by restraint"
+    ],
+    "Arrest": [
+      "Arrest with handcuffs",
+      "Arrest by police officers",
+      "Arrest with suspect restraint",
+      "Arrest with suspect search",
+      "Arrest with police escort"
+    ],
+    "Arson": [
+      "Arson with a lighter",
+      "Arson with poured fuel",
+      "Arson of a vehicle",
+      "Arson of a building",
+      "Arson with spreading flames"
+    ],
+    "Assault": [
+      "Assault with punches",
+      "Assault with kicks",
+      "Assault with a weapon",
+      "Assault on a fallen person",
+      "Assault by multiple attackers"
+    ],
+    "Burglary": [
+      "Burglary through a door",
+      "Burglary through a window",
+      "Burglary with forced entry",
+      "Burglary inside a building",
+      "Burglary with property removal"
+    ],
+    "Explosion": [
+      "Explosion of a vehicle",
+      "Explosion near a building",
+      "Explosion in an open area",
+      "Explosion with a fireball",
+      "Explosion with flying debris"
+    ],
+    "Fighting": [
+      "Fighting between two people",
+      "Fighting between groups",
+      "Fighting with exchanged punches",
+      "Fighting with mutual grappling",
+      "Fighting in a crowd"
+    ],
+    "RoadAccidents": [
+      "Road accident between vehicles",
+      "Road accident involving a pedestrian",
+      "Road accident involving a motorcycle",
+      "Road accident at an intersection",
+      "Road accident with a crashed vehicle"
+    ],
+    "Robbery": [
+      "Robbery with a firearm",
+      "Robbery with a knife",
+      "Robbery at a counter",
+      "Robbery of a handbag",
+      "Robbery with a threatened victim"
+    ],
+    "Shooting": [
+      "Shooting with a handgun",
+      "Shooting with a rifle",
+      "Shooting with a muzzle flash",
+      "Shooting toward a person",
+      "Shooting in a crowd"
+    ],
+    "Shoplifting": [
+      "Shoplifting from a shelf",
+      "Shoplifting into a bag",
+      "Shoplifting inside clothing",
+      "Shoplifting small merchandise",
+      "Shoplifting near a store counter"
+    ],
+    "Stealing": [
+      "Stealing an unattended bag",
+      "Stealing a parked vehicle",
+      "Stealing from a vehicle",
+      "Stealing a bicycle",
+      "Stealing a handheld object"
+    ],
+    "Vandalism": [
+      "Vandalism by smashing glass",
+      "Vandalism by striking property",
+      "Vandalism by spraying walls",
+      "Vandalism by damaging vehicles",
+      "Vandalism by cutting structures"
+    ]
+  }
+}

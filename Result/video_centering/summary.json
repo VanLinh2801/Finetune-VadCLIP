@@ -1,0 +1,90 @@
+{
+  "test_videos": 290,
+  "abnormal_videos_with_both_snippet_labels": 140,
+  "snippet_count": 69368,
+  "top_k_ratio": 0.15,
+  "mean_vectors": "Raw float32 CLIP features; normal uses GT-normal snippets only",
+  "normal_mean_is_oracle": true,
+  "macro_video_auc": {
+    "all_cosine": {
+      "n": 140,
+      "mean": 0.5958122368053522,
+      "median": 0.6076495124814367,
+      "ci95_low": 0.5559957041048074,
+      "ci95_high": 0.6356287695058971
+    },
+    "normal_cosine": {
+      "n": 140,
+      "mean": 0.7135501179558812,
+      "median": 0.7612833155190842,
+      "ci95_low": 0.6805569590531608,
+      "ci95_high": 0.7465432768586016
+    },
+    "all_residual": {
+      "n": 140,
+      "mean": 0.5932094006491837,
+      "median": 0.6123081774227455,
+      "ci95_low": 0.5538092526514591,
+      "ci95_high": 0.6326095486469083
+    },
+    "normal_residual": {
+      "n": 140,
+      "mean": 0.7089090834020143,
+      "median": 0.7568900129622878,
+      "ci95_low": 0.6759086144009732,
+      "ci95_high": 0.7419095524030555
+    }
+  },
+  "macro_video_topk_precision": {
+    "all_cosine": {
+      "n": 140,
+      "mean": 0.25685461642600543,
+      "median": 0.1715686274509804,
+      "ci95_low": 0.21288495058917623,
+      "ci95_high": 0.30082428226283464
+    },
+    "normal_cosine": {
+      "n": 140,
+      "mean": 0.3357373927156405,
+      "median": 0.26120857699805067,
+      "ci95_low": 0.28303177703032817,
+      "ci95_high": 0.38844300840095286
+    },
+    "all_residual": {
+      "n": 140,
+      "mean": 0.25171494386272625,
+      "median": 0.15587044534412955,
+      "ci95_low": 0.20832105040443505,
+      "ci95_high": 0.29510883732101745
+    },
+    "normal_residual": {
+      "n": 140,
+      "mean": 0.3398792078550396,
+      "median": 0.265993265993266,
+      "ci95_low": 0.28726032270531365,
+      "ci95_high": 0.39249809300476557
+    }
+  },
+  "oracle_minus_all_cosine_auc": {
+    "n": 140,
+    "mean": 0.11773788115052913,
+    "median": 0.060434782608695614,
+    "ci95_low": 0.09137759132649198,
+    "ci95_high": 0.1440981709745663
+  },
+  "oracle_better_video_fraction": 0.9928571428571429,
+  "all_mean_energy_fraction": {
+    "n": 290,
+    "mean": 0.9288220436408602,
+    "median": 0.9373737573623657,
+    "ci95_low": 0.9234901869847565,
+    "ci95_high": 0.9341539002969639
+  },
+  "mean_all_vs_normal_cosine_abnormal_videos": {
+    "n": 140,
+    "mean": 0.996453099165644,
+    "median": 0.9994916617870331,
+    "ci95_low": 0.9942888475460763,
+    "ci95_high": 0.9986173507852116
+  }
+}

@@ -1,0 +1,269 @@
+
+  0%|                                               | 0.00/335M [00:00<?, ?iB/s]
+  1%|▌                                     | 4.91M/335M [00:00<00:06, 50.1MiB/s]
+  4%|█▌                                    | 13.7M/335M [00:00<00:04, 73.5MiB/s]
+  7%|██▌                                   | 23.0M/335M [00:00<00:03, 84.4MiB/s]
+ 10%|███▉                                  | 34.5M/335M [00:00<00:03, 98.0MiB/s]
+ 13%|████▉                                 | 43.8M/335M [00:00<00:03, 95.2MiB/s]
+ 17%|██████▌                                | 56.0M/335M [00:00<00:02, 106MiB/s]
+ 20%|███████▌                              | 66.1M/335M [00:00<00:03, 79.4MiB/s]
+ 24%|█████████                             | 79.8M/335M [00:00<00:02, 95.7MiB/s]
+ 27%|██████████▋                            | 91.4M/335M [00:01<00:02, 103MiB/s]
+ 30%|███████████▉                           | 102M/335M [00:01<00:02, 98.1MiB/s]
+ 34%|█████████████▋                          | 114M/335M [00:01<00:02, 107MiB/s]
+ 38%|███████████████▎                        | 128M/335M [00:01<00:01, 118MiB/s]
+ 42%|████████████████▎                      | 140M/335M [00:01<00:02, 92.2MiB/s]
+ 45%|█████████████████▍                     | 150M/335M [00:01<00:02, 80.4MiB/s]
+ 48%|██████████████████▌                    | 159M/335M [00:01<00:02, 83.9MiB/s]
+ 51%|████████████████████                   | 172M/335M [00:01<00:01, 95.4MiB/s]
+ 54%|█████████████████████▏                 | 182M/335M [00:02<00:01, 96.2MiB/s]
+ 57%|██████████████████████▍                | 192M/335M [00:02<00:01, 98.7MiB/s]
+ 60%|███████████████████████▌               | 202M/335M [00:02<00:01, 98.3MiB/s]
+ 64%|█████████████████████████▌              | 214M/335M [00:02<00:01, 105MiB/s]
+ 67%|██████████████████████████▊             | 224M/335M [00:02<00:01, 105MiB/s]
+ 70%|███████████████████████████▉            | 234M/335M [00:02<00:01, 102MiB/s]
+ 73%|████████████████████████████▍          | 244M/335M [00:02<00:01, 93.7MiB/s]
+ 76%|█████████████████████████████▌         | 253M/335M [00:02<00:01, 83.8MiB/s]
+ 79%|██████████████████████████████▊        | 264M/335M [00:02<00:00, 91.6MiB/s]
+ 82%|███████████████████████████████▊       | 273M/335M [00:03<00:00, 71.8MiB/s]
+ 85%|████████████████████████████████▉      | 283M/335M [00:03<00:00, 78.5MiB/s]
+ 87%|█████████████████████████████████▉     | 291M/335M [00:03<00:00, 71.5MiB/s]
+ 91%|███████████████████████████████████▌   | 305M/335M [00:03<00:00, 90.1MiB/s]
+ 94%|████████████████████████████████████▋  | 315M/335M [00:03<00:00, 90.4MiB/s]
+ 98%|██████████████████████████████████████ | 327M/335M [00:03<00:00, 98.6MiB/s]
+100%|███████████████████████████████████████| 335M/335M [00:03<00:00, 92.8MiB/s]
+Multi-classifier config: | heads: 2 | aggregate: mean raw logits | aggregate_cls_weight: 0.5 | lambda_diversity: 0.01 | lambda_balance: 0.001 | temperature: 1.0 | warmup_epochs: 2 | ramp_epochs: 2
+epoch: 1 | loss_cls_aggregate: 0.31825413620471954 | loss_cls_individual: 0.3396736656427383 | loss_mil: 1.8296185617446898 | loss_text: 0.07692853647470474 | loss_diversity: 0.8850103917121888 | loss_balance: 0.6555211646556854 | lambda_diversity: 0.0 | lambda_balance: 0.0
+Top-k selection tracking:
+  alignment_true_class_logit: samples=8000 | previous_jaccard=nan | cumulative_coverage=0.0692 | max_frequency=1.0000 | topk_gap=0.2630
+  classifier: samples=8000 | previous_jaccard=nan | cumulative_coverage=0.0692 | max_frequency=1.0000 | topk_gap=0.1310
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=nan | cumulative_coverage=0.0692 | max_frequency=1.0000 | topk_gap=0.1459
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=nan | cumulative_coverage=0.0692 | max_frequency=1.0000 | topk_gap=0.1402
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_frequency.json
+AUC1:  0.8578412572809643  AP1:  0.25928509255941073
+AUC2:  0.836462728184034  AP2: 0.21321899636422123
+Score separation diagnostics:
+  Intra-video abnormal top-k gap (top_k_ratio=0.15, abnormal_videos=140)
+    logits1/classifier: mean=0.3597, median=0.2836, min=0.0059, max=0.9871
+    logits2/alignment:  mean=0.1912, median=0.1446, min=0.0022, max=0.8144
+  Global frame-level separation
+    logits1/classifier: positive_mean=0.7770, negative_mean=0.2527, gap=0.5242
+    logits2/alignment:  positive_mean=0.8226, negative_mean=0.3367, gap=0.4859
+mAP@0.1 =6.94%
+mAP@0.2 =5.75%
+mAP@0.3 =4.24%
+mAP@0.4 =3.14%
+mAP@0.5 =2.35%
+average MAP: 4.48
+New best multi-classifier AUC: 0.857841
+epoch: 2 | loss_cls_aggregate: 0.14320721232891082 | loss_cls_individual: 0.14891912925243378 | loss_mil: 1.206532811164856 | loss_text: 0.03182834340631962 | loss_diversity: 0.9296987781524658 | loss_balance: 0.3362068192958832 | lambda_diversity: 0.0 | lambda_balance: 0.0
+Top-k selection tracking:
+  alignment_true_class_logit: samples=8000 | previous_jaccard=0.2286 | cumulative_coverage=0.1183 | max_frequency=0.7442 | topk_gap=0.8586
+  classifier: samples=8000 | previous_jaccard=0.4230 | cumulative_coverage=0.1034 | max_frequency=0.8761 | topk_gap=0.1604
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.4092 | cumulative_coverage=0.1040 | max_frequency=0.8774 | topk_gap=0.1671
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.3786 | cumulative_coverage=0.1066 | max_frequency=0.8532 | topk_gap=0.1590
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_frequency.json
+AUC1:  0.8584656521649778  AP1:  0.2714519955819643
+AUC2:  0.8512068829652599  AP2: 0.24335058040263835
+Score separation diagnostics:
+  Intra-video abnormal top-k gap (top_k_ratio=0.15, abnormal_videos=140)
+    logits1/classifier: mean=0.4180, median=0.3721, min=0.0018, max=0.9952
+    logits2/alignment:  mean=0.2357, median=0.1230, min=0.0004, max=0.9364
+  Global frame-level separation
+    logits1/classifier: positive_mean=0.7758, negative_mean=0.2462, gap=0.5295
+    logits2/alignment:  positive_mean=0.8684, negative_mean=0.3339, gap=0.5345
+mAP@0.1 =9.83%
+mAP@0.2 =6.79%
+mAP@0.3 =3.10%
+mAP@0.4 =2.20%
+mAP@0.5 =0.78%
+average MAP: 4.54
+New best multi-classifier AUC: 0.858466
+epoch: 3 | loss_cls_aggregate: 0.0938024223446846 | loss_cls_individual: 0.09732024112343789 | loss_mil: 0.9569538493156433 | loss_text: 0.025271729528903962 | loss_diversity: 0.9449314122200012 | loss_balance: 0.27874657571315764 | lambda_diversity: 0.005 | lambda_balance: 0.0005
+Top-k selection tracking:
+  alignment_true_class_logit: samples=8000 | previous_jaccard=0.5548 | cumulative_coverage=0.1406 | max_frequency=0.7682 | topk_gap=1.3060
+  classifier: samples=8000 | previous_jaccard=0.6456 | cumulative_coverage=0.1191 | max_frequency=0.8766 | topk_gap=0.1771
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.6295 | cumulative_coverage=0.1200 | max_frequency=0.8780 | topk_gap=0.1798
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.6077 | cumulative_coverage=0.1247 | max_frequency=0.8527 | topk_gap=0.1772
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_frequency.json
+AUC1:  0.8617954947135313  AP1:  0.26605225287624434
+AUC2:  0.8474045545186817  AP2: 0.23733866396271922
+Score separation diagnostics:
+  Intra-video abnormal top-k gap (top_k_ratio=0.15, abnormal_videos=140)
+    logits1/classifier: mean=0.3961, median=0.3407, min=0.0009, max=0.9968
+    logits2/alignment:  mean=0.2251, median=0.0770, min=0.0002, max=0.9755
+  Global frame-level separation
+    logits1/classifier: positive_mean=0.8399, negative_mean=0.2797, gap=0.5602
+    logits2/alignment:  positive_mean=0.8888, negative_mean=0.3398, gap=0.5490
+mAP@0.1 =10.29%
+mAP@0.2 =7.24%
+mAP@0.3 =3.77%
+mAP@0.4 =3.26%
+mAP@0.5 =2.74%
+average MAP: 5.46
+New best multi-classifier AUC: 0.861795
+epoch: 4 | loss_cls_aggregate: 0.05900692307949066 | loss_cls_individual: 0.06134039022028446 | loss_mil: 0.7428465909957885 | loss_text: 0.02254201239347458 | loss_diversity: 0.9523443260192871 | loss_balance: 0.23538441920280456 | lambda_diversity: 0.01 | lambda_balance: 0.001
+Top-k selection tracking:
+  alignment_true_class_logit: samples=8000 | previous_jaccard=0.6126 | cumulative_coverage=0.1573 | max_frequency=0.7732 | topk_gap=1.6029
+  classifier: samples=8000 | previous_jaccard=0.6933 | cumulative_coverage=0.1306 | max_frequency=0.8739 | topk_gap=0.1811
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.6769 | cumulative_coverage=0.1316 | max_frequency=0.8742 | topk_gap=0.1805
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.6757 | cumulative_coverage=0.1372 | max_frequency=0.8515 | topk_gap=0.1838
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_frequency.json
+AUC1:  0.8637236145668574  AP1:  0.27972436204122675
+AUC2:  0.8485289834803187  AP2: 0.24100407307029767
+Score separation diagnostics:
+  Intra-video abnormal top-k gap (top_k_ratio=0.15, abnormal_videos=140)
+    logits1/classifier: mean=0.4540, median=0.4262, min=0.0003, max=0.9931
+    logits2/alignment:  mean=0.2560, median=0.1246, min=0.0002, max=0.9874
+  Global frame-level separation
+    logits1/classifier: positive_mean=0.7841, negative_mean=0.2390, gap=0.5451
+    logits2/alignment:  positive_mean=0.8590, negative_mean=0.3031, gap=0.5559
+mAP@0.1 =12.50%
+mAP@0.2 =9.97%
+mAP@0.3 =5.10%
+mAP@0.4 =4.07%
+mAP@0.5 =2.97%
+average MAP: 6.92
+New best multi-classifier AUC: 0.863724
+epoch: 5 | loss_cls_aggregate: 0.041949967473745346 | loss_cls_individual: 0.04366745261847973 | loss_mil: 0.6175655195713043 | loss_text: 0.021122864842414855 | loss_diversity: 0.9541424956321717 | loss_balance: 0.20880003929138183 | lambda_diversity: 0.01 | lambda_balance: 0.001
+Top-k selection tracking:
+  alignment_true_class_logit: samples=8000 | previous_jaccard=0.7229 | cumulative_coverage=0.1664 | max_frequency=0.7843 | topk_gap=1.7083
+  classifier: samples=8000 | previous_jaccard=0.7765 | cumulative_coverage=0.1365 | max_frequency=0.8795 | topk_gap=0.1761
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.7578 | cumulative_coverage=0.1380 | max_frequency=0.8773 | topk_gap=0.1760
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.7714 | cumulative_coverage=0.1433 | max_frequency=0.8586 | topk_gap=0.1785
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_frequency.json
+AUC1:  0.8611818105752387  AP1:  0.26932387624034737
+AUC2:  0.8468104272034348  AP2: 0.23718398822221032
+Score separation diagnostics:
+  Intra-video abnormal top-k gap (top_k_ratio=0.15, abnormal_videos=140)
+    logits1/classifier: mean=0.4215, median=0.4009, min=0.0003, max=0.9939
+    logits2/alignment:  mean=0.2168, median=0.0831, min=0.0002, max=0.9866
+  Global frame-level separation
+    logits1/classifier: positive_mean=0.8300, negative_mean=0.2680, gap=0.5620
+    logits2/alignment:  positive_mean=0.8811, negative_mean=0.3291, gap=0.5519
+mAP@0.1 =13.14%
+mAP@0.2 =10.26%
+mAP@0.3 =5.56%
+mAP@0.4 =3.53%
+mAP@0.5 =2.51%
+average MAP: 7.00
+No multi-classifier AUC improvement: 1/3
+epoch: 6 | loss_cls_aggregate: 0.03809132760763168 | loss_cls_individual: 0.03966958194971085 | loss_mil: 0.5967008664608001 | loss_text: 0.0209868201315403 | loss_diversity: 0.9543863968849182 | loss_balance: 0.20206115186214446 | lambda_diversity: 0.01 | lambda_balance: 0.001
+Top-k selection tracking:
+  alignment_true_class_logit: samples=8000 | previous_jaccard=0.8926 | cumulative_coverage=0.1690 | max_frequency=0.8042 | topk_gap=1.7210
+  classifier: samples=8000 | previous_jaccard=0.9067 | cumulative_coverage=0.1382 | max_frequency=0.8897 | topk_gap=0.1748
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.8964 | cumulative_coverage=0.1398 | max_frequency=0.8874 | topk_gap=0.1752
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.9021 | cumulative_coverage=0.1453 | max_frequency=0.8713 | topk_gap=0.1765
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_frequency.json
+AUC1:  0.8615064488705313  AP1:  0.2690867559413349
+AUC2:  0.8463421903509846  AP2: 0.23761831023627583
+Score separation diagnostics:
+  Intra-video abnormal top-k gap (top_k_ratio=0.15, abnormal_videos=140)
+    logits1/classifier: mean=0.4226, median=0.4051, min=0.0003, max=0.9942
+    logits2/alignment:  mean=0.2157, median=0.0831, min=0.0002, max=0.9882
+  Global frame-level separation
+    logits1/classifier: positive_mean=0.8281, negative_mean=0.2654, gap=0.5627
+    logits2/alignment:  positive_mean=0.8792, negative_mean=0.3278, gap=0.5514
+mAP@0.1 =13.34%
+mAP@0.2 =9.93%
+mAP@0.3 =5.54%
+mAP@0.4 =3.57%
+mAP@0.5 =2.51%
+average MAP: 6.98
+No multi-classifier AUC improvement: 2/3
+epoch: 7 | loss_cls_aggregate: 0.03606398552656174 | loss_cls_individual: 0.03754189758002758 | loss_mil: 0.579345190525055 | loss_text: 0.020528203189373016 | loss_diversity: 0.95485795545578 | loss_balance: 0.2037823235988617 | lambda_diversity: 0.01 | lambda_balance: 0.001
+Top-k selection tracking:
+  alignment_true_class_logit: samples=8000 | previous_jaccard=0.9228 | cumulative_coverage=0.1701 | max_frequency=0.8259 | topk_gap=1.7612
+  classifier: samples=8000 | previous_jaccard=0.9375 | cumulative_coverage=0.1390 | max_frequency=0.9014 | topk_gap=0.1796
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.9335 | cumulative_coverage=0.1407 | max_frequency=0.8997 | topk_gap=0.1799
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_1/topk_selection_frequency.json
+Top-k selection tracking:
+  classifier: samples=8000 | previous_jaccard=0.9325 | cumulative_coverage=0.1462 | max_frequency=0.8853 | topk_gap=0.1814
+  details: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_details.csv
+  summary: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_epoch_summary.csv
+  frequency: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/topk_multi_classifier_diversity/head_2/topk_selection_frequency.json
+AUC1:  0.8614558593724978  AP1:  0.2708612282885182
+AUC2:  0.8457506263639947  AP2: 0.23746213261963894
+Score separation diagnostics:
+  Intra-video abnormal top-k gap (top_k_ratio=0.15, abnormal_videos=140)
+    logits1/classifier: mean=0.4187, median=0.3823, min=0.0002, max=0.9950
+    logits2/alignment:  mean=0.2113, median=0.0703, min=0.0002, max=0.9891
+  Global frame-level separation
+    logits1/classifier: positive_mean=0.8335, negative_mean=0.2691, gap=0.5644
+    logits2/alignment:  positive_mean=0.8811, negative_mean=0.3313, gap=0.5498
+mAP@0.1 =13.21%
+mAP@0.2 =10.10%
+mAP@0.3 =5.24%
+mAP@0.4 =3.25%
+mAP@0.5 =2.50%
+average MAP: 6.86
+No multi-classifier AUC improvement: 3/3
+Early stopping triggered.
+Best multi-classifier AUC: 0.8637236145668574
+Best model: /content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_multi_classifier_diversity_scratch.pth

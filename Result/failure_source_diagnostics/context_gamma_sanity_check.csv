@@ -1,0 +1,5 @@
+﻿model,gamma_1_max_absolute_logit_error_vs_original,status
+baseline_self_train,0.0,ok
+baseline_abnormal_topk,0.0,ok
+weighted_prompt_no_regularize,0.0,ok
+weighted_prompt_abnormal_topk,0.0,ok

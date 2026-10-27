@@ -1,0 +1,7 @@
+split,bank,source_rows,source_unique_videos,bank_video_count,candidate_feature_count,centroid_count,exemplar_count,bank_size,kmeans_inertia,max_exemplars_from_one_video
+development,old_style,8000,800,640,51200,32,0,32,15871.2890625,0
+development,expanded,8000,800,640,51200,256,0,256,10123.2353515625,0
+development,hybrid,8000,800,640,51200,256,2048,2304,10123.2353515625,8
+final,old_style,8000,800,800,64000,32,0,32,20055.818359375,0
+final,expanded,8000,800,800,64000,256,0,256,13327.47265625,0
+final,hybrid,8000,800,800,64000,256,2048,2304,13327.47265625,8

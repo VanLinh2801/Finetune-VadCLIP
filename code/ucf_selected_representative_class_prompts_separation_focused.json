@@ -1,0 +1,499 @@
+{
+  "metadata": {
+    "source_prompt_jsons": [
+      "/content/drive/.shortcut-targets-by-id/1-U9_vjMHKG2d8jkjQiyTPN_g9hVgfqO8/Finetune VadCLIP/code/ucf_manual_class_prompts_5x_visual_keywords.json",
+      "/content/drive/.shortcut-targets-by-id/1-U9_vjMHKG2d8jkjQiyTPN_g9hVgfqO8/Finetune VadCLIP/code/ucf_keyword_class_prompts_5x.json",
+      "/content/drive/.shortcut-targets-by-id/1-U9_vjMHKG2d8jkjQiyTPN_g9hVgfqO8/Finetune VadCLIP/code/ucf_manual_class_prompts_10x.json",
+      "/content/drive/.shortcut-targets-by-id/1-U9_vjMHKG2d8jkjQiyTPN_g9hVgfqO8/Finetune VadCLIP/code/ucf_manual_class_prompts_10x_v2.json",
+      "/content/drive/.shortcut-targets-by-id/1-U9_vjMHKG2d8jkjQiyTPN_g9hVgfqO8/Finetune VadCLIP/code/ucf_manual_class_prompts_5x_v3.json",
+      "/content/drive/.shortcut-targets-by-id/1-U9_vjMHKG2d8jkjQiyTPN_g9hVgfqO8/Finetune VadCLIP/code/ucf_manual_class_prompts_5x_v4.json",
+      "/content/drive/.shortcut-targets-by-id/1-U9_vjMHKG2d8jkjQiyTPN_g9hVgfqO8/Finetune VadCLIP/code/ucf_manual_class_prompts_5x_v5.json"
+    ],
+    "selection_method": "anchor_intra_hard_negative_prompt_text_space_score",
+    "embedding_space": "raw_clip_encode_text",
+    "scoring_prompt_mode": "prototype_only",
+    "training_prompt_mode": "prototype_only",
+    "note": "classes contain raw prompt text only; use the same prompt_mode at training/evaluation unless intentionally testing a mismatch.",
+    "weights": {
+      "anchor": 0.5,
+      "anchor_margin": 0.0,
+      "intra": 0.2,
+      "inter": 0.0,
+      "hard_negative": 0.3
+    },
+    "score_preset": "separation_focused",
+    "inter_mode": "max",
+    "hard_negative_class_map": {
+      "Abuse": [
+        "Assault",
+        "Fighting"
+      ],
+      "Arrest": [
+        "Fighting",
+        "Assault"
+      ],
+      "Arson": [
+        "Explosion",
+        "Vandalism"
+      ],
+      "Assault": [
+        "Fighting",
+        "Abuse"
+      ],
+      "Burglary": [
+        "Robbery",
+        "Stealing",
+        "Shoplifting",
+        "Vandalism"
+      ],
+      "Explosion": [
+        "Arson",
+        "RoadAccidents"
+      ],
+      "Fighting": [
+        "Assault",
+        "Abuse",
+        "Arrest"
+      ],
+      "Normal": [
+        "Abuse",
+        "Arrest",
+        "Arson",
+        "Assault",
+        "Burglary",
+        "Explosion",
+        "Fighting",
+        "RoadAccidents",
+        "Robbery",
+        "Shooting",
+        "Shoplifting",
+        "Stealing",
+        "Vandalism"
+      ],
+      "RoadAccidents": [
+        "Explosion"
+      ],
+      "Robbery": [
+        "Stealing",
+        "Burglary",
+        "Shoplifting"
+      ],
+      "Shooting": [
+        "Robbery",
+        "Assault",
+        "Fighting"
+      ],
+      "Shoplifting": [
+        "Stealing",
+        "Robbery",
+        "Burglary"
+      ],
+      "Stealing": [
+        "Shoplifting",
+        "Robbery",
+        "Burglary"
+      ],
+      "Vandalism": [
+        "Arson",
+        "Burglary"
+      ]
+    },
+    "prompts_per_class": 1
+  },
+  "classes": {
+    "Normal": [
+      "an orderly scene with predictable everyday human activity"
+    ],
+    "Abuse": [
+      "helpless victim physical harm"
+    ],
+    "Arrest": [
+      "police restraining suspect"
+    ],
+    "Arson": [
+      "person setting fire"
+    ],
+    "Assault": [
+      "one-sided physical attack"
+    ],
+    "Burglary": [
+      "burglar carrying property"
+    ],
+    "Explosion": [
+      "a structure bursting apart from explosive force"
+    ],
+    "Fighting": [
+      "crowd joining fight"
+    ],
+    "RoadAccidents": [
+      "crashed vehicles lanes"
+    ],
+    "Robbery": [
+      "a robbery where someone uses intimidation or force to steal property"
+    ],
+    "Shooting": [
+      "armed shooter firing"
+    ],
+    "Shoplifting": [
+      "shopper hiding merchandise"
+    ],
+    "Stealing": [
+      "owner distracted theft"
+    ],
+    "Vandalism": [
+      "a vandal hitting a sign until it bends"
+    ]
+  },
+  "selection_details": {
+    "Normal": {
+      "source_file": "ucf_manual_class_prompts_10x.json",
+      "source_stem": "ucf_manual_class_prompts_10x",
+      "source_prompts_per_class": 10,
+      "class_index": 0,
+      "class_name": "Normal",
+      "class_anchor_text": "normal",
+      "prompt_index": 9,
+      "raw_prompt_text": "an orderly scene with predictable everyday human activity",
+      "encoded_prompt_text": "an orderly scene with predictable everyday human activity",
+      "global_prompt_index": 149,
+      "anchor_similarity": 0.8365610837936401,
+      "intra_prompt_similarity": 0.7973730564117432,
+      "inter_prompt_similarity": 0.8768613338470459,
+      "hard_negative_prompt_similarity": 0.8768613338470459,
+      "hard_negative_classes": "Abuse, Arrest, Arson, Assault, Burglary, Explosion, Fighting, RoadAccidents, Robbery, Shooting, Shoplifting, Stealing, Vandalism",
+      "selection_score": 0.31469675302505495,
+      "best_other_anchor_class": "Fighting",
+      "best_other_anchor_similarity": 0.852759838104248,
+      "anchor_margin": -0.01619875431060791,
+      "rank_in_class": 1,
+      "prompt_weight": 0.12872232954285737,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Abuse": {
+      "source_file": "ucf_keyword_class_prompts_5x.json",
+      "source_stem": "ucf_keyword_class_prompts_5x",
+      "source_prompts_per_class": 5,
+      "class_index": 1,
+      "class_name": "Abuse",
+      "class_anchor_text": "abuse",
+      "prompt_index": 3,
+      "raw_prompt_text": "helpless victim physical harm",
+      "encoded_prompt_text": "helpless victim physical harm",
+      "global_prompt_index": 78,
+      "anchor_similarity": 0.9068785309791565,
+      "intra_prompt_similarity": 0.8603979349136353,
+      "inter_prompt_similarity": 0.9061081409454346,
+      "hard_negative_prompt_similarity": 0.9061081409454346,
+      "hard_negative_classes": "Assault, Fighting",
+      "selection_score": 0.35368641018867497,
+      "best_other_anchor_class": "Arrest",
+      "best_other_anchor_similarity": 0.8922807574272156,
+      "anchor_margin": 0.014597773551940918,
+      "rank_in_class": 1,
+      "prompt_weight": 0.22446978731186168,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Arrest": {
+      "source_file": "ucf_manual_class_prompts_5x_visual_keywords.json",
+      "source_stem": "ucf_manual_class_prompts_5x_visual_keywords",
+      "source_prompts_per_class": 5,
+      "class_index": 2,
+      "class_name": "Arrest",
+      "class_anchor_text": "arrest",
+      "prompt_index": 2,
+      "raw_prompt_text": "police restraining suspect",
+      "encoded_prompt_text": "police restraining suspect",
+      "global_prompt_index": 12,
+      "anchor_similarity": 0.8870313763618469,
+      "intra_prompt_similarity": 0.8331789374351501,
+      "inter_prompt_similarity": 0.8837903738021851,
+      "hard_negative_prompt_similarity": 0.8793047070503235,
+      "hard_negative_classes": "Fighting, Assault",
+      "selection_score": 0.3463600635528564,
+      "best_other_anchor_class": "Stealing",
+      "best_other_anchor_similarity": 0.8417513370513916,
+      "anchor_margin": 0.04528003931045532,
+      "rank_in_class": 1,
+      "prompt_weight": 0.21320357620494887,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Arson": {
+      "source_file": "ucf_keyword_class_prompts_5x.json",
+      "source_stem": "ucf_keyword_class_prompts_5x",
+      "source_prompts_per_class": 5,
+      "class_index": 3,
+      "class_name": "Arson",
+      "class_anchor_text": "arson",
+      "prompt_index": 1,
+      "raw_prompt_text": "person setting fire",
+      "encoded_prompt_text": "person setting fire",
+      "global_prompt_index": 86,
+      "anchor_similarity": 0.8692907691001892,
+      "intra_prompt_similarity": 0.838457465171814,
+      "inter_prompt_similarity": 0.8929239511489868,
+      "hard_negative_prompt_similarity": 0.8531797528266907,
+      "hard_negative_classes": "Explosion, Vandalism",
+      "selection_score": 0.34638295173645023,
+      "best_other_anchor_class": "Explosion",
+      "best_other_anchor_similarity": 0.8430766463279724,
+      "anchor_margin": 0.026214122772216797,
+      "rank_in_class": 1,
+      "prompt_weight": 0.21608892771275431,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Assault": {
+      "source_file": "ucf_keyword_class_prompts_5x.json",
+      "source_stem": "ucf_keyword_class_prompts_5x",
+      "source_prompts_per_class": 5,
+      "class_index": 4,
+      "class_name": "Assault",
+      "class_anchor_text": "assault",
+      "prompt_index": 3,
+      "raw_prompt_text": "one-sided physical attack",
+      "encoded_prompt_text": "one-sided physical attack",
+      "global_prompt_index": 93,
+      "anchor_similarity": 0.9013974070549011,
+      "intra_prompt_similarity": 0.819559633731842,
+      "inter_prompt_similarity": 0.9135448932647705,
+      "hard_negative_prompt_similarity": 0.9135448932647705,
+      "hard_negative_classes": "Fighting, Abuse",
+      "selection_score": 0.34054716229438786,
+      "best_other_anchor_class": "Abuse",
+      "best_other_anchor_similarity": 0.8918583393096924,
+      "anchor_margin": 0.00953906774520874,
+      "rank_in_class": 1,
+      "prompt_weight": 0.21915519732760239,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Burglary": {
+      "source_file": "ucf_keyword_class_prompts_5x.json",
+      "source_stem": "ucf_keyword_class_prompts_5x",
+      "source_prompts_per_class": 5,
+      "class_index": 5,
+      "class_name": "Burglary",
+      "class_anchor_text": "burglary",
+      "prompt_index": 4,
+      "raw_prompt_text": "burglar carrying property",
+      "encoded_prompt_text": "burglar carrying property",
+      "global_prompt_index": 99,
+      "anchor_similarity": 0.8483919501304626,
+      "intra_prompt_similarity": 0.6711680889129639,
+      "inter_prompt_similarity": 0.8420506119728088,
+      "hard_negative_prompt_similarity": 0.8420506119728088,
+      "hard_negative_classes": "Robbery, Stealing, Shoplifting, Vandalism",
+      "selection_score": 0.30581440925598147,
+      "best_other_anchor_class": "Arrest",
+      "best_other_anchor_similarity": 0.7386291027069092,
+      "anchor_margin": 0.10976284742355347,
+      "rank_in_class": 1,
+      "prompt_weight": 0.2965929608597102,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Explosion": {
+      "source_file": "ucf_manual_class_prompts_5x_v3.json",
+      "source_stem": "ucf_manual_class_prompts_5x_v3",
+      "source_prompts_per_class": 5,
+      "class_index": 6,
+      "class_name": "Explosion",
+      "class_anchor_text": "explosion",
+      "prompt_index": 2,
+      "raw_prompt_text": "a structure bursting apart from explosive force",
+      "encoded_prompt_text": "a structure bursting apart from explosive force",
+      "global_prompt_index": 452,
+      "anchor_similarity": 0.8762215971946716,
+      "intra_prompt_similarity": 0.8388919830322266,
+      "inter_prompt_similarity": 0.8450619578361511,
+      "hard_negative_prompt_similarity": 0.8450619578361511,
+      "hard_negative_classes": "Arson, RoadAccidents",
+      "selection_score": 0.35237060785293584,
+      "best_other_anchor_class": "Assault",
+      "best_other_anchor_similarity": 0.7887174487113953,
+      "anchor_margin": 0.08750414848327637,
+      "rank_in_class": 1,
+      "prompt_weight": 0.21811121072230066,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Fighting": {
+      "source_file": "ucf_manual_class_prompts_5x_visual_keywords.json",
+      "source_stem": "ucf_manual_class_prompts_5x_visual_keywords",
+      "source_prompts_per_class": 5,
+      "class_index": 7,
+      "class_name": "Fighting",
+      "class_anchor_text": "fighting",
+      "prompt_index": 3,
+      "raw_prompt_text": "crowd joining fight",
+      "encoded_prompt_text": "crowd joining fight",
+      "global_prompt_index": 38,
+      "anchor_similarity": 0.8927648067474365,
+      "intra_prompt_similarity": 0.8644294738769531,
+      "inter_prompt_similarity": 0.8863154649734497,
+      "hard_negative_prompt_similarity": 0.8724614381790161,
+      "hard_negative_classes": "Assault, Abuse, Arrest",
+      "selection_score": 0.35752986669540404,
+      "best_other_anchor_class": "Assault",
+      "best_other_anchor_similarity": 0.8735760450363159,
+      "anchor_margin": 0.019188761711120605,
+      "rank_in_class": 1,
+      "prompt_weight": 0.22683443811290743,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "RoadAccidents": {
+      "source_file": "ucf_keyword_class_prompts_5x.json",
+      "source_stem": "ucf_keyword_class_prompts_5x",
+      "source_prompts_per_class": 5,
+      "class_index": 8,
+      "class_name": "RoadAccidents",
+      "class_anchor_text": "roadAccidents",
+      "prompt_index": 4,
+      "raw_prompt_text": "crashed vehicles lanes",
+      "encoded_prompt_text": "crashed vehicles lanes",
+      "global_prompt_index": 114,
+      "anchor_similarity": 0.897752583026886,
+      "intra_prompt_similarity": 0.8258750438690186,
+      "inter_prompt_similarity": 0.8565791845321655,
+      "hard_negative_prompt_similarity": 0.7972654104232788,
+      "hard_negative_classes": "Explosion",
+      "selection_score": 0.37487167716026315,
+      "best_other_anchor_class": "Arrest",
+      "best_other_anchor_similarity": 0.794230580329895,
+      "anchor_margin": 0.10352200269699097,
+      "rank_in_class": 1,
+      "prompt_weight": 0.23292742909921765,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Robbery": {
+      "source_file": "ucf_manual_class_prompts_5x_v5.json",
+      "source_stem": "ucf_manual_class_prompts_5x_v5",
+      "source_prompts_per_class": 5,
+      "class_index": 9,
+      "class_name": "Robbery",
+      "class_anchor_text": "robbery",
+      "prompt_index": 1,
+      "raw_prompt_text": "a robbery where someone uses intimidation or force to steal property",
+      "encoded_prompt_text": "a robbery where someone uses intimidation or force to steal property",
+      "global_prompt_index": 606,
+      "anchor_similarity": 0.917824387550354,
+      "intra_prompt_similarity": 0.8361150622367859,
+      "inter_prompt_similarity": 0.9111649394035339,
+      "hard_negative_prompt_similarity": 0.9111649394035339,
+      "hard_negative_classes": "Stealing, Burglary, Shoplifting",
+      "selection_score": 0.352785724401474,
+      "best_other_anchor_class": "Arrest",
+      "best_other_anchor_similarity": 0.8611374497413635,
+      "anchor_margin": 0.05668693780899048,
+      "rank_in_class": 1,
+      "prompt_weight": 0.23220163542851927,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Shooting": {
+      "source_file": "ucf_manual_class_prompts_5x_visual_keywords.json",
+      "source_stem": "ucf_manual_class_prompts_5x_visual_keywords",
+      "source_prompts_per_class": 5,
+      "class_index": 10,
+      "class_name": "Shooting",
+      "class_anchor_text": "shooting",
+      "prompt_index": 4,
+      "raw_prompt_text": "armed shooter firing",
+      "encoded_prompt_text": "armed shooter firing",
+      "global_prompt_index": 54,
+      "anchor_similarity": 0.8502299189567566,
+      "intra_prompt_similarity": 0.8588808178901672,
+      "inter_prompt_similarity": 0.8810200095176697,
+      "hard_negative_prompt_similarity": 0.8810200095176697,
+      "hard_negative_classes": "Robbery, Assault, Fighting",
+      "selection_score": 0.3325851202011109,
+      "best_other_anchor_class": "Arrest",
+      "best_other_anchor_similarity": 0.8398747444152832,
+      "anchor_margin": 0.010355174541473389,
+      "rank_in_class": 1,
+      "prompt_weight": 0.22510446230163542,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Shoplifting": {
+      "source_file": "ucf_manual_class_prompts_5x_visual_keywords.json",
+      "source_stem": "ucf_manual_class_prompts_5x_visual_keywords",
+      "source_prompts_per_class": 5,
+      "class_index": 11,
+      "class_name": "Shoplifting",
+      "class_anchor_text": "shoplifting",
+      "prompt_index": 0,
+      "raw_prompt_text": "shopper hiding merchandise",
+      "encoded_prompt_text": "shopper hiding merchandise",
+      "global_prompt_index": 55,
+      "anchor_similarity": 0.8585958480834961,
+      "intra_prompt_similarity": 0.8526434302330017,
+      "inter_prompt_similarity": 0.883556604385376,
+      "hard_negative_prompt_similarity": 0.8403186202049255,
+      "hard_negative_classes": "Stealing, Robbery, Burglary",
+      "selection_score": 0.3477310240268707,
+      "best_other_anchor_class": "Stealing",
+      "best_other_anchor_similarity": 0.8066468238830566,
+      "anchor_margin": 0.05194902420043945,
+      "rank_in_class": 1,
+      "prompt_weight": 0.2386363835377084,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Stealing": {
+      "source_file": "ucf_keyword_class_prompts_5x.json",
+      "source_stem": "ucf_keyword_class_prompts_5x",
+      "source_prompts_per_class": 5,
+      "class_index": 12,
+      "class_name": "Stealing",
+      "class_anchor_text": "stealing",
+      "prompt_index": 3,
+      "raw_prompt_text": "owner distracted theft",
+      "encoded_prompt_text": "owner distracted theft",
+      "global_prompt_index": 133,
+      "anchor_similarity": 0.8887770175933838,
+      "intra_prompt_similarity": 0.8156312704086304,
+      "inter_prompt_similarity": 0.8886210322380066,
+      "hard_negative_prompt_similarity": 0.8886210322380066,
+      "hard_negative_classes": "Shoplifting, Robbery, Burglary",
+      "selection_score": 0.34092845320701604,
+      "best_other_anchor_class": "Arrest",
+      "best_other_anchor_similarity": 0.879353404045105,
+      "anchor_margin": 0.009423613548278809,
+      "rank_in_class": 1,
+      "prompt_weight": 0.23660611985228028,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    },
+    "Vandalism": {
+      "source_file": "ucf_manual_class_prompts_5x_v4.json",
+      "source_stem": "ucf_manual_class_prompts_5x_v4",
+      "source_prompts_per_class": 5,
+      "class_index": 13,
+      "class_name": "Vandalism",
+      "class_anchor_text": "vandalism",
+      "prompt_index": 3,
+      "raw_prompt_text": "a vandal hitting a sign until it bends",
+      "encoded_prompt_text": "a vandal hitting a sign until it bends",
+      "global_prompt_index": 558,
+      "anchor_similarity": 0.8859364986419678,
+      "intra_prompt_similarity": 0.7684160470962524,
+      "inter_prompt_similarity": 0.7973142266273499,
+      "hard_negative_prompt_similarity": 0.789447009563446,
+      "hard_negative_classes": "Arson, Burglary",
+      "selection_score": 0.35981735587120056,
+      "best_other_anchor_class": "Arrest",
+      "best_other_anchor_similarity": 0.7707725763320923,
+      "anchor_margin": 0.11516392230987549,
+      "rank_in_class": 1,
+      "prompt_weight": 0.2583382729154002,
+      "weight_rank_in_class": 1,
+      "prompt_weight_temperature": 0.2
+    }
+  }
+}

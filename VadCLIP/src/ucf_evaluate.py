@@ -11,6 +11,9 @@ from model import CLIPVAD
 from model_description import CLIPVADDescription
 from model_multi_prompt import CLIPVADMultiPrompt
 from model_prompt_replacement import CLIPVADPromptReplacement
+from model_prompt_residual import CLIPVADPromptResidual
+from model_multi_prompt_residual import CLIPVADMultiPromptResidual
+from model_temporal_proposal import CLIPVADTemporalProposal
 from utils.prompt_replacement import build_compact_prompt_groups, build_multi_prompt_groups, build_multi_prompt_weights
 from utils.tools import get_batch_mask, get_prompt_text
 from utils.ucf_detectionMAP import getDetectionMAP as dmAP
@@ -62,8 +65,32 @@ def build_model(args, model_type, device):
         model_cls = CLIPVADDescription
     elif model_type == "multi_prompt":
         model_cls = CLIPVADMultiPrompt
+    elif model_type == "multi_prompt_residual":
+        model_cls = CLIPVADMultiPromptResidual
     elif model_type == "prompt_replacement":
         model_cls = CLIPVADPromptReplacement
+    elif model_type == "prompt_residual":
+        model_cls = CLIPVADPromptResidual
+    elif model_type == "temporal_proposal":
+        return CLIPVADTemporalProposal(
+            args.classes_num,
+            args.embed_dim,
+            args.visual_length,
+            args.visual_width,
+            args.visual_head,
+            args.visual_layers,
+            args.attn_window,
+            args.prompt_prefix,
+            args.prompt_postfix,
+            device,
+            num_proposals=args.num_proposals,
+            proposal_heads=args.proposal_heads,
+            min_width=args.proposal_min_width,
+            max_width=args.proposal_max_width,
+            initial_width=args.proposal_initial_width,
+            mask_temperature=args.mask_temperature,
+            context_scale=args.context_scale,
+        )
     else:
         model_cls = CLIPVAD
     return model_cls(
@@ -236,7 +263,19 @@ def parse_args():
     parser.add_argument("--test-list", default="../list/ucf_CLIP_rgbtest_relative.csv")
     parser.add_argument("--baseline-model-path", default="../../model_ucf.pth")
     parser.add_argument("--description-model-path", default=None)
-    parser.add_argument("--description-model-type", default="description", choices=["baseline", "description", "prompt_replacement", "multi_prompt"])
+    parser.add_argument(
+        "--description-model-type",
+        default="description",
+        choices=[
+            "baseline",
+            "description",
+            "prompt_replacement",
+            "prompt_residual",
+            "multi_prompt",
+            "multi_prompt_residual",
+            "temporal_proposal",
+        ],
+    )
     parser.add_argument("--gt-path", default="../list/gt_ucf.npy")
     parser.add_argument("--gt-segment-path", default="../list/gt_segment_ucf.npy")
     parser.add_argument("--gt-label-path", default="../list/gt_label_ucf.npy")
@@ -250,9 +289,16 @@ def parse_args():
     parser.add_argument("--prompt-prefix", default=10, type=int)
     parser.add_argument("--prompt-postfix", default=10, type=int)
     parser.add_argument("--classes-num", default=14, type=int)
+    parser.add_argument("--num-proposals", default=8, type=int)
+    parser.add_argument("--proposal-heads", default=4, type=int)
+    parser.add_argument("--proposal-min-width", default=0.02, type=float)
+    parser.add_argument("--proposal-max-width", default=0.50, type=float)
+    parser.add_argument("--proposal-initial-width", default=0.15, type=float)
+    parser.add_argument("--mask-temperature", default=0.02, type=float)
+    parser.add_argument("--context-scale", default=0.25, type=float)
     parser.add_argument("--batch-size", default=1, type=int)
-    parser.add_argument("--prompt-replacement-mode", default="class_plus_prototype", choices=["prototype_only", "class_plus_prototype"])
-    parser.add_argument("--prototype-json", default="../../code/ucf_compact_class_prototypes.json")
+    parser.add_argument("--prompt-replacement-mode", default="manual_caption", choices=["prototype_only", "class_plus_prototype", "manual_caption"])
+    parser.add_argument("--prototype-json", default="../../code/ucf_weighted_class_prompts.json")
     parser.add_argument("--prompt-weights-json", default=None)
     parser.add_argument("--prototype-source", default="manual", choices=["manual", "compact", "long_event_only"])
     parser.add_argument(
@@ -331,14 +377,31 @@ def main():
     if args.description_model_path:
         description_prompt_text = None
         description_prompt_weights = None
-        if args.description_model_type == "prompt_replacement":
-            description_prompt_text = build_compact_prompt_groups(
-                args.prototype_json,
-                prompt_replacement_label_map,
-                args.prompt_replacement_mode,
-                args.compact_prototype_types,
-            )
-        elif args.description_model_type == "multi_prompt":
+        if args.description_model_type in ("prompt_replacement", "prompt_residual"):
+            prompt_mode = args.prompt_mode or args.prompt_replacement_mode
+            if args.prototype_source == "compact":
+                description_prompt_text = build_compact_prompt_groups(
+                    args.prototype_json,
+                    prompt_replacement_label_map,
+                    prompt_mode if prompt_mode in ("prototype_only", "class_plus_prototype") else "class_plus_prototype",
+                    args.compact_prototype_types,
+                )
+                description_prompt_weights = None
+            else:
+                description_prompt_text = build_multi_prompt_groups(
+                    args.prototype_json,
+                    prompt_replacement_label_map,
+                    args.prototype_source,
+                    args.compact_prototype_types,
+                    args.long_prototype_types,
+                    prompt_mode,
+                )
+                description_prompt_weights = build_multi_prompt_weights(
+                    args.prompt_weights_json,
+                    prompt_replacement_label_map,
+                    device,
+                )
+        elif args.description_model_type in ("multi_prompt", "multi_prompt_residual"):
             description_prompt_text = build_multi_prompt_groups(
                 args.prototype_json,
                 prompt_replacement_label_map,
@@ -352,11 +415,26 @@ def main():
                 prompt_replacement_label_map,
                 device,
             )
+        description_model = build_model(args, args.description_model_type, device)
+        if args.description_model_type == "prompt_residual":
+            # Ensure p_c exists before loading Delta / saved buffers.
+            description_model.to(device)
+            description_model.init_class_prototypes(
+                description_prompt_text,
+                prompt_weights=description_prompt_weights,
+            )
+        if args.description_model_type == "multi_prompt_residual":
+            description_model.to(device)
+            description_model.init_prompt_embeddings(description_prompt_text)
         description_model = load_state_dict(
-            build_model(args, args.description_model_type, device),
+            description_model,
             args.description_model_path,
             device,
         )
+        if args.description_model_type == "prompt_residual":
+            description_model.prototypes_initialized = True
+        if args.description_model_type == "multi_prompt_residual":
+            description_model.prompts_initialized = True
         description_metrics = evaluate_model(
             description_model,
             dataloader,

@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "name": "manual_keyword_5_prompts_per_class",
+    "dataset": "UCF-Crime",
+    "classes": 14,
+    "prompts_per_class": 5,
+    "language": "English",
+    "style": "Short noun-verb keyword phrases for CLIP text prompts.",
+    "intended_prompt_modes": [
+      "manual_caption",
+      "prototype_only"
+    ],
+    "design_notes": [
+      "Prompts are derived from previous 5x/10x manual prompt banks and compact class prototypes.",
+      "Each prompt is intentionally short to reduce noisy visual details and temporal reasoning.",
+      "Words are selected to emphasize nouns and verbs that distinguish visually similar classes.",
+      "For manual_caption mode, the training code prepends the class name before each keyword phrase."
+    ]
+  },
+  "classes": {
+    "Abuse": [
+      "victim aggressor grabbing",
+      "repeated hitting vulnerable victim",
+      "domestic violence close contact",
+      "helpless victim physical harm",
+      "aggressor restraining weaker person"
+    ],
+    "Arrest": [
+      "police handcuffs detained suspect",
+      "officers restraining suspect",
+      "patrol car custody",
+      "uniformed police escorting",
+      "suspect kneeling handcuffed"
+    ],
+    "Arson": [
+      "lighter accelerant ignition",
+      "person setting fire",
+      "flames spreading property",
+      "fuel burning surface",
+      "deliberate ignition object"
+    ],
+    "Assault": [
+      "single attacker striking victim",
+      "punches kicks one target",
+      "victim shielding attacker",
+      "one-sided physical attack",
+      "aggressor chasing victim"
+    ],
+    "Burglary": [
+      "intruder forced entry",
+      "prying door lock",
+      "breaking window entering",
+      "unauthorized room searching",
+      "burglar carrying property"
+    ],
+    "Explosion": [
+      "blast shockwave debris",
+      "detonation fireball smoke",
+      "outward fragments pressure",
+      "sudden blast cloud",
+      "rupture explosion debris"
+    ],
+    "Fighting": [
+      "mutual punches brawl",
+      "groups grappling striking",
+      "opponents exchanging blows",
+      "crowd combat struggle",
+      "two sides fighting"
+    ],
+    "Normal": [
+      "pedestrians walking calmly",
+      "vehicles moving normally",
+      "people standing talking",
+      "shoppers browsing checkout",
+      "routine public activity"
+    ],
+    "RoadAccidents": [
+      "vehicle collision roadway",
+      "car crash impact",
+      "motorbike sliding traffic",
+      "pedestrian struck vehicle",
+      "crashed vehicles lanes"
+    ],
+    "Robbery": [
+      "threatening victim valuables",
+      "weapon demanding money",
+      "victim surrendering belongings",
+      "robber intimidation theft",
+      "force taking property"
+    ],
+    "Shooting": [
+      "gun aiming firing",
+      "firearm muzzle flash",
+      "shooter weapon people",
+      "handgun discharge panic",
+      "armed person shooting"
+    ],
+    "Shoplifting": [
+      "shopper concealing merchandise",
+      "store item hidden",
+      "bag clothing products",
+      "aisle pocketing goods",
+      "retail theft checkout"
+    ],
+    "Stealing": [
+      "unattended property taken",
+      "thief grabbing bag",
+      "phone bicycle package",
+      "owner distracted theft",
+      "person carrying stolen item"
+    ],
+    "Vandalism": [
+      "graffiti spraying wall",
+      "smashing window property",
+      "kicking public fixture",
+      "scratching parked vehicle",
+      "breaking objects damage"
+    ]
+  }
+}

@@ -1,0 +1,1070 @@
+{
+  "metadata": {
+    "name": "ucf_class_prompts_short_merged",
+    "dataset": "UCF-Crime",
+    "language": "English",
+    "style": "Short noun-verb / visual-keyword phrases for CLIP text prompts.",
+    "merged_from": [
+      "ucf_keyword_class_prompts_5x.json",
+      "ucf_manual_class_prompts_5x_visual_keywords.json"
+    ],
+    "dedupe": "case_insensitive_whitespace_normalized",
+    "num_classes": 14,
+    "total_unique_prompts": 137,
+    "prompts_per_class": {
+      "Normal": 9,
+      "Abuse": 10,
+      "Arrest": 10,
+      "Arson": 10,
+      "Assault": 10,
+      "Burglary": 10,
+      "Explosion": 10,
+      "Fighting": 10,
+      "RoadAccidents": 9,
+      "Robbery": 10,
+      "Shooting": 10,
+      "Shoplifting": 10,
+      "Stealing": 10,
+      "Vandalism": 9
+    },
+    "avg_chars": 23.3,
+    "min_chars": 15,
+    "max_chars": 35,
+    "intended_prompt_modes": [
+      "manual_caption",
+      "prototype_only"
+    ],
+    "intended_use": [
+      "candidate_pool_for_prompt_selection",
+      "candidate_pool_for_class_prototype_construction"
+    ],
+    "notes": [
+      "Merged unique prompts from the listed source banks; selected/weighted derivative banks were not included.",
+      "Per-class counts may differ. For multi_prompt training that requires equal group size, sample or pad after selection.",
+      "classes maps class_name -> list of raw prompt strings compatible with prototype_source=manual.",
+      "prompt_provenance lists the same prompts with source-file provenance."
+    ]
+  },
+  "classes": {
+    "Normal": [
+      "pedestrians walking calmly",
+      "vehicles moving normally",
+      "people standing talking",
+      "shoppers browsing checkout",
+      "routine public activity",
+      "pedestrian walking sidewalk",
+      "customer browsing shelf",
+      "cashier scanning products",
+      "vehicle driving roadway"
+    ],
+    "Abuse": [
+      "victim aggressor grabbing",
+      "repeated hitting vulnerable victim",
+      "domestic violence close contact",
+      "helpless victim physical harm",
+      "aggressor restraining weaker person",
+      "adult hitting child",
+      "caregiver striking resident",
+      "aggressor dragging victim",
+      "person pinning victim",
+      "person restraining weaker victim"
+    ],
+    "Arrest": [
+      "police handcuffs detained suspect",
+      "officers restraining suspect",
+      "patrol car custody",
+      "uniformed police escorting",
+      "suspect kneeling handcuffed",
+      "police handcuffing suspect",
+      "officer escorting suspect",
+      "police restraining suspect",
+      "officer searching suspect",
+      "patrol car suspect custody"
+    ],
+    "Arson": [
+      "lighter accelerant ignition",
+      "person setting fire",
+      "flames spreading property",
+      "fuel burning surface",
+      "deliberate ignition object",
+      "person lighting fuel",
+      "lighter igniting cloth",
+      "accelerant flames ground",
+      "person burning vehicle",
+      "flames spreading storefront"
+    ],
+    "Assault": [
+      "single attacker striking victim",
+      "punches kicks one target",
+      "victim shielding attacker",
+      "one-sided physical attack",
+      "aggressor chasing victim",
+      "person punching passerby",
+      "person kicking target",
+      "attacker swinging weapon",
+      "person stomping target",
+      "person knocking target down"
+    ],
+    "Burglary": [
+      "intruder forced entry",
+      "prying door lock",
+      "breaking window entering",
+      "unauthorized room searching",
+      "burglar carrying property",
+      "intruder prying door",
+      "burglar climbing window",
+      "lock cutting tool",
+      "broken window entry",
+      "intruder searching drawers"
+    ],
+    "Explosion": [
+      "blast shockwave debris",
+      "detonation fireball smoke",
+      "outward fragments pressure",
+      "sudden blast cloud",
+      "rupture explosion debris",
+      "blast fireball debris",
+      "detonation shockwave fragments",
+      "vehicle explosion smoke",
+      "building blast debris",
+      "fireball plume rubble"
+    ],
+    "Fighting": [
+      "mutual punches brawl",
+      "groups grappling striking",
+      "opponents exchanging blows",
+      "crowd combat struggle",
+      "two sides fighting",
+      "people exchanging punches",
+      "group brawl street",
+      "fighters grappling ground",
+      "crowd joining fight",
+      "people kicking each other"
+    ],
+    "RoadAccidents": [
+      "vehicle collision roadway",
+      "car crash impact",
+      "motorbike sliding traffic",
+      "pedestrian struck vehicle",
+      "crashed vehicles lanes",
+      "car hitting pedestrian",
+      "motorcycle sliding road",
+      "vehicle hitting barrier",
+      "crashed vehicles intersection"
+    ],
+    "Robbery": [
+      "threatening victim valuables",
+      "weapon demanding money",
+      "victim surrendering belongings",
+      "robber intimidation theft",
+      "force taking property",
+      "weapon threatening cashier",
+      "robber grabbing bag",
+      "masked person taking cash",
+      "victim surrendering wallet",
+      "forceful purse snatching"
+    ],
+    "Shooting": [
+      "gun aiming firing",
+      "firearm muzzle flash",
+      "shooter weapon people",
+      "handgun discharge panic",
+      "armed person shooting",
+      "person firing gun",
+      "handgun muzzle flash",
+      "rifle aiming crowd",
+      "gunfire street scene",
+      "armed shooter firing"
+    ],
+    "Shoplifting": [
+      "shopper concealing merchandise",
+      "store item hidden",
+      "bag clothing products",
+      "aisle pocketing goods",
+      "retail theft checkout",
+      "shopper hiding merchandise",
+      "product concealed clothing",
+      "merchandise placed bag",
+      "shopper pocketing product",
+      "tag removed product"
+    ],
+    "Stealing": [
+      "unattended property taken",
+      "thief grabbing bag",
+      "phone bicycle package",
+      "owner distracted theft",
+      "person carrying stolen item",
+      "phone grabbed table",
+      "bag taken chair",
+      "wallet removed pocket",
+      "package taken doorway",
+      "bicycle taken sidewalk"
+    ],
+    "Vandalism": [
+      "graffiti spraying wall",
+      "smashing window property",
+      "kicking public fixture",
+      "scratching parked vehicle",
+      "breaking objects damage",
+      "window smashing tool",
+      "vehicle scratching key",
+      "door kicking damage",
+      "sign breaking impact"
+    ]
+  },
+  "prompt_provenance": {
+    "Normal": [
+      {
+        "text": "pedestrians walking calmly",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "vehicles moving normally",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "people standing talking",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json",
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "shoppers browsing checkout",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "routine public activity",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "pedestrian walking sidewalk",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "customer browsing shelf",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "cashier scanning products",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "vehicle driving roadway",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Abuse": [
+      {
+        "text": "victim aggressor grabbing",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "repeated hitting vulnerable victim",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "domestic violence close contact",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "helpless victim physical harm",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "aggressor restraining weaker person",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "adult hitting child",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "caregiver striking resident",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "aggressor dragging victim",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "person pinning victim",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "person restraining weaker victim",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Arrest": [
+      {
+        "text": "police handcuffs detained suspect",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "officers restraining suspect",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "patrol car custody",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "uniformed police escorting",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "suspect kneeling handcuffed",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "police handcuffing suspect",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "officer escorting suspect",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "police restraining suspect",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "officer searching suspect",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "patrol car suspect custody",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Arson": [
+      {
+        "text": "lighter accelerant ignition",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "person setting fire",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "flames spreading property",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "fuel burning surface",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "deliberate ignition object",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "person lighting fuel",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "lighter igniting cloth",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "accelerant flames ground",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "person burning vehicle",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "flames spreading storefront",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Assault": [
+      {
+        "text": "single attacker striking victim",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "punches kicks one target",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "victim shielding attacker",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "one-sided physical attack",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "aggressor chasing victim",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "person punching passerby",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "person kicking target",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "attacker swinging weapon",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "person stomping target",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "person knocking target down",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Burglary": [
+      {
+        "text": "intruder forced entry",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "prying door lock",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "breaking window entering",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "unauthorized room searching",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "burglar carrying property",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "intruder prying door",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "burglar climbing window",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "lock cutting tool",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "broken window entry",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "intruder searching drawers",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Explosion": [
+      {
+        "text": "blast shockwave debris",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "detonation fireball smoke",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "outward fragments pressure",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "sudden blast cloud",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "rupture explosion debris",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "blast fireball debris",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "detonation shockwave fragments",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "vehicle explosion smoke",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "building blast debris",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "fireball plume rubble",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Fighting": [
+      {
+        "text": "mutual punches brawl",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "groups grappling striking",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "opponents exchanging blows",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "crowd combat struggle",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "two sides fighting",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "people exchanging punches",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "group brawl street",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "fighters grappling ground",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "crowd joining fight",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "people kicking each other",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "RoadAccidents": [
+      {
+        "text": "vehicle collision roadway",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json",
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "car crash impact",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "motorbike sliding traffic",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "pedestrian struck vehicle",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "crashed vehicles lanes",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "car hitting pedestrian",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "motorcycle sliding road",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "vehicle hitting barrier",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "crashed vehicles intersection",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Robbery": [
+      {
+        "text": "threatening victim valuables",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "weapon demanding money",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "victim surrendering belongings",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "robber intimidation theft",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "force taking property",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "weapon threatening cashier",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "robber grabbing bag",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "masked person taking cash",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "victim surrendering wallet",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "forceful purse snatching",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Shooting": [
+      {
+        "text": "gun aiming firing",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "firearm muzzle flash",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "shooter weapon people",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "handgun discharge panic",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "armed person shooting",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "person firing gun",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "handgun muzzle flash",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "rifle aiming crowd",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "gunfire street scene",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "armed shooter firing",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Shoplifting": [
+      {
+        "text": "shopper concealing merchandise",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "store item hidden",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "bag clothing products",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "aisle pocketing goods",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "retail theft checkout",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "shopper hiding merchandise",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "product concealed clothing",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "merchandise placed bag",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "shopper pocketing product",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "tag removed product",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Stealing": [
+      {
+        "text": "unattended property taken",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "thief grabbing bag",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "phone bicycle package",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "owner distracted theft",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "person carrying stolen item",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "phone grabbed table",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "bag taken chair",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "wallet removed pocket",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "package taken doorway",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "bicycle taken sidewalk",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ],
+    "Vandalism": [
+      {
+        "text": "graffiti spraying wall",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json",
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "smashing window property",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "kicking public fixture",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "scratching parked vehicle",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "breaking objects damage",
+        "sources": [
+          "ucf_keyword_class_prompts_5x.json"
+        ]
+      },
+      {
+        "text": "window smashing tool",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "vehicle scratching key",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "door kicking damage",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      },
+      {
+        "text": "sign breaking impact",
+        "sources": [
+          "ucf_manual_class_prompts_5x_visual_keywords.json"
+        ]
+      }
+    ]
+  }
+}

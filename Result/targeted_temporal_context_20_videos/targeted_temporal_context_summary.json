@@ -1,0 +1,94 @@
+{
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_scratch.pth",
+  "videos": 20,
+  "target_snippets": 737,
+  "metric_note": "Context effects are baseline classifier score minus intervened score; positive means the removed context raised the original score.",
+  "intervention_note": "For scoring, only the target snippet's post-temporal vector is replaced; all other snippet vectors and both original graph adjacency matrices are held fixed. Past-only/future-only temporal masks are applied to all queries in the block to prevent indirect context leakage.",
+  "macro_video_group_summary": {
+    "false_high": {
+      "snippet_count": 20,
+      "original_score": {
+        "mean": 0.761251346381264,
+        "median": 0.9443031429416604,
+        "positive_fraction": null
+      },
+      "self_only_score": {
+        "mean": 0.7601966359949778,
+        "median": 0.9449001297492672,
+        "positive_fraction": null
+      },
+      "past_only_score": {
+        "mean": 0.7580244152654639,
+        "median": 0.9463186160557799,
+        "positive_fraction": null
+      },
+      "future_only_score": {
+        "mean": 0.7622573155915449,
+        "median": 0.9425134984431444,
+        "positive_fraction": null
+      },
+      "context_gain": {
+        "mean": 0.0010547103862862354,
+        "median": 9.245342678493923e-05,
+        "positive_fraction": 0.7
+      },
+      "future_context_effect": {
+        "mean": 0.003226931115800067,
+        "median": 0.0002645303805669149,
+        "positive_fraction": 0.7
+      },
+      "past_context_effect": {
+        "mean": -0.0010059692102807488,
+        "median": -7.505047602284235e-05,
+        "positive_fraction": 0.35
+      }
+    },
+    "true_high": {
+      "snippet_count": 20,
+      "original_score": {
+        "mean": 0.8014610055011013,
+        "median": 0.9762909114360809,
+        "positive_fraction": null
+      },
+      "self_only_score": {
+        "mean": 0.8008935016463923,
+        "median": 0.9754414521157742,
+        "positive_fraction": null
+      },
+      "past_only_score": {
+        "mean": 0.8001001291719392,
+        "median": 0.9765980911369507,
+        "positive_fraction": null
+      },
+      "future_only_score": {
+        "mean": 0.8034903553031567,
+        "median": 0.9756884016096592,
+        "positive_fraction": null
+      },
+      "context_gain": {
+        "mean": 0.0005675038547090456,
+        "median": 5.017316859701406e-05,
+        "positive_fraction": 0.65
+      },
+      "future_context_effect": {
+        "mean": 0.0013608763291622192,
+        "median": 0.0001740431697625253,
+        "positive_fraction": 0.7
+      },
+      "past_context_effect": {
+        "mean": -0.002029349802055353,
+        "median": -3.672086027704504e-05,
+        "positive_fraction": 0.4
+      }
+    }
+  },
+  "selectivity_true_minus_false": {
+    "context_gain": -0.0004872065315771897,
+    "future_context_effect": -0.001866054786637848,
+    "past_context_effect": -0.001023380591774604
+  },
+  "files": {
+    "targeted_temporal_context_snippets": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/temporal_graph_leakage/targeted_temporal_context_20_videos/targeted_temporal_context_snippets.csv",
+    "targeted_temporal_context_video_groups": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/temporal_graph_leakage/targeted_temporal_context_20_videos/targeted_temporal_context_video_groups.csv"
+  }
+}

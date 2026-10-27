@@ -1,0 +1,13 @@
+﻿model,stage,sample_count,folds,grouped_by_video_linear_probe_auc_mean,grouped_by_video_linear_probe_auc_std
+baseline_self_train,raw_clip,4000,3,79.99910555142132,3.224586227491625
+baseline_self_train,temporal,4000,3,81.11043068338671,3.8458235729720562
+baseline_self_train,final_visual,4000,3,82.99651930218579,4.2993181218004946
+baseline_abnormal_topk,raw_clip,4000,3,81.52743459563673,4.292060438987476
+baseline_abnormal_topk,temporal,4000,3,82.00126338047359,4.486441053212652
+baseline_abnormal_topk,final_visual,4000,3,83.21875847678632,1.5480854171569167
+weighted_prompt_no_regularize,raw_clip,4000,3,82.12307617197536,5.262797653099179
+weighted_prompt_no_regularize,temporal,4000,3,84.12378658108217,4.390575879253153
+weighted_prompt_no_regularize,final_visual,4000,3,86.36570131687365,2.02596405075337
+weighted_prompt_abnormal_topk,raw_clip,4000,3,82.95096288537769,1.9119649701624462
+weighted_prompt_abnormal_topk,temporal,4000,3,83.92510750336089,1.6065084030379833
+weighted_prompt_abnormal_topk,final_visual,4000,3,83.64327061564028,0.47970109943398537

@@ -1,0 +1,98 @@
+Cross-video class evidence analysis only; no training and no model updates
+Device: cuda
+Model: /content/drive/MyDrive/Finetune VadCLIP/model_ucf.pth
+Top-k ratio used to define test groups: 0.15
+
+  0%|                                               | 0.00/335M [00:00<?, ?iB/s]
+  2%|▋                                     | 5.78M/335M [00:00<00:05, 58.7MiB/s]
+  5%|██                                    | 17.7M/335M [00:00<00:03, 95.4MiB/s]
+  8%|███                                   | 26.8M/335M [00:00<00:05, 57.9MiB/s]
+ 10%|███▊                                  | 33.4M/335M [00:00<00:05, 55.6MiB/s]
+ 14%|█████▍                                | 47.8M/335M [00:00<00:03, 80.9MiB/s]
+ 17%|██████▌                               | 58.1M/335M [00:00<00:03, 88.4MiB/s]
+ 21%|███████▉                              | 70.2M/335M [00:00<00:02, 99.3MiB/s]
+ 24%|█████████▍                             | 80.6M/335M [00:00<00:02, 102MiB/s]
+ 27%|██████████▎                           | 90.9M/335M [00:01<00:02, 90.5MiB/s]
+ 30%|███████████▋                           | 100M/335M [00:01<00:02, 93.0MiB/s]
+ 34%|█████████████▍                          | 113M/335M [00:01<00:02, 103MiB/s]
+ 37%|██████████████▋                         | 123M/335M [00:01<00:02, 103MiB/s]
+ 40%|███████████████▉                        | 133M/335M [00:01<00:02, 105MiB/s]
+ 43%|█████████████████▏                      | 144M/335M [00:01<00:01, 106MiB/s]
+ 46%|█████████████████▉                     | 154M/335M [00:01<00:01, 99.8MiB/s]
+ 49%|███████████████████                    | 164M/335M [00:01<00:01, 94.5MiB/s]
+ 52%|████████████████████▏                  | 173M/335M [00:02<00:01, 91.0MiB/s]
+ 55%|█████████████████████▌                 | 185M/335M [00:02<00:01, 99.6MiB/s]
+ 59%|███████████████████████▋                | 198M/335M [00:02<00:01, 109MiB/s]
+ 62%|████████████████████████▉               | 209M/335M [00:02<00:01, 110MiB/s]
+ 66%|██████████████████████████▏             | 219M/335M [00:02<00:01, 110MiB/s]
+ 69%|███████████████████████████▌            | 230M/335M [00:02<00:01, 106MiB/s]
+ 72%|████████████████████████████▋           | 240M/335M [00:02<00:00, 101MiB/s]
+ 75%|█████████████████████████████▏         | 250M/335M [00:02<00:01, 83.0MiB/s]
+ 77%|██████████████████████████████         | 258M/335M [00:02<00:00, 81.3MiB/s]
+ 80%|███████████████████████████████        | 267M/335M [00:03<00:00, 81.4MiB/s]
+ 82%|████████████████████████████████       | 275M/335M [00:03<00:00, 78.4MiB/s]
+ 84%|████████████████████████████████▉      | 283M/335M [00:03<00:00, 79.7MiB/s]
+ 87%|█████████████████████████████████▉     | 291M/335M [00:03<00:00, 82.7MiB/s]
+ 91%|███████████████████████████████████▍   | 304M/335M [00:03<00:00, 98.5MiB/s]
+ 94%|████████████████████████████████████▌  | 314M/335M [00:03<00:00, 97.1MiB/s]
+ 98%|███████████████████████████████████████▏| 327M/335M [00:03<00:00, 109MiB/s]
+100%|███████████████████████████████████████| 335M/335M [00:03<00:00, 94.5MiB/s]
+
+Building train bank from 16100 chunks...
+  Train batches: 100/1007
+  Train batches: 200/1007
+  Train batches: 300/1007
+  Train batches: 400/1007
+  Train batches: 500/1007
+  Train batches: 600/1007
+  Train batches: 700/1007
+  Train batches: 800/1007
+  Train batches: 900/1007
+  Train batches: 1000/1007
+Bank candidates retained: 64399 | videos=1610 | classes=14
+
+Running test inference for diagnostic labels on 290 videos...
+  Test videos: 50/290
+  Test videos: 100/290
+  Test videos: 150/290
+  Test videos: 200/290
+  Test videos: 250/290
+Balanced diagnostic queries retained: 4615
+
+Retrieving cross-video neighbors in raw_clip space...
+Clustering train candidates in raw_clip space...
+
+Retrieving cross-video neighbors in classifier_input space...
+Clustering train candidates in classifier_input space...
+
+========================================================================================
+CROSS-VIDEO CLASS EVIDENCE DIAGNOSTICS
+Train bank: 64399 snippets | 1610 videos
+Test queries: 4615
+
+----------------------------------------------------------------------------------------
+Feature stage: raw_clip
+  true_high        n= 1067 | same-class=0.251 | Normal=0.083 | quality=-0.217
+  false_high       n=  964 | same-class=0.266 | Normal=0.119 | quality=-0.189
+  missed_anomaly   n= 1184 | same-class=0.235 | Normal=0.199 | quality=-0.257
+  true_high_vs_false_high                AUC=48.01 | gap=-0.0276
+  missed_anomaly_vs_false_high           AUC=45.38 | gap=-0.0676
+  Weakest class separation: Burglary=33.3, Assault=37.2, RoadAccidents=38.7, Arrest=41.4, Shoplifting=41.9
+  Strongest class separation: Robbery=87.3, Explosion=72.9, Fighting=60.0, Vandalism=59.6, Stealing=56.2
+  True-high/false-high neighborhood: mean centroid cosine=0.942 | mean Jaccard=0.182
+
+----------------------------------------------------------------------------------------
+Feature stage: classifier_input
+  true_high        n= 1067 | same-class=0.327 | Normal=0.055 | quality=-0.203
+  false_high       n=  964 | same-class=0.294 | Normal=0.070 | quality=-0.214
+  missed_anomaly   n= 1184 | same-class=0.291 | Normal=0.191 | quality=-0.264
+  true_high_vs_false_high                AUC=48.69 | gap=+0.0109
+  missed_anomaly_vs_false_high           AUC=45.71 | gap=-0.0501
+  Weakest class separation: Arrest=18.4, Shoplifting=24.0, RoadAccidents=24.9, Fighting=31.5, Shooting=40.8
+  Strongest class separation: Robbery=100.0, Arson=77.1, Vandalism=67.7, Stealing=63.2, Assault=57.4
+  True-high/false-high neighborhood: mean centroid cosine=0.857 | mean Jaccard=0.110
+
+Decision: do_not_use_cross_video_evidence_for_training_yet
+Reason: Cross-video evidence quality does not reliably separate false-high from both useful evidence groups.
+
+Saved diagnostics to: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/cross_video_evidence

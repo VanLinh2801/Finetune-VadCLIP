@@ -1,0 +1,2827 @@
+{
+  "metadata": {
+    "name": "ucf_class_prompts_long_merged",
+    "dataset": "UCF-Crime",
+    "language": "English",
+    "style": "CLIP-friendly surveillance caption-style prompts (longer descriptive phrases).",
+    "merged_from": [
+      "ucf_manual_class_prompts_10x.json",
+      "ucf_manual_class_prompts_10x_v2.json",
+      "ucf_manual_class_prompts_5x_v3.json",
+      "ucf_manual_class_prompts_5x_v4.json",
+      "ucf_manual_class_prompts_5x_v5.json"
+    ],
+    "dedupe": "case_insensitive_whitespace_normalized",
+    "num_classes": 14,
+    "total_unique_prompts": 371,
+    "prompts_per_class": {
+      "Normal": 28,
+      "Abuse": 25,
+      "Arrest": 27,
+      "Arson": 34,
+      "Assault": 24,
+      "Burglary": 25,
+      "Explosion": 35,
+      "Fighting": 30,
+      "RoadAccidents": 22,
+      "Robbery": 25,
+      "Shooting": 21,
+      "Shoplifting": 22,
+      "Stealing": 23,
+      "Vandalism": 30
+    },
+    "avg_chars": 54.1,
+    "min_chars": 34,
+    "max_chars": 86,
+    "intended_prompt_modes": [
+      "manual_caption",
+      "prototype_only"
+    ],
+    "intended_use": [
+      "candidate_pool_for_prompt_selection",
+      "candidate_pool_for_class_prototype_construction"
+    ],
+    "notes": [
+      "Merged unique prompts from the listed source banks; selected/weighted derivative banks were not included.",
+      "Per-class counts may differ. For multi_prompt training that requires equal group size, sample or pad after selection.",
+      "classes maps class_name -> list of raw prompt strings compatible with prototype_source=manual.",
+      "prompt_provenance lists the same prompts with source-file provenance."
+    ]
+  },
+  "classes": {
+    "Normal": [
+      "a normal street scene with pedestrians walking calmly",
+      "people standing and talking without aggressive movement",
+      "vehicles moving through traffic in an ordinary way",
+      "shoppers browsing shelves and carrying bags normally",
+      "workers calmly performing tasks around counters and equipment",
+      "pedestrians crossing a walkway with regular spacing",
+      "people entering and exiting buildings in a routine manner",
+      "a public area with ordinary walking and waiting",
+      "people interacting casually without panic or force",
+      "an orderly scene with predictable everyday human activity",
+      "pedestrians walking calmly along a quiet street",
+      "people chatting casually in an ordinary public area",
+      "vehicles moving normally through regular traffic flow",
+      "shoppers browsing shelves and paying at checkout",
+      "workers performing routine tasks in a calm store",
+      "people entering and exiting buildings at a steady pace",
+      "people standing calmly near counters and doorways",
+      "an orderly scene with predictable everyday activity",
+      "pedestrians walking calmly along an ordinary street",
+      "people waiting and talking in a public area",
+      "vehicles moving steadily through regular traffic",
+      "customers standing calmly near store counters",
+      "people entering and exiting buildings at normal pace",
+      "normal daily activity with people walking calmly in public areas",
+      "ordinary people and vehicles moving in a regular environment",
+      "people shopping or standing normally without unusual activity",
+      "a normal street scene with everyday human activity",
+      "routine activities occurring in a public place"
+    ],
+    "Abuse": [
+      "a surveillance frame of an aggressor striking a vulnerable victim",
+      "a person forcefully pushing a helpless victim against furniture",
+      "a violent person grabbing and controlling a weaker victim",
+      "a victim shielding their body during repeated physical mistreatment",
+      "an attacker cornering someone and delivering forceful hits",
+      "a person dragging a resisting victim across the floor",
+      "a vulnerable person recoiling from sustained aggressive body contact",
+      "a stronger aggressor overpowering a weaker person indoors",
+      "a victim collapsing after repeated blows from another person",
+      "a hostile person restraining and hurting a defenseless target",
+      "a dominant person grabbing and controlling a weaker victim",
+      "a victim shielding their body from repeated physical mistreatment",
+      "an attacker cornering someone and delivering forceful blows",
+      "a vulnerable person recoiling from sustained aggressive contact",
+      "a hostile person hurting a defenseless target at close range",
+      "a vulnerable victim enduring repeated close range mistreatment",
+      "a stronger aggressor controlling a weaker victim indoors",
+      "a helpless person recoiling from sustained physical abuse",
+      "a defenseless victim shielding from repeated aggressive contact",
+      "an aggressor dragging or overpowering a vulnerable person",
+      "physical abuse where one person repeatedly hurts another person in a close environment",
+      "a person being subjected to repeated physical violence by another person",
+      "a person aggressively grabbing and hurting another person indoors",
+      "a person repeatedly attacking someone who appears unable to escape",
+      "domestic violence involving physical harm between two people"
+    ],
+    "Arrest": [
+      "a surveillance frame of police restraining a suspect",
+      "officers handcuffing a detained person with controlled posture",
+      "police surrounding a suspect and directing surrender",
+      "uniformed officers escorting a suspect toward a patrol car",
+      "law enforcement pinning a resisting person during detention",
+      "officers searching a suspect after applying physical restraint",
+      "a patrol team blocking a suspect from escaping",
+      "police pulling a suspect's arms behind their back",
+      "a detained person being guided beside police officers",
+      "officers immobilizing a suspect using coordinated restraint",
+      "uniformed police placing handcuffs on a detained suspect",
+      "officers escorting a handcuffed person toward a patrol car",
+      "law enforcement surrounding a suspect beside a police vehicle",
+      "a detained suspect kneeling while officers secure handcuffs",
+      "police guiding a restrained person during formal detention",
+      "uniformed officers searching a suspect beside a patrol car",
+      "a handcuffed suspect standing between multiple police officers",
+      "officers controlling a detainee during a roadside arrest",
+      "a patrol team moving a suspect into police custody",
+      "law enforcement securing wrists of a compliant detained person",
+      "law enforcement securing a suspect during formal custody",
+      "a detained person kneeling while officers apply restraints",
+      "police arresting and restraining a suspect with handcuffs",
+      "law enforcement officers detaining a person during an arrest",
+      "a police officer holding a detained suspect in custody",
+      "a person being arrested by uniformed police officers",
+      "police officers surrounding and controlling a detained person"
+    ],
+    "Arson": [
+      "a person igniting flammable material near property",
+      "a suspicious person pouring liquid before visible flames appear",
+      "a small fire spreading across a vehicle or building surface",
+      "bright flames emerging after someone approaches a combustible target",
+      "a person fleeing as a deliberately started fire grows",
+      "smoke and flames rising from unattended damaged property",
+      "a surveillance frame showing deliberate ignition near a structure",
+      "fire spreading around an entrance, window, or vehicle",
+      "a person handling a lighter before a sudden flame outbreak",
+      "a property surface burning after a suspicious human action",
+      "a person deliberately igniting material near a property entrance",
+      "a suspicious individual using a lighter on a flammable surface",
+      "a small flame spreading gradually after human ignition",
+      "a person pouring accelerant before fire begins growing",
+      "deliberate fire starting near property without an explosive blast",
+      "a person crouching near combustible material before flames appear",
+      "a slow fire growing after someone lights an object",
+      "a suspicious person leaving as a small fire spreads",
+      "visible accelerant or lighter use before property begins burning",
+      "human ignition causing flames to spread across property",
+      "a person lighting flammable material before flames spread",
+      "a person pouring accelerant before visible fire grows",
+      "a lighter touching a surface before ignition begins",
+      "small flames expanding after deliberate human ignition",
+      "a person retreating as planted fire starts spreading",
+      "a person lighting material before flames spread",
+      "a person pouring accelerant before fire grows",
+      "a lighter touching a surface before ignition starts",
+      "a person retreating as planted fire begins spreading",
+      "a person intentionally setting fire to a building or object",
+      "a person starting a fire using a lighter or flammable material",
+      "a deliberate fire being created on someone's property",
+      "a person causing flames on an object or structure",
+      "a scene showing a person involved in setting property on fire"
+    ],
+    "Assault": [
+      "a person punching another person in a close confrontation",
+      "an attacker lunging toward a victim with a forceful strike",
+      "two people colliding violently during a street confrontation",
+      "an aggressor kicking a fallen victim on the ground",
+      "a victim stumbling backward after a direct body hit",
+      "an attacker swinging arms repeatedly at another person",
+      "a person shoving an opponent hard enough to lose balance",
+      "a close range attack with punches, kicks, and defense",
+      "an aggressor pursuing a target while continuing to strike",
+      "a victim shielding their face during a rapid attack",
+      "an aggressor swinging arms repeatedly at another person",
+      "a person punching a victim during a one-sided confrontation",
+      "an attacker kicking a fallen victim on the ground",
+      "a victim recoiling from repeated close range hits",
+      "a single attacker lunging with a direct strike",
+      "a one-sided attack with punches and defensive movement",
+      "an aggressor kicking a fallen victim on pavement",
+      "a victim stumbling backward after a sudden hit",
+      "an attacker chasing one target while striking repeatedly",
+      "a person physically attacking another person with punches or kicks",
+      "one person violently striking another person during an assault",
+      "a person hitting or kicking someone in a one-sided physical attack",
+      "a person attacking another individual in a public place",
+      "a victim being physically assaulted by a single attacker"
+    ],
+    "Burglary": [
+      "a surveillance frame of an intruder forcing a doorway",
+      "a person prying a lock to enter a restricted room",
+      "a masked intruder breaking a barrier into private property",
+      "a suspect searching drawers and shelves after unauthorized entry",
+      "an intruder carrying stolen items from a damaged entrance",
+      "a person climbing through a window into closed property",
+      "a suspicious person slipping inside after a doorway opens",
+      "a burglar moving quietly through a room collecting valuables",
+      "a person damaging a lock to access an interior space",
+      "an intruder exiting a building with bags or electronics",
+      "an intruder exiting through a damaged entry point",
+      "an intruder forcing entry through a locked doorway",
+      "a person prying a lock before entering property",
+      "a masked intruder breaking into a closed building",
+      "a person climbing through a window into private space",
+      "an intruder entering rooms after damaging an entry point",
+      "an intruder manipulating a lock at a doorway",
+      "a person prying open access to a restricted room",
+      "a masked intruder entering a closed building interior",
+      "an intruder searching inside rooms after unauthorized entry",
+      "a person illegally entering a building to steal property",
+      "a burglar breaking into a house or restricted building",
+      "a person forcing entry into a closed building",
+      "an intruder searching inside a building after unauthorized entry",
+      "a person entering private property without permission"
+    ],
+    "Explosion": [
+      "a sudden blast creating a fireball, smoke, and debris",
+      "a vehicle or structure bursting violently with scattered fragments",
+      "a bright flash followed by an expanding smoke cloud",
+      "an explosive impact throwing debris across a street",
+      "a large fireball expanding after an abrupt detonation",
+      "a shockwave shaking the scene while smoke engulfs objects",
+      "an object detonating and damaging the surrounding area",
+      "a blast plume rising as fragments scatter on the road",
+      "a sudden light burst with heavy smoke and debris",
+      "a violent detonation damaging a vehicle or nearby building",
+      "an instant blast wave with fireball and flying fragments",
+      "a sudden detonation producing shockwave and expanding smoke plume",
+      "a bright flash followed by rapid explosive pressure burst",
+      "an object erupting violently with an outward debris cloud",
+      "a large fireball appearing immediately after explosive detonation",
+      "a shockwave pushing smoke and fragments away from impact",
+      "a violent pressure burst scattering debris in every direction",
+      "a sudden explosive plume rising from a detonation point",
+      "a rapid blast creating flash, shockwave, and airborne debris",
+      "a concentrated detonation expanding outward within seconds",
+      "an instant detonation expanding from a blast center",
+      "a shockwave pushing fragments outward within seconds",
+      "a structure bursting apart from explosive force",
+      "a concentrated blast throwing debris radially outward",
+      "a sudden pressure wave following a visible detonation",
+      "a blast center expanding into a radial debris cloud",
+      "a sudden shock front spreading from one point",
+      "an object rupturing outward in a single instant",
+      "a compact detonation producing outward airborne fragments",
+      "a pressure blast expanding faster than surrounding motion",
+      "a sudden explosion causing fire, smoke, and flying debris",
+      "a powerful blast destroying an object or structure",
+      "an explosive event with a large fireball and smoke cloud",
+      "a scene showing damage caused by an explosive blast",
+      "a violent explosion producing scattered debris and destruction"
+    ],
+    "Fighting": [
+      "a group of people exchanging punches and kicks",
+      "several people grappling, pushing, and swinging arms",
+      "two opponents separating and reengaging in a brawl",
+      "multiple individuals shoving and wrestling in public",
+      "two groups clashing in a chaotic physical fight",
+      "fighters grabbing clothing while others join the conflict",
+      "a crowd surrounding combatants in an escalating brawl",
+      "people trading blows while moving unpredictably through space",
+      "a mutual fight continuing despite attempts to separate",
+      "a brawl with repeated grappling, striking, and falling",
+      "two groups mutually exchanging punches in a crowded brawl",
+      "several participants striking each other during mutual combat",
+      "opponents separating and reengaging repeatedly in a group fight",
+      "multiple people wrestling and swinging arms at each other",
+      "a crowd circling two sides fighting each other",
+      "several combatants pushing, grappling, and striking simultaneously",
+      "two sides clashing back and forth in public space",
+      "multiple participants falling and rejoining a chaotic brawl",
+      "people on both sides trading blows in close quarters",
+      "a mutual street fight with several active combatants",
+      "two groups mutually exchanging punches in a brawl",
+      "multiple participants striking each other during mutual combat",
+      "opponents separating and reengaging in group fighting",
+      "several combatants grappling and swinging simultaneously",
+      "two sides clashing back and forth in public",
+      "two or more people physically fighting each other",
+      "a group of people involved in a violent fight or brawl",
+      "multiple people punching and attacking each other",
+      "people engaging in mutual physical combat",
+      "a public fight where both sides are physically attacking"
+    ],
+    "RoadAccidents": [
+      "a vehicle collision causing impact, debris, and disruption",
+      "a car striking a pedestrian or cyclist on the road",
+      "a motorbike sliding across a lane after a crash",
+      "vehicles swerving and colliding during a sudden accident",
+      "a pedestrian knocked down by a vehicle near a crossing",
+      "a damaged vehicle stopped and blocking the roadway",
+      "a rider thrown onto pavement after a high speed impact",
+      "a traffic accident with a vehicle spinning to a halt",
+      "a car hitting an obstacle with sudden debris",
+      "a motorbike rider falling during an intersection collision",
+      "a vehicle collision causing roadway impact and disruption",
+      "a car striking a pedestrian or cyclist on road",
+      "a motorbike sliding across a lane after collision",
+      "vehicles swerving before colliding in traffic",
+      "a crashed vehicle blocking lanes after impact",
+      "vehicles colliding at an intersection on the roadway",
+      "a crashed vehicle blocking lanes after roadway impact",
+      "vehicles involved in a traffic accident on a road",
+      "a damaged vehicle after a collision or crash",
+      "a car or motorcycle accident causing road damage",
+      "vehicles colliding and creating a traffic accident scene",
+      "a roadway with crashed vehicles after an accident"
+    ],
+    "Robbery": [
+      "a threatening person forcing a victim to surrender valuables",
+      "an aggressor confronting someone and grabbing a purse or wallet",
+      "a victim handing over belongings under close range intimidation",
+      "a robber snatching property and escaping quickly",
+      "a person threatening a clerk and demanding money",
+      "an attacker cornering a victim and seizing personal items",
+      "a forced handover following a visible threat gesture",
+      "a suspect taking valuables while the victim backs away",
+      "a person brandishing a weapon to demand property",
+      "a robber approaching a victim and leaving with belongings",
+      "an aggressor confronting someone and taking a purse or wallet",
+      "a coerced handover of valuables during visible intimidation",
+      "a victim handing belongings under close range intimidation",
+      "an attacker cornering a victim and seizing items",
+      "a robber confronting a victim before taking belongings",
+      "a threatening person demanding valuables from a victim",
+      "a victim handing belongings during close intimidation",
+      "a robber confronting someone and taking personal items",
+      "a weapon used to force a property handover",
+      "a victim backing away while valuables are taken",
+      "a person threatening another person while taking their belongings",
+      "a robbery where someone uses intimidation or force to steal property",
+      "a person confronting a victim and demanding valuables",
+      "an armed person committing a robbery against another person",
+      "a criminal taking possessions from someone through threats"
+    ],
+    "Shooting": [
+      "an armed person aiming a firearm and firing shots",
+      "a gunman pointing a weapon as people scatter",
+      "a muzzle flash appearing as a shooter targets someone",
+      "a person firing a handgun and causing panic",
+      "an armed attacker discharging a weapon in public",
+      "a victim falling after a nearby firearm is fired",
+      "a shooter raising a gun while a crowd runs",
+      "a gunfire scene with fear and rapid dispersal",
+      "a person aiming a rifle or handgun at a target",
+      "a shooter stance with recoil and fleeing people",
+      "an armed shooter firing as people flee the scene",
+      "an armed person aiming and firing a firearm",
+      "a visible muzzle flash from a discharged gun",
+      "a shooter raising a gun before firing",
+      "a person firing a handgun in surveillance footage",
+      "an armed shooter discharging a weapon toward people",
+      "a person firing a gun at another person",
+      "an armed person aiming and shooting a firearm",
+      "a shooting incident involving a visible gun",
+      "a person using a firearm during a violent event",
+      "a gun being fired in a public area"
+    ],
+    "Shoplifting": [
+      "a shopper concealing merchandise inside clothing or a bag",
+      "a person removing a store item without checkout",
+      "a customer hiding a product and exiting an aisle",
+      "a shopper slipping goods into a bag while browsing",
+      "a person scanning surroundings before pocketing merchandise",
+      "someone carrying an unpaid item past the cashier",
+      "concealed goods disappearing beneath a jacket in a store",
+      "a customer manipulating shelf products and hiding one item",
+      "a suspect leaving a shop while holding unpaid merchandise",
+      "a retail theft scene with discreet concealment and exit",
+      "a customer hiding one item while handling shelf products",
+      "a shopper leaving a store with concealed unpaid merchandise",
+      "a shopper concealing merchandise inside clothing or bag",
+      "a person hiding a retail item while browsing shelves",
+      "store goods disappearing beneath a jacket while shopping",
+      "a shopper slipping merchandise into a bag in aisle",
+      "a customer exiting retail space with concealed merchandise",
+      "a person secretly taking merchandise from a store without paying",
+      "a shopper hiding store products inside clothing or a bag",
+      "a person stealing items from a retail store",
+      "a customer leaving a shop with concealed merchandise",
+      "a person removing store goods without permission"
+    ],
+    "Stealing": [
+      "a person taking unattended property and leaving quickly",
+      "a thief grabbing a bicycle, bag, phone, or object",
+      "a suspect approaching a valuable item and carrying it away",
+      "unattended belongings disappearing after suspicious human contact",
+      "a person lifting property while the owner is distracted",
+      "a thief cutting a lock and taking a bicycle",
+      "a suspect removing a package or bag from public space",
+      "a person pocketing an unattended item and changing direction",
+      "a valuable object being taken stealthily during distraction",
+      "a thief carrying stolen property away without confrontation",
+      "a thief quietly taking property during owner distraction",
+      "a thief carrying stolen property away from the scene",
+      "a suspect carrying property while the owner is distracted",
+      "a thief quietly removing property from public space",
+      "a person taking an unattended bag and leaving",
+      "a thief lifting a phone or package from public space",
+      "a person pocketing an unattended item and walking away",
+      "a thief removing a bicycle after handling its lock",
+      "a person taking another person's property without permission",
+      "a person secretly stealing an unattended object",
+      "a person removing someone's belongings and leaving",
+      "a thief taking personal property in a public place",
+      "a person carrying away stolen items"
+    ],
+    "Vandalism": [
+      "a person damaging property by smashing a window or door",
+      "someone kicking or striking an object until it breaks",
+      "a suspect spraying graffiti on a wall or vehicle",
+      "a person breaking glass with repeated tool impacts",
+      "a vandal throwing an object at a storefront or car",
+      "deliberate destruction of signs, windows, equipment, or furniture",
+      "a person scratching and denting a parked vehicle",
+      "public property being defaced with paint or graffiti",
+      "a suspect repeatedly hitting a fixture until pieces break",
+      "property damage happening without theft, fire, or confrontation",
+      "a person smashing a window or door with force",
+      "someone kicking a fixture until visible pieces break",
+      "a suspect spraying graffiti onto a wall with a can",
+      "someone striking public property until visible damage appears",
+      "a person painting graffiti directly onto public property",
+      "a suspect repeatedly hitting a fixture until it breaks",
+      "a person deliberately damaging property without taking anything",
+      "a suspect spraying graffiti directly onto public property",
+      "someone striking fixtures until visible damage appears",
+      "a person deliberately damaging property with tools or kicks",
+      "a person spraying paint across a wall surface",
+      "someone scratching a parked vehicle with a tool",
+      "a person repeatedly kicking a public fixture",
+      "a vandal hitting a sign until it bends",
+      "a person marking property with deliberate graffiti strokes",
+      "a person intentionally damaging public or private property",
+      "a person destroying or defacing objects without taking them",
+      "a person damaging a wall, vehicle, or public facility",
+      "property being damaged through vandalism or destruction",
+      "a person breaking or marking property in a destructive way"
+    ]
+  },
+  "prompt_provenance": {
+    "Normal": [
+      {
+        "text": "a normal street scene with pedestrians walking calmly",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "people standing and talking without aggressive movement",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "vehicles moving through traffic in an ordinary way",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "shoppers browsing shelves and carrying bags normally",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "workers calmly performing tasks around counters and equipment",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "pedestrians crossing a walkway with regular spacing",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "people entering and exiting buildings in a routine manner",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a public area with ordinary walking and waiting",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "people interacting casually without panic or force",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "an orderly scene with predictable everyday human activity",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "pedestrians walking calmly along a quiet street",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "people chatting casually in an ordinary public area",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "vehicles moving normally through regular traffic flow",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "shoppers browsing shelves and paying at checkout",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "workers performing routine tasks in a calm store",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "people entering and exiting buildings at a steady pace",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "people standing calmly near counters and doorways",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an orderly scene with predictable everyday activity",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "pedestrians walking calmly along an ordinary street",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "people waiting and talking in a public area",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "vehicles moving steadily through regular traffic",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "customers standing calmly near store counters",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "people entering and exiting buildings at normal pace",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "normal daily activity with people walking calmly in public areas",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "ordinary people and vehicles moving in a regular environment",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "people shopping or standing normally without unusual activity",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a normal street scene with everyday human activity",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "routine activities occurring in a public place",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Abuse": [
+      {
+        "text": "a surveillance frame of an aggressor striking a vulnerable victim",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person forcefully pushing a helpless victim against furniture",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a violent person grabbing and controlling a weaker victim",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a victim shielding their body during repeated physical mistreatment",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "an attacker cornering someone and delivering forceful hits",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a person dragging a resisting victim across the floor",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a vulnerable person recoiling from sustained aggressive body contact",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a stronger aggressor overpowering a weaker person indoors",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a victim collapsing after repeated blows from another person",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a hostile person restraining and hurting a defenseless target",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a dominant person grabbing and controlling a weaker victim",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a victim shielding their body from repeated physical mistreatment",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an attacker cornering someone and delivering forceful blows",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a vulnerable person recoiling from sustained aggressive contact",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a hostile person hurting a defenseless target at close range",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a vulnerable victim enduring repeated close range mistreatment",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a stronger aggressor controlling a weaker victim indoors",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a helpless person recoiling from sustained physical abuse",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a defenseless victim shielding from repeated aggressive contact",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "an aggressor dragging or overpowering a vulnerable person",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "physical abuse where one person repeatedly hurts another person in a close environment",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person being subjected to repeated physical violence by another person",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person aggressively grabbing and hurting another person indoors",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person repeatedly attacking someone who appears unable to escape",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "domestic violence involving physical harm between two people",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Arrest": [
+      {
+        "text": "a surveillance frame of police restraining a suspect",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "officers handcuffing a detained person with controlled posture",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "police surrounding a suspect and directing surrender",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "uniformed officers escorting a suspect toward a patrol car",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "law enforcement pinning a resisting person during detention",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "officers searching a suspect after applying physical restraint",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a patrol team blocking a suspect from escaping",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "police pulling a suspect's arms behind their back",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a detained person being guided beside police officers",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "officers immobilizing a suspect using coordinated restraint",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "uniformed police placing handcuffs on a detained suspect",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "officers escorting a handcuffed person toward a patrol car",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "law enforcement surrounding a suspect beside a police vehicle",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a detained suspect kneeling while officers secure handcuffs",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "police guiding a restrained person during formal detention",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "uniformed officers searching a suspect beside a patrol car",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a handcuffed suspect standing between multiple police officers",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "officers controlling a detainee during a roadside arrest",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a patrol team moving a suspect into police custody",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "law enforcement securing wrists of a compliant detained person",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "law enforcement securing a suspect during formal custody",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a detained person kneeling while officers apply restraints",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "police arresting and restraining a suspect with handcuffs",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "law enforcement officers detaining a person during an arrest",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a police officer holding a detained suspect in custody",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person being arrested by uniformed police officers",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "police officers surrounding and controlling a detained person",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Arson": [
+      {
+        "text": "a person igniting flammable material near property",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a suspicious person pouring liquid before visible flames appear",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a small fire spreading across a vehicle or building surface",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "bright flames emerging after someone approaches a combustible target",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a person fleeing as a deliberately started fire grows",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "smoke and flames rising from unattended damaged property",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a surveillance frame showing deliberate ignition near a structure",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "fire spreading around an entrance, window, or vehicle",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a person handling a lighter before a sudden flame outbreak",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a property surface burning after a suspicious human action",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a person deliberately igniting material near a property entrance",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a suspicious individual using a lighter on a flammable surface",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a small flame spreading gradually after human ignition",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person pouring accelerant before fire begins growing",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "deliberate fire starting near property without an explosive blast",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person crouching near combustible material before flames appear",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a slow fire growing after someone lights an object",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a suspicious person leaving as a small fire spreads",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "visible accelerant or lighter use before property begins burning",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "human ignition causing flames to spread across property",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person lighting flammable material before flames spread",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a person pouring accelerant before visible fire grows",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a lighter touching a surface before ignition begins",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "small flames expanding after deliberate human ignition",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person retreating as planted fire starts spreading",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a person lighting material before flames spread",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person pouring accelerant before fire grows",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a lighter touching a surface before ignition starts",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person retreating as planted fire begins spreading",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person intentionally setting fire to a building or object",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person starting a fire using a lighter or flammable material",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a deliberate fire being created on someone's property",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person causing flames on an object or structure",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a scene showing a person involved in setting property on fire",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Assault": [
+      {
+        "text": "a person punching another person in a close confrontation",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "an attacker lunging toward a victim with a forceful strike",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "two people colliding violently during a street confrontation",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "an aggressor kicking a fallen victim on the ground",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a victim stumbling backward after a direct body hit",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an attacker swinging arms repeatedly at another person",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a person shoving an opponent hard enough to lose balance",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a close range attack with punches, kicks, and defense",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an aggressor pursuing a target while continuing to strike",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a victim shielding their face during a rapid attack",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an aggressor swinging arms repeatedly at another person",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person punching a victim during a one-sided confrontation",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an attacker kicking a fallen victim on the ground",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a victim recoiling from repeated close range hits",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a single attacker lunging with a direct strike",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a one-sided attack with punches and defensive movement",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "an aggressor kicking a fallen victim on pavement",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a victim stumbling backward after a sudden hit",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "an attacker chasing one target while striking repeatedly",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person physically attacking another person with punches or kicks",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "one person violently striking another person during an assault",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person hitting or kicking someone in a one-sided physical attack",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person attacking another individual in a public place",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a victim being physically assaulted by a single attacker",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Burglary": [
+      {
+        "text": "a surveillance frame of an intruder forcing a doorway",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person prying a lock to enter a restricted room",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a masked intruder breaking a barrier into private property",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a suspect searching drawers and shelves after unauthorized entry",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an intruder carrying stolen items from a damaged entrance",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a person climbing through a window into closed property",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a suspicious person slipping inside after a doorway opens",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a burglar moving quietly through a room collecting valuables",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person damaging a lock to access an interior space",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an intruder exiting a building with bags or electronics",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an intruder exiting through a damaged entry point",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an intruder forcing entry through a locked doorway",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a person prying a lock before entering property",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a masked intruder breaking into a closed building",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a person climbing through a window into private space",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "an intruder entering rooms after damaging an entry point",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "an intruder manipulating a lock at a doorway",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person prying open access to a restricted room",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a masked intruder entering a closed building interior",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "an intruder searching inside rooms after unauthorized entry",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person illegally entering a building to steal property",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a burglar breaking into a house or restricted building",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person forcing entry into a closed building",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "an intruder searching inside a building after unauthorized entry",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person entering private property without permission",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Explosion": [
+      {
+        "text": "a sudden blast creating a fireball, smoke, and debris",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a vehicle or structure bursting violently with scattered fragments",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a bright flash followed by an expanding smoke cloud",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "an explosive impact throwing debris across a street",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a large fireball expanding after an abrupt detonation",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a shockwave shaking the scene while smoke engulfs objects",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "an object detonating and damaging the surrounding area",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a blast plume rising as fragments scatter on the road",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a sudden light burst with heavy smoke and debris",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a violent detonation damaging a vehicle or nearby building",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "an instant blast wave with fireball and flying fragments",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a sudden detonation producing shockwave and expanding smoke plume",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a bright flash followed by rapid explosive pressure burst",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an object erupting violently with an outward debris cloud",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a large fireball appearing immediately after explosive detonation",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a shockwave pushing smoke and fragments away from impact",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a violent pressure burst scattering debris in every direction",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a sudden explosive plume rising from a detonation point",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a rapid blast creating flash, shockwave, and airborne debris",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a concentrated detonation expanding outward within seconds",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an instant detonation expanding from a blast center",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a shockwave pushing fragments outward within seconds",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a structure bursting apart from explosive force",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a concentrated blast throwing debris radially outward",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a sudden pressure wave following a visible detonation",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a blast center expanding into a radial debris cloud",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a sudden shock front spreading from one point",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "an object rupturing outward in a single instant",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a compact detonation producing outward airborne fragments",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a pressure blast expanding faster than surrounding motion",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a sudden explosion causing fire, smoke, and flying debris",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a powerful blast destroying an object or structure",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "an explosive event with a large fireball and smoke cloud",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a scene showing damage caused by an explosive blast",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a violent explosion producing scattered debris and destruction",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Fighting": [
+      {
+        "text": "a group of people exchanging punches and kicks",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "several people grappling, pushing, and swinging arms",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "two opponents separating and reengaging in a brawl",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "multiple individuals shoving and wrestling in public",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "two groups clashing in a chaotic physical fight",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "fighters grabbing clothing while others join the conflict",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a crowd surrounding combatants in an escalating brawl",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "people trading blows while moving unpredictably through space",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a mutual fight continuing despite attempts to separate",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a brawl with repeated grappling, striking, and falling",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "two groups mutually exchanging punches in a crowded brawl",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "several participants striking each other during mutual combat",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "opponents separating and reengaging repeatedly in a group fight",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "multiple people wrestling and swinging arms at each other",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a crowd circling two sides fighting each other",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "several combatants pushing, grappling, and striking simultaneously",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "two sides clashing back and forth in public space",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "multiple participants falling and rejoining a chaotic brawl",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "people on both sides trading blows in close quarters",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a mutual street fight with several active combatants",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "two groups mutually exchanging punches in a brawl",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "multiple participants striking each other during mutual combat",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "opponents separating and reengaging in group fighting",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "several combatants grappling and swinging simultaneously",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "two sides clashing back and forth in public",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "two or more people physically fighting each other",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a group of people involved in a violent fight or brawl",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "multiple people punching and attacking each other",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "people engaging in mutual physical combat",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a public fight where both sides are physically attacking",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "RoadAccidents": [
+      {
+        "text": "a vehicle collision causing impact, debris, and disruption",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a car striking a pedestrian or cyclist on the road",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a motorbike sliding across a lane after a crash",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "vehicles swerving and colliding during a sudden accident",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a pedestrian knocked down by a vehicle near a crossing",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a damaged vehicle stopped and blocking the roadway",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a rider thrown onto pavement after a high speed impact",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a traffic accident with a vehicle spinning to a halt",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a car hitting an obstacle with sudden debris",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a motorbike rider falling during an intersection collision",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a vehicle collision causing roadway impact and disruption",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a car striking a pedestrian or cyclist on road",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a motorbike sliding across a lane after collision",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "vehicles swerving before colliding in traffic",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a crashed vehicle blocking lanes after impact",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "vehicles colliding at an intersection on the roadway",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a crashed vehicle blocking lanes after roadway impact",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "vehicles involved in a traffic accident on a road",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a damaged vehicle after a collision or crash",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a car or motorcycle accident causing road damage",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "vehicles colliding and creating a traffic accident scene",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a roadway with crashed vehicles after an accident",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Robbery": [
+      {
+        "text": "a threatening person forcing a victim to surrender valuables",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "an aggressor confronting someone and grabbing a purse or wallet",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a victim handing over belongings under close range intimidation",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a robber snatching property and escaping quickly",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person threatening a clerk and demanding money",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an attacker cornering a victim and seizing personal items",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a forced handover following a visible threat gesture",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a suspect taking valuables while the victim backs away",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person brandishing a weapon to demand property",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a robber approaching a victim and leaving with belongings",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an aggressor confronting someone and taking a purse or wallet",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a coerced handover of valuables during visible intimidation",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a victim handing belongings under close range intimidation",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "an attacker cornering a victim and seizing items",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a robber confronting a victim before taking belongings",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a threatening person demanding valuables from a victim",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a victim handing belongings during close intimidation",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a robber confronting someone and taking personal items",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a weapon used to force a property handover",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a victim backing away while valuables are taken",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person threatening another person while taking their belongings",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a robbery where someone uses intimidation or force to steal property",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person confronting a victim and demanding valuables",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "an armed person committing a robbery against another person",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a criminal taking possessions from someone through threats",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Shooting": [
+      {
+        "text": "an armed person aiming a firearm and firing shots",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a gunman pointing a weapon as people scatter",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a muzzle flash appearing as a shooter targets someone",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person firing a handgun and causing panic",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an armed attacker discharging a weapon in public",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a victim falling after a nearby firearm is fired",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a shooter raising a gun while a crowd runs",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a gunfire scene with fear and rapid dispersal",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person aiming a rifle or handgun at a target",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a shooter stance with recoil and fleeing people",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "an armed shooter firing as people flee the scene",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "an armed person aiming and firing a firearm",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a visible muzzle flash from a discharged gun",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a shooter raising a gun before firing",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person firing a handgun in surveillance footage",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "an armed shooter discharging a weapon toward people",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person firing a gun at another person",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "an armed person aiming and shooting a firearm",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a shooting incident involving a visible gun",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person using a firearm during a violent event",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a gun being fired in a public area",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Shoplifting": [
+      {
+        "text": "a shopper concealing merchandise inside clothing or a bag",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person removing a store item without checkout",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a customer hiding a product and exiting an aisle",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a shopper slipping goods into a bag while browsing",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person scanning surroundings before pocketing merchandise",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "someone carrying an unpaid item past the cashier",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "concealed goods disappearing beneath a jacket in a store",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a customer manipulating shelf products and hiding one item",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a suspect leaving a shop while holding unpaid merchandise",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a retail theft scene with discreet concealment and exit",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a customer hiding one item while handling shelf products",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a shopper leaving a store with concealed unpaid merchandise",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a shopper concealing merchandise inside clothing or bag",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person hiding a retail item while browsing shelves",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "store goods disappearing beneath a jacket while shopping",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a shopper slipping merchandise into a bag in aisle",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a customer exiting retail space with concealed merchandise",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person secretly taking merchandise from a store without paying",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a shopper hiding store products inside clothing or a bag",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person stealing items from a retail store",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a customer leaving a shop with concealed merchandise",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person removing store goods without permission",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Stealing": [
+      {
+        "text": "a person taking unattended property and leaving quickly",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a thief grabbing a bicycle, bag, phone, or object",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a suspect approaching a valuable item and carrying it away",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "unattended belongings disappearing after suspicious human contact",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person lifting property while the owner is distracted",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a thief cutting a lock and taking a bicycle",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a suspect removing a package or bag from public space",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person pocketing an unattended item and changing direction",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a valuable object being taken stealthily during distraction",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a thief carrying stolen property away without confrontation",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a thief quietly taking property during owner distraction",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a thief carrying stolen property away from the scene",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a suspect carrying property while the owner is distracted",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json",
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a thief quietly removing property from public space",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a person taking an unattended bag and leaving",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a thief lifting a phone or package from public space",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person pocketing an unattended item and walking away",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a thief removing a bicycle after handling its lock",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person taking another person's property without permission",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person secretly stealing an unattended object",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person removing someone's belongings and leaving",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a thief taking personal property in a public place",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person carrying away stolen items",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ],
+    "Vandalism": [
+      {
+        "text": "a person damaging property by smashing a window or door",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "someone kicking or striking an object until it breaks",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a suspect spraying graffiti on a wall or vehicle",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a person breaking glass with repeated tool impacts",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a vandal throwing an object at a storefront or car",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "deliberate destruction of signs, windows, equipment, or furniture",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a person scratching and denting a parked vehicle",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json",
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "public property being defaced with paint or graffiti",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a suspect repeatedly hitting a fixture until pieces break",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "property damage happening without theft, fire, or confrontation",
+        "sources": [
+          "ucf_manual_class_prompts_10x.json"
+        ]
+      },
+      {
+        "text": "a person smashing a window or door with force",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json",
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "someone kicking a fixture until visible pieces break",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a suspect spraying graffiti onto a wall with a can",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "someone striking public property until visible damage appears",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person painting graffiti directly onto public property",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a suspect repeatedly hitting a fixture until it breaks",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a person deliberately damaging property without taking anything",
+        "sources": [
+          "ucf_manual_class_prompts_10x_v2.json"
+        ]
+      },
+      {
+        "text": "a suspect spraying graffiti directly onto public property",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "someone striking fixtures until visible damage appears",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a person deliberately damaging property with tools or kicks",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v3.json"
+        ]
+      },
+      {
+        "text": "a person spraying paint across a wall surface",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "someone scratching a parked vehicle with a tool",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person repeatedly kicking a public fixture",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a vandal hitting a sign until it bends",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person marking property with deliberate graffiti strokes",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v4.json"
+        ]
+      },
+      {
+        "text": "a person intentionally damaging public or private property",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person destroying or defacing objects without taking them",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person damaging a wall, vehicle, or public facility",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "property being damaged through vandalism or destruction",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      },
+      {
+        "text": "a person breaking or marking property in a destructive way",
+        "sources": [
+          "ucf_manual_class_prompts_5x_v5.json"
+        ]
+      }
+    ]
+  }
+}

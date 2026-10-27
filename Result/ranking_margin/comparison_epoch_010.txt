@@ -1,0 +1,39 @@
+/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+Test videos: 290
+
+Baseline
+  classifier_auc: 87.72
+  classifier_ap:  33.13
+  alignment_auc:  86.52
+  alignment_ap:   28.23
+  best_auc:       87.72 (classifier)
+  ano_auc:        69.94
+  mAP is computed from alignment branch logits2, matching existing VadCLIP code.
+  mAP@0.1: 14.12
+  mAP@0.2: 9.47
+  mAP@0.3: 6.63
+  mAP@0.4: 4.27
+  mAP@0.5: 3.34
+  avg_mAP: 7.57
+
+Description-guided
+  classifier_auc: 86.57
+  classifier_ap:  30.62
+  alignment_auc:  85.62
+  alignment_ap:   26.30
+  best_auc:       86.57 (classifier)
+  ano_auc:        67.36
+  mAP is computed from alignment branch logits2, matching existing VadCLIP code.
+  mAP@0.1: 12.55
+  mAP@0.2: 8.88
+  mAP@0.3: 5.32
+  mAP@0.4: 4.32
+  mAP@0.5: 3.64
+  avg_mAP: 6.94
+
+Comparison
+Model,best_auc,ano_auc,mAP@0.1,mAP@0.2,mAP@0.3,mAP@0.4,mAP@0.5,avg_mAP
+Baseline,87.72,69.94,14.12,9.47,6.63,4.27,3.34,7.57
+Description,86.57,67.36,12.55,8.88,5.32,4.32,3.64,6.94
+Delta,-1.15,-2.58,-1.57,-0.59,-1.30,+0.05,+0.29,-0.62

@@ -1,0 +1,35 @@
+{
+  "old_style": {
+    "heldout_coverage_at_development_p05": 0.93171875,
+    "false_high_vs_missed_auc": 44.38335149762994,
+    "false_high_minus_missed_similarity_gap": -0.023538172245025635,
+    "classes_with_positive_false_high_minus_missed_gap": 4,
+    "classes_evaluated": 13,
+    "best_rescore_gamma": 1.0,
+    "best_rescore_auc_delta": 0.0030018649760705785,
+    "best_rescore_ap_delta": 0.008260139982816384,
+    "passes_initial_gate": false
+  },
+  "expanded": {
+    "heldout_coverage_at_development_p05": 0.8971875,
+    "false_high_vs_missed_auc": 45.19970066979484,
+    "false_high_minus_missed_similarity_gap": -0.01758342981338501,
+    "classes_with_positive_false_high_minus_missed_gap": 5,
+    "classes_evaluated": 13,
+    "best_rescore_gamma": 1.0,
+    "best_rescore_auc_delta": 0.011639113525987455,
+    "best_rescore_ap_delta": 0.01877919361051994,
+    "passes_initial_gate": false
+  },
+  "hybrid": {
+    "heldout_coverage_at_development_p05": 0.788828125,
+    "false_high_vs_missed_auc": 46.93402335906789,
+    "false_high_minus_missed_similarity_gap": -0.00755840539932251,
+    "classes_with_positive_false_high_minus_missed_gap": 6,
+    "classes_evaluated": 13,
+    "best_rescore_gamma": 1.0,
+    "best_rescore_auc_delta": 0.002520791465030925,
+    "best_rescore_ap_delta": 0.004768043396836674,
+    "passes_initial_gate": false
+  }
+}

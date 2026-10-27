@@ -1,0 +1,2639 @@
+{
+  "top15_context_delta_by_group": {
+    "true_high_abnormal_video": {
+      "count": 1542,
+      "mean": -0.0018114555086461532,
+      "median": -0.0016941935755312443,
+      "positive_fraction": 0.016861219195849545
+    },
+    "false_high_abnormal_video": {
+      "count": 2854,
+      "mean": -0.001780884513918188,
+      "median": -0.0016664568101987243,
+      "positive_fraction": 0.000350385423966363
+    },
+    "false_high_normal_video": {
+      "count": 6141,
+      "mean": -0.003630311854226024,
+      "median": -0.0036120142322033644,
+      "positive_fraction": 0.0
+    }
+  },
+  "paired_abnormal_video_true_minus_false_high_delta": {
+    "count": 72,
+    "mean": -4.24825649751222e-05,
+    "median": -1.952773399186065e-05
+  },
+  "per_video": [
+    {
+      "video_id": "Abuse028_x264",
+      "label": "Abuse",
+      "video_context_probability": 0.9443204402923584,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 14,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0016856929453622019
+    },
+    {
+      "video_id": "Abuse030_x264",
+      "label": "Abuse",
+      "video_context_probability": 0.9674404859542847,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 15,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0022915373866756756
+    },
+    {
+      "video_id": "Arrest001_x264",
+      "label": "Arrest",
+      "video_context_probability": 0.18267467617988586,
+      "top15_true_high_count": 18,
+      "top15_false_high_count": 5,
+      "top15_true_high_mean_delta": -0.0011926536228404278,
+      "top15_false_high_mean_delta": -0.0013912216061726212
+    },
+    {
+      "video_id": "Arrest007_x264",
+      "label": "Arrest",
+      "video_context_probability": 0.6026875376701355,
+      "top15_true_high_count": 23,
+      "top15_false_high_count": 7,
+      "top15_true_high_mean_delta": -0.001122158152334716,
+      "top15_false_high_mean_delta": -0.0027967318892478943
+    },
+    {
+      "video_id": "Arrest024_x264",
+      "label": "Arrest",
+      "video_context_probability": 0.9900152087211609,
+      "top15_true_high_count": 23,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": -0.001797166455577573,
+      "top15_false_high_mean_delta": -0.0012347399024292827
+    },
+    {
+      "video_id": "Arrest030_x264",
+      "label": "Arrest",
+      "video_context_probability": 0.9789146184921265,
+      "top15_true_high_count": 23,
+      "top15_false_high_count": 58,
+      "top15_true_high_mean_delta": -0.0002894730347654094,
+      "top15_false_high_mean_delta": -0.0003208219962383235
+    },
+    {
+      "video_id": "Arrest039_x264",
+      "label": "Arrest",
+      "video_context_probability": 0.3343115448951721,
+      "top15_true_high_count": 15,
+      "top15_false_high_count": 134,
+      "top15_true_high_mean_delta": -0.0014835702410588663,
+      "top15_false_high_mean_delta": -0.0012458939445830549
+    },
+    {
+      "video_id": "Arson007_x264",
+      "label": "Arson",
+      "video_context_probability": 0.9841485023498535,
+      "top15_true_high_count": 20,
+      "top15_false_high_count": 39,
+      "top15_true_high_mean_delta": -0.0021986267704050986,
+      "top15_false_high_mean_delta": -0.00205790896105986
+    },
+    {
+      "video_id": "Arson009_x264",
+      "label": "Arson",
+      "video_context_probability": 0.9866887927055359,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 7,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0010090432312738682
+    },
+    {
+      "video_id": "Arson010_x264",
+      "label": "Arson",
+      "video_context_probability": 0.8198108673095703,
+      "top15_true_high_count": 7,
+      "top15_false_high_count": 23,
+      "top15_true_high_mean_delta": -0.002530311600172094,
+      "top15_false_high_mean_delta": -0.0027225414979393067
+    },
+    {
+      "video_id": "Arson011_x264",
+      "label": "Arson",
+      "video_context_probability": 0.9713318347930908,
+      "top15_true_high_count": 12,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.000467846606625244,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Arson016_x264",
+      "label": "Arson",
+      "video_context_probability": 0.8875101208686829,
+      "top15_true_high_count": 17,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.0015421700321466608,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Arson018_x264",
+      "label": "Arson",
+      "video_context_probability": 0.9822174906730652,
+      "top15_true_high_count": 1,
+      "top15_false_high_count": 7,
+      "top15_true_high_mean_delta": -0.001776056713424623,
+      "top15_false_high_mean_delta": -0.0017481093860364386
+    },
+    {
+      "video_id": "Arson022_x264",
+      "label": "Arson",
+      "video_context_probability": 0.4277766942977905,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 81,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0017706397913660808
+    },
+    {
+      "video_id": "Arson035_x264",
+      "label": "Arson",
+      "video_context_probability": 0.9539428353309631,
+      "top15_true_high_count": 11,
+      "top15_false_high_count": 3,
+      "top15_true_high_mean_delta": -0.0017755737803368406,
+      "top15_false_high_mean_delta": -0.0020482861436903477
+    },
+    {
+      "video_id": "Arson041_x264",
+      "label": "Arson",
+      "video_context_probability": 0.9832642674446106,
+      "top15_true_high_count": 35,
+      "top15_false_high_count": 1,
+      "top15_true_high_mean_delta": -0.0012464636171768818,
+      "top15_false_high_mean_delta": -0.0006500572781078517
+    },
+    {
+      "video_id": "Assault006_x264",
+      "label": "Assault",
+      "video_context_probability": 0.9578033089637756,
+      "top15_true_high_count": 76,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.0009808617657032109,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Assault010_x264",
+      "label": "Assault",
+      "video_context_probability": 0.9467199444770813,
+      "top15_true_high_count": 59,
+      "top15_false_high_count": 93,
+      "top15_true_high_mean_delta": -0.0009699803865830398,
+      "top15_false_high_mean_delta": -0.0012226095792376786
+    },
+    {
+      "video_id": "Assault011_x264",
+      "label": "Assault",
+      "video_context_probability": 0.5324143171310425,
+      "top15_true_high_count": 11,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": -0.004039676859974861,
+      "top15_false_high_mean_delta": -0.004130195868624883
+    },
+    {
+      "video_id": "Burglary005_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.892943799495697,
+      "top15_true_high_count": 18,
+      "top15_false_high_count": 55,
+      "top15_true_high_mean_delta": -0.0025677605816680524,
+      "top15_false_high_mean_delta": -0.0025443861134011635
+    },
+    {
+      "video_id": "Burglary017_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.96568363904953,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 20,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0013910067005781456
+    },
+    {
+      "video_id": "Burglary018_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.9273635745048523,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0031819401351227
+    },
+    {
+      "video_id": "Burglary021_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.9679548144340515,
+      "top15_true_high_count": 5,
+      "top15_false_high_count": 10,
+      "top15_true_high_mean_delta": -0.002573818480595946,
+      "top15_false_high_mean_delta": -0.0019062866806052626
+    },
+    {
+      "video_id": "Burglary024_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.5608287453651428,
+      "top15_true_high_count": 25,
+      "top15_false_high_count": 9,
+      "top15_true_high_mean_delta": -0.002485362170264125,
+      "top15_false_high_mean_delta": -0.0018178974666322272
+    },
+    {
+      "video_id": "Burglary032_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.9236891865730286,
+      "top15_true_high_count": 57,
+      "top15_false_high_count": 92,
+      "top15_true_high_mean_delta": -0.0019242039109629236,
+      "top15_false_high_mean_delta": -0.0017805924656821171
+    },
+    {
+      "video_id": "Burglary033_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.9138652086257935,
+      "top15_true_high_count": 12,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.0012414273417865236,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Burglary035_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.9926948547363281,
+      "top15_true_high_count": 31,
+      "top15_false_high_count": 7,
+      "top15_true_high_mean_delta": -0.00158509717232758,
+      "top15_false_high_mean_delta": -0.001350868327010955
+    },
+    {
+      "video_id": "Burglary037_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.986684262752533,
+      "top15_true_high_count": 18,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.0012170180044550863,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Burglary061_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.8265675902366638,
+      "top15_true_high_count": 62,
+      "top15_false_high_count": 23,
+      "top15_true_high_mean_delta": -0.0017132227076217532,
+      "top15_false_high_mean_delta": -0.0021758660137572365
+    },
+    {
+      "video_id": "Burglary076_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.6677473187446594,
+      "top15_true_high_count": 13,
+      "top15_false_high_count": 109,
+      "top15_true_high_mean_delta": -0.001899534952826798,
+      "top15_false_high_mean_delta": -0.0018622631211380619
+    },
+    {
+      "video_id": "Burglary079_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.8312329053878784,
+      "top15_true_high_count": 137,
+      "top15_false_high_count": 3,
+      "top15_true_high_mean_delta": -0.002670622482576346,
+      "top15_false_high_mean_delta": -0.002781207673251629
+    },
+    {
+      "video_id": "Burglary092_x264",
+      "label": "Burglary",
+      "video_context_probability": 0.975059449672699,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 6,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0008975898187297086
+    },
+    {
+      "video_id": "Explosion002_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.8029294610023499,
+      "top15_true_high_count": 13,
+      "top15_false_high_count": 25,
+      "top15_true_high_mean_delta": -0.0016784952022135258,
+      "top15_false_high_mean_delta": -0.0018682469241321088
+    },
+    {
+      "video_id": "Explosion004_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9937372207641602,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 18,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0013516841249333487
+    },
+    {
+      "video_id": "Explosion007_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.975846529006958,
+      "top15_true_high_count": 1,
+      "top15_false_high_count": 152,
+      "top15_true_high_mean_delta": -0.0008657343569211662,
+      "top15_false_high_mean_delta": -0.0007988080276271304
+    },
+    {
+      "video_id": "Explosion008_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.8914427161216736,
+      "top15_true_high_count": 7,
+      "top15_false_high_count": 10,
+      "top15_true_high_mean_delta": -0.0017868014484910028,
+      "top15_false_high_mean_delta": -0.0018332704668864608
+    },
+    {
+      "video_id": "Explosion010_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.7501205801963806,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 24,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0012475389812607318
+    },
+    {
+      "video_id": "Explosion011_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.09656462073326111,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 15,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.004134246706962585
+    },
+    {
+      "video_id": "Explosion013_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.8591430187225342,
+      "top15_true_high_count": 21,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": -0.00014561542249815656,
+      "top15_false_high_mean_delta": -0.0008184077821417966
+    },
+    {
+      "video_id": "Explosion016_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.5833101868629456,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 9,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0027445669855094617
+    },
+    {
+      "video_id": "Explosion017_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9721473455429077,
+      "top15_true_high_count": 16,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.0012014132225885987,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Explosion020_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9750369191169739,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 12,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0016270528722088784
+    },
+    {
+      "video_id": "Explosion021_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9853750467300415,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 8,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0004726153929368593
+    },
+    {
+      "video_id": "Explosion022_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.4108755886554718,
+      "top15_true_high_count": 13,
+      "top15_false_high_count": 21,
+      "top15_true_high_mean_delta": -0.0008362160879187286,
+      "top15_false_high_mean_delta": -0.0016410026804632729
+    },
+    {
+      "video_id": "Explosion025_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.1018257662653923,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 5,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0027195351663976907
+    },
+    {
+      "video_id": "Explosion027_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9371007084846497,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 8,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0014557873946614563
+    },
+    {
+      "video_id": "Explosion028_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9350739121437073,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 16,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0013065280290902592
+    },
+    {
+      "video_id": "Explosion029_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9829609990119934,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 23,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.001339404312286364
+    },
+    {
+      "video_id": "Explosion033_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.8198376893997192,
+      "top15_true_high_count": 30,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.0012061096592030178,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Explosion035_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9622653722763062,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 27,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0010286932897374586
+    },
+    {
+      "video_id": "Explosion036_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9927335977554321,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 50,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.001337347615044564
+    },
+    {
+      "video_id": "Explosion039_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9765977263450623,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 10,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0006452928471844643
+    },
+    {
+      "video_id": "Explosion043_x264",
+      "label": "Explosion",
+      "video_context_probability": 0.9529855847358704,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 72,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0014522258740422938
+    },
+    {
+      "video_id": "Fighting003_x264",
+      "label": "Fighting",
+      "video_context_probability": 0.9881445169448853,
+      "top15_true_high_count": 27,
+      "top15_false_high_count": 2,
+      "top15_true_high_mean_delta": 5.875501912871389e-05,
+      "top15_false_high_mean_delta": -1.8209992049378343e-05
+    },
+    {
+      "video_id": "Fighting018_x264",
+      "label": "Fighting",
+      "video_context_probability": 0.9876551032066345,
+      "top15_true_high_count": 10,
+      "top15_false_high_count": 3,
+      "top15_true_high_mean_delta": -0.0002980660618050024,
+      "top15_false_high_mean_delta": -0.0002453000391445433
+    },
+    {
+      "video_id": "Fighting033_x264",
+      "label": "Fighting",
+      "video_context_probability": 0.9838407635688782,
+      "top15_true_high_count": 11,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.00025343604846222496,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Fighting042_x264",
+      "label": "Fighting",
+      "video_context_probability": 0.9771788120269775,
+      "top15_true_high_count": 21,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.0010376106809070777,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Fighting047_x264",
+      "label": "Fighting",
+      "video_context_probability": 0.9405125379562378,
+      "top15_true_high_count": 34,
+      "top15_false_high_count": 8,
+      "top15_true_high_mean_delta": -0.0002882488671970992,
+      "top15_false_high_mean_delta": -0.0004847521340707317
+    },
+    {
+      "video_id": "RoadAccidents001_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.9928953051567078,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 13,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0007272037686421894
+    },
+    {
+      "video_id": "RoadAccidents002_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.41356411576271057,
+      "top15_true_high_count": 2,
+      "top15_false_high_count": 2,
+      "top15_true_high_mean_delta": -0.0008624419278930873,
+      "top15_false_high_mean_delta": -0.0004411775153130293
+    },
+    {
+      "video_id": "RoadAccidents004_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.17344851791858673,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 4,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.002367257431615144
+    },
+    {
+      "video_id": "RoadAccidents009_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.4694904386997223,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 9,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0027671122225001454
+    },
+    {
+      "video_id": "RoadAccidents010_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.9053657054901123,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 5,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.002103870315477252
+    },
+    {
+      "video_id": "RoadAccidents011_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.766110360622406,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 21,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0027956818840244695
+    },
+    {
+      "video_id": "RoadAccidents012_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.25706490874290466,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 5,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0029302812181413174
+    },
+    {
+      "video_id": "RoadAccidents016_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.15030451118946075,
+      "top15_true_high_count": 8,
+      "top15_false_high_count": 13,
+      "top15_true_high_mean_delta": -0.0030881733691785485,
+      "top15_false_high_mean_delta": -0.0032219411805272102
+    },
+    {
+      "video_id": "RoadAccidents017_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.7160083651542664,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 3,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0018575938108066719
+    },
+    {
+      "video_id": "RoadAccidents019_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.9162151217460632,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 13,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.002419229086416845
+    },
+    {
+      "video_id": "RoadAccidents020_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.8858192563056946,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 17,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0037233918110894807
+    },
+    {
+      "video_id": "RoadAccidents021_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.8612091541290283,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 2,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0021396930096670985
+    },
+    {
+      "video_id": "RoadAccidents022_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.43112245202064514,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 7,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0026056549312280758
+    },
+    {
+      "video_id": "RoadAccidents121_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.9843953847885132,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 18,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.001709665003646579
+    },
+    {
+      "video_id": "RoadAccidents122_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.8893841505050659,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 6,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0013331128478360672
+    },
+    {
+      "video_id": "RoadAccidents123_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.756648063659668,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 10,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0032610576367005707
+    },
+    {
+      "video_id": "RoadAccidents124_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.9758811593055725,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 14,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.001434727297497115
+    },
+    {
+      "video_id": "RoadAccidents125_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.8897533416748047,
+      "top15_true_high_count": 6,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": -0.002331882521199683,
+      "top15_false_high_mean_delta": -0.0024539866611700168
+    },
+    {
+      "video_id": "RoadAccidents127_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.09779734909534454,
+      "top15_true_high_count": 4,
+      "top15_false_high_count": 21,
+      "top15_true_high_mean_delta": -0.0035472327726893127,
+      "top15_false_high_mean_delta": -0.0036332419896054837
+    },
+    {
+      "video_id": "RoadAccidents128_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.9690519571304321,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 6,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.002368891922136148
+    },
+    {
+      "video_id": "RoadAccidents131_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.8829129338264465,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 15,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.002158518445988496
+    },
+    {
+      "video_id": "RoadAccidents132_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.44755637645721436,
+      "top15_true_high_count": 5,
+      "top15_false_high_count": 13,
+      "top15_true_high_mean_delta": -0.0037008950021117926,
+      "top15_false_high_mean_delta": -0.0030549170915037394
+    },
+    {
+      "video_id": "RoadAccidents133_x264",
+      "label": "RoadAccidents",
+      "video_context_probability": 0.973409116268158,
+      "top15_true_high_count": 5,
+      "top15_false_high_count": 2,
+      "top15_true_high_mean_delta": -0.0020177435129880906,
+      "top15_false_high_mean_delta": -0.0019449288956820965
+    },
+    {
+      "video_id": "Robbery048_x264",
+      "label": "Robbery",
+      "video_context_probability": 0.9506946206092834,
+      "top15_true_high_count": 14,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.0011660279456659087,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Robbery050_x264",
+      "label": "Robbery",
+      "video_context_probability": 0.15057264268398285,
+      "top15_true_high_count": 15,
+      "top15_false_high_count": 1,
+      "top15_true_high_mean_delta": -0.004581367534895738,
+      "top15_false_high_mean_delta": -0.0020668862853199244
+    },
+    {
+      "video_id": "Robbery102_x264",
+      "label": "Robbery",
+      "video_context_probability": 0.9820029735565186,
+      "top15_true_high_count": 18,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.001434783884582834,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Robbery106_x264",
+      "label": "Robbery",
+      "video_context_probability": 0.8095250725746155,
+      "top15_true_high_count": 8,
+      "top15_false_high_count": 4,
+      "top15_true_high_mean_delta": -0.004016763297840953,
+      "top15_false_high_mean_delta": -0.004099984536878765
+    },
+    {
+      "video_id": "Robbery137_x264",
+      "label": "Robbery",
+      "video_context_probability": 0.9327085614204407,
+      "top15_true_high_count": 21,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.001479690445453993,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Shooting002_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9876608848571777,
+      "top15_true_high_count": 6,
+      "top15_false_high_count": 6,
+      "top15_true_high_mean_delta": -0.0015010177157819271,
+      "top15_false_high_mean_delta": -0.0015204131098774571
+    },
+    {
+      "video_id": "Shooting004_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9252945780754089,
+      "top15_true_high_count": 11,
+      "top15_false_high_count": 6,
+      "top15_true_high_mean_delta": -0.0015024158637970686,
+      "top15_false_high_mean_delta": -0.0016076581669040024
+    },
+    {
+      "video_id": "Shooting007_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9796825051307678,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 14,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.001514019220069583
+    },
+    {
+      "video_id": "Shooting008_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.6139236688613892,
+      "top15_true_high_count": 15,
+      "top15_false_high_count": 1,
+      "top15_true_high_mean_delta": -0.0008917987230233848,
+      "top15_false_high_mean_delta": -0.0010463081998750567
+    },
+    {
+      "video_id": "Shooting010_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9520102739334106,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 25,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0023668834567070005
+    },
+    {
+      "video_id": "Shooting011_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9900954961776733,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 38,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0013250179166023276
+    },
+    {
+      "video_id": "Shooting013_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9903378486633301,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0025644272946837273
+    },
+    {
+      "video_id": "Shooting015_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9780550599098206,
+      "top15_true_high_count": 6,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": -0.0010245773592032492,
+      "top15_false_high_mean_delta": -0.0005312691500876099
+    },
+    {
+      "video_id": "Shooting018_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.980340838432312,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 17,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0011745761354070377
+    },
+    {
+      "video_id": "Shooting019_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.97764652967453,
+      "top15_true_high_count": 15,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": -0.0016350756321723261,
+      "top15_false_high_mean_delta": -0.0020148731260137124
+    },
+    {
+      "video_id": "Shooting021_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9262884259223938,
+      "top15_true_high_count": 9,
+      "top15_false_high_count": 3,
+      "top15_true_high_mean_delta": -0.0028801304805609915,
+      "top15_false_high_mean_delta": -0.002456416880401472
+    },
+    {
+      "video_id": "Shooting022_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.722983181476593,
+      "top15_true_high_count": 29,
+      "top15_false_high_count": 14,
+      "top15_true_high_mean_delta": -0.0016144726040034458,
+      "top15_false_high_mean_delta": -0.0016994803778028914
+    },
+    {
+      "video_id": "Shooting024_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.957455575466156,
+      "top15_true_high_count": 7,
+      "top15_false_high_count": 12,
+      "top15_true_high_mean_delta": -0.0024932182194398983,
+      "top15_false_high_mean_delta": -0.002477537219723066
+    },
+    {
+      "video_id": "Shooting026_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9853907823562622,
+      "top15_true_high_count": 4,
+      "top15_false_high_count": 10,
+      "top15_true_high_mean_delta": -0.001374429150018841,
+      "top15_false_high_mean_delta": -0.0016836161958053708
+    },
+    {
+      "video_id": "Shooting028_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9120736718177795,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 18,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.001028466051340931
+    },
+    {
+      "video_id": "Shooting032_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.5663512945175171,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 204,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0011637027702960825
+    },
+    {
+      "video_id": "Shooting033_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9882526993751526,
+      "top15_true_high_count": 13,
+      "top15_false_high_count": 21,
+      "top15_true_high_mean_delta": -0.0021336540185774746,
+      "top15_false_high_mean_delta": -0.0019939318798216327
+    },
+    {
+      "video_id": "Shooting034_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9690722227096558,
+      "top15_true_high_count": 5,
+      "top15_false_high_count": 9,
+      "top15_true_high_mean_delta": -0.0008972291019745171,
+      "top15_false_high_mean_delta": -0.0008091725046849913
+    },
+    {
+      "video_id": "Shooting037_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9439544677734375,
+      "top15_true_high_count": 3,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.002225822381054362,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Shooting043_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9872009754180908,
+      "top15_true_high_count": 3,
+      "top15_false_high_count": 15,
+      "top15_true_high_mean_delta": -0.001244283087241153,
+      "top15_false_high_mean_delta": -0.0010131645288007955
+    },
+    {
+      "video_id": "Shooting046_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.9466226100921631,
+      "top15_true_high_count": 7,
+      "top15_false_high_count": 41,
+      "top15_true_high_mean_delta": -0.0009336795358519469,
+      "top15_false_high_mean_delta": -0.0010521685684713104
+    },
+    {
+      "video_id": "Shooting047_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.7822084426879883,
+      "top15_true_high_count": 45,
+      "top15_false_high_count": 33,
+      "top15_true_high_mean_delta": -0.0027870573931270174,
+      "top15_false_high_mean_delta": -0.0035092675931413064
+    },
+    {
+      "video_id": "Shooting048_x264",
+      "label": "Shooting",
+      "video_context_probability": 0.09654898196458817,
+      "top15_true_high_count": 9,
+      "top15_false_high_count": 17,
+      "top15_true_high_mean_delta": -0.002904890337958932,
+      "top15_false_high_mean_delta": -0.0027744041084695388
+    },
+    {
+      "video_id": "Shoplifting001_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.7743604183197021,
+      "top15_true_high_count": 13,
+      "top15_false_high_count": 28,
+      "top15_true_high_mean_delta": -0.0017717833577010494,
+      "top15_false_high_mean_delta": -0.001599382035367723
+    },
+    {
+      "video_id": "Shoplifting004_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.9681910872459412,
+      "top15_true_high_count": 56,
+      "top15_false_high_count": 7,
+      "top15_true_high_mean_delta": -0.0019585511430964936,
+      "top15_false_high_mean_delta": -0.0017993786272459797
+    },
+    {
+      "video_id": "Shoplifting005_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.3664029836654663,
+      "top15_true_high_count": 9,
+      "top15_false_high_count": 10,
+      "top15_true_high_mean_delta": -0.002607822081901961,
+      "top15_false_high_mean_delta": -0.002866005548276007
+    },
+    {
+      "video_id": "Shoplifting007_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.7333733439445496,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 48,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.002846485319120499
+    },
+    {
+      "video_id": "Shoplifting010_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.06447607278823853,
+      "top15_true_high_count": 1,
+      "top15_false_high_count": 25,
+      "top15_true_high_mean_delta": -0.0032844040542840958,
+      "top15_false_high_mean_delta": -0.0028999402886256574
+    },
+    {
+      "video_id": "Shoplifting015_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.43565067648887634,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 22,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0016197583013722165
+    },
+    {
+      "video_id": "Shoplifting016_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.63216632604599,
+      "top15_true_high_count": 4,
+      "top15_false_high_count": 10,
+      "top15_true_high_mean_delta": -0.0024161278270184994,
+      "top15_false_high_mean_delta": -0.002084564382676035
+    },
+    {
+      "video_id": "Shoplifting017_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.8383103013038635,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 5,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.001509297569282353
+    },
+    {
+      "video_id": "Shoplifting020_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.8407135009765625,
+      "top15_true_high_count": 8,
+      "top15_false_high_count": 46,
+      "top15_true_high_mean_delta": -0.0010649143951013684,
+      "top15_false_high_mean_delta": -0.0011116686459306789
+    },
+    {
+      "video_id": "Shoplifting021_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.9348510503768921,
+      "top15_true_high_count": 8,
+      "top15_false_high_count": 26,
+      "top15_true_high_mean_delta": -0.001663906848989427,
+      "top15_false_high_mean_delta": -0.0021452638007198963
+    },
+    {
+      "video_id": "Shoplifting022_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.4641325771808624,
+      "top15_true_high_count": 14,
+      "top15_false_high_count": 7,
+      "top15_true_high_mean_delta": -0.002122154035272875,
+      "top15_false_high_mean_delta": -0.001601093465329281
+    },
+    {
+      "video_id": "Shoplifting027_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.02178194373846054,
+      "top15_true_high_count": 7,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": -0.0043021453145359245,
+      "top15_false_high_mean_delta": -0.00343461041550406
+    },
+    {
+      "video_id": "Shoplifting028_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.7640578746795654,
+      "top15_true_high_count": 10,
+      "top15_false_high_count": 3,
+      "top15_true_high_mean_delta": -0.0005556599848205223,
+      "top15_false_high_mean_delta": -0.00046013178265032667
+    },
+    {
+      "video_id": "Shoplifting029_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.3050587475299835,
+      "top15_true_high_count": 14,
+      "top15_false_high_count": 7,
+      "top15_true_high_mean_delta": -0.0030154772269140396,
+      "top15_false_high_mean_delta": -0.0028431726553078207
+    },
+    {
+      "video_id": "Shoplifting031_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.5711121559143066,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 5,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0013531388016417623
+    },
+    {
+      "video_id": "Shoplifting033_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.2148810625076294,
+      "top15_true_high_count": 6,
+      "top15_false_high_count": 3,
+      "top15_true_high_mean_delta": -0.0036258393665775657,
+      "top15_false_high_mean_delta": -0.00308302134120216
+    },
+    {
+      "video_id": "Shoplifting034_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.34838905930519104,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 112,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.002018230664751692
+    },
+    {
+      "video_id": "Shoplifting037_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.6606231927871704,
+      "top15_true_high_count": 2,
+      "top15_false_high_count": 11,
+      "top15_true_high_mean_delta": -0.002011918695643544,
+      "top15_false_high_mean_delta": -0.0014138085005635564
+    },
+    {
+      "video_id": "Shoplifting039_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.017489535734057426,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 27,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.00321320323187306
+    },
+    {
+      "video_id": "Shoplifting044_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.9151518940925598,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 137,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0017470960525700645
+    },
+    {
+      "video_id": "Shoplifting049_x264",
+      "label": "Shoplifting",
+      "video_context_probability": 0.9437042474746704,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 21,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": -0.0019244174583859387
+    },
+    {
+      "video_id": "Stealing019_x264",
+      "label": "Stealing",
+      "video_context_probability": 0.8320772647857666,
+      "top15_true_high_count": 2,
+      "top15_false_high_count": 44,
+      "top15_true_high_mean_delta": -0.0025632549077272415,
+      "top15_false_high_mean_delta": -0.0026015524741854856
+    },
+    {
+      "video_id": "Stealing036_x264",
+      "label": "Stealing",
+      "video_context_probability": 0.6313773393630981,
+      "top15_true_high_count": 7,
+      "top15_false_high_count": 17,
+      "top15_true_high_mean_delta": -0.003951470168041331,
+      "top15_false_high_mean_delta": -0.004073937313959879
+    },
+    {
+      "video_id": "Stealing058_x264",
+      "label": "Stealing",
+      "video_context_probability": 0.9415292143821716,
+      "top15_true_high_count": 47,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.003318364063198579,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Stealing062_x264",
+      "label": "Stealing",
+      "video_context_probability": 0.9671311378479004,
+      "top15_true_high_count": 13,
+      "top15_false_high_count": 2,
+      "top15_true_high_mean_delta": -0.0010467798789390004,
+      "top15_false_high_mean_delta": -0.0007267545734066516
+    },
+    {
+      "video_id": "Stealing079_x264",
+      "label": "Stealing",
+      "video_context_probability": 0.9513229727745056,
+      "top15_true_high_count": 22,
+      "top15_false_high_count": 33,
+      "top15_true_high_mean_delta": -0.0024981830078600483,
+      "top15_false_high_mean_delta": -0.0031231094899615555
+    },
+    {
+      "video_id": "Vandalism007_x264",
+      "label": "Vandalism",
+      "video_context_probability": 0.9465391039848328,
+      "top15_true_high_count": 10,
+      "top15_false_high_count": 1,
+      "top15_true_high_mean_delta": -0.0033542885445058345,
+      "top15_false_high_mean_delta": -0.003266564104706049
+    },
+    {
+      "video_id": "Vandalism015_x264",
+      "label": "Vandalism",
+      "video_context_probability": 0.9426774978637695,
+      "top15_true_high_count": 28,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": -0.0021822637894989123,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Vandalism017_x264",
+      "label": "Vandalism",
+      "video_context_probability": 0.9792278409004211,
+      "top15_true_high_count": 5,
+      "top15_false_high_count": 5,
+      "top15_true_high_mean_delta": -0.0006269480334594845,
+      "top15_false_high_mean_delta": -0.0005450512282550335
+    },
+    {
+      "video_id": "Vandalism028_x264",
+      "label": "Vandalism",
+      "video_context_probability": 0.8270096778869629,
+      "top15_true_high_count": 21,
+      "top15_false_high_count": 21,
+      "top15_true_high_mean_delta": -0.003280007080840213,
+      "top15_false_high_mean_delta": -0.003544716164469719
+    },
+    {
+      "video_id": "Vandalism036_x264",
+      "label": "Vandalism",
+      "video_context_probability": 0.9762560725212097,
+      "top15_true_high_count": 9,
+      "top15_false_high_count": 5,
+      "top15_true_high_mean_delta": -0.0017267041839659214,
+      "top15_false_high_mean_delta": -0.002208824176341295
+    },
+    {
+      "video_id": "Normal_Videos_003_x264",
+      "label": "Normal",
+      "video_context_probability": 0.0397888645529747,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_006_x264",
+      "label": "Normal",
+      "video_context_probability": 0.06695587188005447,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_010_x264",
+      "label": "Normal",
+      "video_context_probability": 0.14018607139587402,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_014_x264",
+      "label": "Normal",
+      "video_context_probability": 0.03385094925761223,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_015_x264",
+      "label": "Normal",
+      "video_context_probability": 0.03244781866669655,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_018_x264",
+      "label": "Normal",
+      "video_context_probability": 0.012295741587877274,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_019_x264",
+      "label": "Normal",
+      "video_context_probability": 0.3161843717098236,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_024_x264",
+      "label": "Normal",
+      "video_context_probability": 0.010102210566401482,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_025_x264",
+      "label": "Normal",
+      "video_context_probability": 0.012699275277554989,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_027_x264",
+      "label": "Normal",
+      "video_context_probability": 0.028112055733799934,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_033_x264",
+      "label": "Normal",
+      "video_context_probability": 0.009483934380114079,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_034_x264",
+      "label": "Normal",
+      "video_context_probability": 0.0086265429854393,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_041_x264",
+      "label": "Normal",
+      "video_context_probability": 0.059514109045267105,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_042_x264",
+      "label": "Normal",
+      "video_context_probability": 0.01458530593663454,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_048_x264",
+      "label": "Normal",
+      "video_context_probability": 0.02208012528717518,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_050_x264",
+      "label": "Normal",
+      "video_context_probability": 0.08035046607255936,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_051_x264",
+      "label": "Normal",
+      "video_context_probability": 0.4312838017940521,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_056_x264",
+      "label": "Normal",
+      "video_context_probability": 0.14207112789154053,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_059_x264",
+      "label": "Normal",
+      "video_context_probability": 0.19846665859222412,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_063_x264",
+      "label": "Normal",
+      "video_context_probability": 0.1230430155992508,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_067_x264",
+      "label": "Normal",
+      "video_context_probability": 0.016083598136901855,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_070_x264",
+      "label": "Normal",
+      "video_context_probability": 0.022886859253048897,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_100_x264",
+      "label": "Normal",
+      "video_context_probability": 0.018791476264595985,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_129_x264",
+      "label": "Normal",
+      "video_context_probability": 0.4191053807735443,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_150_x264",
+      "label": "Normal",
+      "video_context_probability": 0.026006538420915604,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_168_x264",
+      "label": "Normal",
+      "video_context_probability": 0.026023801416158676,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_175_x264",
+      "label": "Normal",
+      "video_context_probability": 0.3107417821884155,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_182_x264",
+      "label": "Normal",
+      "video_context_probability": 0.06649232655763626,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_189_x264",
+      "label": "Normal",
+      "video_context_probability": 0.6032324433326721,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_196_x264",
+      "label": "Normal",
+      "video_context_probability": 0.0227641724050045,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_203_x264",
+      "label": "Normal",
+      "video_context_probability": 0.02067900262773037,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_210_x264",
+      "label": "Normal",
+      "video_context_probability": 0.029062507674098015,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_217_x264",
+      "label": "Normal",
+      "video_context_probability": 0.25069668889045715,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_224_x264",
+      "label": "Normal",
+      "video_context_probability": 0.1304376870393753,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_246_x264",
+      "label": "Normal",
+      "video_context_probability": 0.06126820296049118,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_247_x264",
+      "label": "Normal",
+      "video_context_probability": 0.04082738608121872,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_248_x264",
+      "label": "Normal",
+      "video_context_probability": 0.014716162346303463,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_251_x264",
+      "label": "Normal",
+      "video_context_probability": 0.09315591305494308,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_289_x264",
+      "label": "Normal",
+      "video_context_probability": 0.018050309270620346,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_310_x264",
+      "label": "Normal",
+      "video_context_probability": 0.06456739455461502,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_312_x264",
+      "label": "Normal",
+      "video_context_probability": 0.0130239836871624,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_317_x264",
+      "label": "Normal",
+      "video_context_probability": 0.02144421823322773,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_345_x264",
+      "label": "Normal",
+      "video_context_probability": 0.12817233800888062,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_352_x264",
+      "label": "Normal",
+      "video_context_probability": 0.017144152894616127,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_360_x264",
+      "label": "Normal",
+      "video_context_probability": 0.06307993084192276,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_365_x264",
+      "label": "Normal",
+      "video_context_probability": 0.011278807185590267,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_401_x264",
+      "label": "Normal",
+      "video_context_probability": 0.021857628598809242,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_417_x264",
+      "label": "Normal",
+      "video_context_probability": 0.06297965347766876,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_439_x264",
+      "label": "Normal",
+      "video_context_probability": 0.04125872626900673,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_452_x264",
+      "label": "Normal",
+      "video_context_probability": 0.021637514233589172,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_453_x264",
+      "label": "Normal",
+      "video_context_probability": 0.0216413214802742,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_478_x264",
+      "label": "Normal",
+      "video_context_probability": 0.3895726799964905,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_576_x264",
+      "label": "Normal",
+      "video_context_probability": 0.13427570462226868,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_597_x264",
+      "label": "Normal",
+      "video_context_probability": 0.11268029361963272,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_603_x264",
+      "label": "Normal",
+      "video_context_probability": 0.012462140992283821,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_606_x264",
+      "label": "Normal",
+      "video_context_probability": 0.015602612867951393,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_621_x264",
+      "label": "Normal",
+      "video_context_probability": 0.011906025931239128,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_634_x264",
+      "label": "Normal",
+      "video_context_probability": 0.011065243743360043,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_641_x264",
+      "label": "Normal",
+      "video_context_probability": 0.03407875820994377,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_656_x264",
+      "label": "Normal",
+      "video_context_probability": 0.017187239602208138,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_686_x264",
+      "label": "Normal",
+      "video_context_probability": 0.038796164095401764,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_696_x264",
+      "label": "Normal",
+      "video_context_probability": 0.12695705890655518,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_702_x264",
+      "label": "Normal",
+      "video_context_probability": 0.024900324642658234,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_704_x264",
+      "label": "Normal",
+      "video_context_probability": 0.5479170083999634,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_710_x264",
+      "label": "Normal",
+      "video_context_probability": 0.053229838609695435,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_717_x264",
+      "label": "Normal",
+      "video_context_probability": 0.030236605554819107,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_722_x264",
+      "label": "Normal",
+      "video_context_probability": 0.019423633813858032,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_725_x264",
+      "label": "Normal",
+      "video_context_probability": 0.7103899121284485,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_745_x264",
+      "label": "Normal",
+      "video_context_probability": 0.07536538690328598,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_758_x264",
+      "label": "Normal",
+      "video_context_probability": 0.024921834468841553,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_778_x264",
+      "label": "Normal",
+      "video_context_probability": 0.025476552546024323,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_780_x264",
+      "label": "Normal",
+      "video_context_probability": 0.011896040290594101,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_781_x264",
+      "label": "Normal",
+      "video_context_probability": 0.008529598824679852,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_782_x264",
+      "label": "Normal",
+      "video_context_probability": 0.011713443323969841,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_783_x264",
+      "label": "Normal",
+      "video_context_probability": 0.013418389484286308,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_798_x264",
+      "label": "Normal",
+      "video_context_probability": 0.04479742795228958,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_801_x264",
+      "label": "Normal",
+      "video_context_probability": 0.03524637594819069,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_828_x264",
+      "label": "Normal",
+      "video_context_probability": 0.014214599505066872,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_831_x264",
+      "label": "Normal",
+      "video_context_probability": 0.060502998530864716,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_866_x264",
+      "label": "Normal",
+      "video_context_probability": 0.04116266593337059,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_867_x264",
+      "label": "Normal",
+      "video_context_probability": 0.03031906858086586,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_868_x264",
+      "label": "Normal",
+      "video_context_probability": 0.18999850749969482,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_869_x264",
+      "label": "Normal",
+      "video_context_probability": 0.03528163954615593,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_870_x264",
+      "label": "Normal",
+      "video_context_probability": 0.019615666940808296,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_871_x264",
+      "label": "Normal",
+      "video_context_probability": 0.024242902174592018,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_872_x264",
+      "label": "Normal",
+      "video_context_probability": 0.14627039432525635,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_873_x264",
+      "label": "Normal",
+      "video_context_probability": 0.015336367301642895,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_874_x264",
+      "label": "Normal",
+      "video_context_probability": 0.09710003435611725,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_875_x264",
+      "label": "Normal",
+      "video_context_probability": 0.01193324662744999,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_876_x264",
+      "label": "Normal",
+      "video_context_probability": 0.09313330799341202,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_877_x264",
+      "label": "Normal",
+      "video_context_probability": 0.301057904958725,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_878_x264",
+      "label": "Normal",
+      "video_context_probability": 0.8624235987663269,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_879_x264",
+      "label": "Normal",
+      "video_context_probability": 0.048211537301540375,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_880_x264",
+      "label": "Normal",
+      "video_context_probability": 0.055683765560388565,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_881_x264",
+      "label": "Normal",
+      "video_context_probability": 0.021023588255047798,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_882_x264",
+      "label": "Normal",
+      "video_context_probability": 0.00860102754086256,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_883_x264",
+      "label": "Normal",
+      "video_context_probability": 0.19408391416072845,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_884_x264",
+      "label": "Normal",
+      "video_context_probability": 0.5738285779953003,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_885_x264",
+      "label": "Normal",
+      "video_context_probability": 0.029268449172377586,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_886_x264",
+      "label": "Normal",
+      "video_context_probability": 0.01065733190625906,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_887_x264",
+      "label": "Normal",
+      "video_context_probability": 0.8812001943588257,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_888_x264",
+      "label": "Normal",
+      "video_context_probability": 0.032620858401060104,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_889_x264",
+      "label": "Normal",
+      "video_context_probability": 0.02848878875374794,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_890_x264",
+      "label": "Normal",
+      "video_context_probability": 0.04029608145356178,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_891_x264",
+      "label": "Normal",
+      "video_context_probability": 0.018182765692472458,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_892_x264",
+      "label": "Normal",
+      "video_context_probability": 0.23667408525943756,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_893_x264",
+      "label": "Normal",
+      "video_context_probability": 0.011466795578598976,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_894_x264",
+      "label": "Normal",
+      "video_context_probability": 0.08348308503627777,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_895_x264",
+      "label": "Normal",
+      "video_context_probability": 0.2680029571056366,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_896_x264",
+      "label": "Normal",
+      "video_context_probability": 0.6670091152191162,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_897_x264",
+      "label": "Normal",
+      "video_context_probability": 0.05182278901338577,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_898_x264",
+      "label": "Normal",
+      "video_context_probability": 0.04875980690121651,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_899_x264",
+      "label": "Normal",
+      "video_context_probability": 0.031265582889318466,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_900_x264",
+      "label": "Normal",
+      "video_context_probability": 0.11968480050563812,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_901_x264",
+      "label": "Normal",
+      "video_context_probability": 0.49819111824035645,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_902_x264",
+      "label": "Normal",
+      "video_context_probability": 0.18496014177799225,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_903_x264",
+      "label": "Normal",
+      "video_context_probability": 0.0418863520026207,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_904_x264",
+      "label": "Normal",
+      "video_context_probability": 0.059734102338552475,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_905_x264",
+      "label": "Normal",
+      "video_context_probability": 0.05898790806531906,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_906_x264",
+      "label": "Normal",
+      "video_context_probability": 0.11443033814430237,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_907_x264",
+      "label": "Normal",
+      "video_context_probability": 0.06412138044834137,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_908_x264",
+      "label": "Normal",
+      "video_context_probability": 0.04499490559101105,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_909_x264",
+      "label": "Normal",
+      "video_context_probability": 0.133266419172287,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_910_x264",
+      "label": "Normal",
+      "video_context_probability": 0.08523514866828918,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_911_x264",
+      "label": "Normal",
+      "video_context_probability": 0.05656488612294197,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_912_x264",
+      "label": "Normal",
+      "video_context_probability": 0.08937343955039978,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_913_x264",
+      "label": "Normal",
+      "video_context_probability": 0.4483772814273834,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_914_x264",
+      "label": "Normal",
+      "video_context_probability": 0.030337054282426834,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_915_x264",
+      "label": "Normal",
+      "video_context_probability": 0.07124984264373779,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_923_x264",
+      "label": "Normal",
+      "video_context_probability": 0.06462665647268295,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_924_x264",
+      "label": "Normal",
+      "video_context_probability": 0.08793186396360397,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_925_x264",
+      "label": "Normal",
+      "video_context_probability": 0.9088218212127686,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_926_x264",
+      "label": "Normal",
+      "video_context_probability": 0.035092972218990326,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_927_x264",
+      "label": "Normal",
+      "video_context_probability": 0.17610718309879303,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_928_x264",
+      "label": "Normal",
+      "video_context_probability": 0.018703214824199677,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_929_x264",
+      "label": "Normal",
+      "video_context_probability": 0.02603285200893879,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_930_x264",
+      "label": "Normal",
+      "video_context_probability": 0.013326490297913551,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_931_x264",
+      "label": "Normal",
+      "video_context_probability": 0.16183660924434662,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_932_x264",
+      "label": "Normal",
+      "video_context_probability": 0.35256484150886536,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_933_x264",
+      "label": "Normal",
+      "video_context_probability": 0.009644322097301483,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_934_x264",
+      "label": "Normal",
+      "video_context_probability": 0.01176102738827467,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_935_x264",
+      "label": "Normal",
+      "video_context_probability": 0.0140715716406703,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_936_x264",
+      "label": "Normal",
+      "video_context_probability": 0.1113714948296547,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_937_x264",
+      "label": "Normal",
+      "video_context_probability": 0.1113714948296547,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_938_x264",
+      "label": "Normal",
+      "video_context_probability": 0.04391598328948021,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_939_x264",
+      "label": "Normal",
+      "video_context_probability": 0.015624605119228363,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_940_x264",
+      "label": "Normal",
+      "video_context_probability": 0.07315190136432648,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_941_x264",
+      "label": "Normal",
+      "video_context_probability": 0.05185975879430771,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_943_x264",
+      "label": "Normal",
+      "video_context_probability": 0.290371835231781,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    },
+    {
+      "video_id": "Normal_Videos_944_x264",
+      "label": "Normal",
+      "video_context_probability": 0.016769398003816605,
+      "top15_true_high_count": 0,
+      "top15_false_high_count": 0,
+      "top15_true_high_mean_delta": null,
+      "top15_false_high_mean_delta": null
+    }
+  ]
+}

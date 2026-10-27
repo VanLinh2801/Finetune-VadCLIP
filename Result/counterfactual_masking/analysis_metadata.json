@@ -1,0 +1,15 @@
+{
+  "top_k_ratio": 0.15,
+  "mask_methods": [
+    "linear",
+    "context_mean"
+  ],
+  "context_radius": 3,
+  "neighbor_radius": 4,
+  "max_segments_per_group": 1,
+  "min_run_length": 1,
+  "include_missed_anomaly": true,
+  "ground_truth_usage": "diagnostic grouping only",
+  "auc_ap_computed": false,
+  "feature_source": "existing CLIP .npy features"
+}

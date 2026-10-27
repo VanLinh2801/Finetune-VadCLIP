@@ -1,0 +1,15 @@
+{
+  "feature_source": "existing CLIP .npy features",
+  "local_radius": 2,
+  "top_k_ratio": 0.15,
+  "metrics": [
+    "first_difference_l2",
+    "second_difference_l2",
+    "cosine_change_previous",
+    "local_residual_l2",
+    "local_variance",
+    "change_point_cosine"
+  ],
+  "ground_truth_usage": "diagnostics only",
+  "snippet_details_saved": false
+}

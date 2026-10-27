@@ -22,6 +22,8 @@ from model import CLIPVAD
 from model_description import CLIPVADDescription
 from model_multi_prompt import CLIPVADMultiPrompt
 from model_prompt_replacement import CLIPVADPromptReplacement
+from model_prompt_residual import CLIPVADPromptResidual
+from model_multi_prompt_residual import CLIPVADMultiPromptResidual
 from ucf_evaluate import UCFRelativeTestDataset
 from utils.prompt_replacement import build_compact_prompt_groups, build_multi_prompt_groups, build_multi_prompt_weights
 from utils.tools import get_batch_mask, get_prompt_text
@@ -68,8 +70,12 @@ def build_model(args, model_type, device):
         model_cls = CLIPVADDescription
     elif model_type == "multi_prompt":
         model_cls = CLIPVADMultiPrompt
+    elif model_type == "multi_prompt_residual":
+        model_cls = CLIPVADMultiPromptResidual
     elif model_type == "prompt_replacement":
         model_cls = CLIPVADPromptReplacement
+    elif model_type == "prompt_residual":
+        model_cls = CLIPVADPromptResidual
     else:
         model_cls = CLIPVAD
     return model_cls(
@@ -88,8 +94,21 @@ def build_model(args, model_type, device):
 
 def load_model(args, checkpoint, model_type, device):
     model = build_model(args, model_type, device)
+    if model_type == "prompt_residual":
+        prompt_text = get_prompt_text_for_model_type(args, model_type)
+        prompt_weights = get_prompt_weights_for_model_type(args, model_type, device)
+        model.to(device)
+        model.init_class_prototypes(prompt_text, prompt_weights=prompt_weights)
+    if model_type == "multi_prompt_residual":
+        prompt_text = get_prompt_text_for_model_type(args, model_type)
+        model.to(device)
+        model.init_prompt_embeddings(prompt_text)
     state_dict = torch.load(checkpoint, map_location=device)
     model.load_state_dict(state_dict, strict=False)
+    if model_type == "prompt_residual":
+        model.prototypes_initialized = True
+    if model_type == "multi_prompt_residual":
+        model.prompts_initialized = True
     model.to(device)
     model.eval()
     return model
@@ -115,14 +134,24 @@ def discover_checkpoints(args):
 
 
 def get_prompt_text_for_model_type(args, model_type):
-    if model_type == "prompt_replacement":
-        return build_compact_prompt_groups(
+    if model_type in ("prompt_replacement", "prompt_residual"):
+        prompt_mode = getattr(args, "prompt_mode", None) or args.prompt_replacement_mode
+        if args.prototype_source == "compact":
+            return build_compact_prompt_groups(
+                args.prototype_json,
+                PROMPT_REPLACEMENT_LABEL_MAP,
+                prompt_mode if prompt_mode in ("prototype_only", "class_plus_prototype") else "class_plus_prototype",
+                args.compact_prototype_types,
+            )
+        return build_multi_prompt_groups(
             args.prototype_json,
             PROMPT_REPLACEMENT_LABEL_MAP,
-            args.prompt_replacement_mode,
+            args.prototype_source,
             args.compact_prototype_types,
+            args.long_prototype_types,
+            prompt_mode,
         )
-    if model_type == "multi_prompt":
+    if model_type in ("multi_prompt", "multi_prompt_residual"):
         return build_multi_prompt_groups(
             args.prototype_json,
             PROMPT_REPLACEMENT_LABEL_MAP,
@@ -135,7 +164,7 @@ def get_prompt_text_for_model_type(args, model_type):
 
 
 def get_prompt_weights_for_model_type(args, model_type, device):
-    if model_type == "multi_prompt":
+    if model_type in ("multi_prompt", "multi_prompt_residual", "prompt_replacement", "prompt_residual"):
         return build_multi_prompt_weights(args.prompt_weights_json, PROMPT_REPLACEMENT_LABEL_MAP, device)
     return None
 
@@ -615,7 +644,7 @@ def parse_args():
     parser.add_argument("--baseline-model-path", default="../../model_ucf.pth")
     parser.add_argument("--epoch-checkpoint-dir", default="model/epoch_checkpoints")
     parser.add_argument("--description-model-path", default="model/model_ucf_description.pth")
-    parser.add_argument("--finetuned-model-type", default="description", choices=["baseline", "description", "prompt_replacement", "multi_prompt"])
+    parser.add_argument("--finetuned-model-type", default="description", choices=["baseline", "description", "prompt_replacement", "prompt_residual", "multi_prompt", "multi_prompt_residual"])
     parser.add_argument("--output-dir", default="../../code/ucf_checkpoint_diagnostics")
     parser.add_argument("--gt-path", default="../list/gt_ucf.npy")
     parser.add_argument("--gt-segment-path", default="../list/gt_segment_ucf.npy")
@@ -631,8 +660,8 @@ def parse_args():
     parser.add_argument("--prompt-prefix", default=10, type=int)
     parser.add_argument("--prompt-postfix", default=10, type=int)
     parser.add_argument("--classes-num", default=14, type=int)
-    parser.add_argument("--prompt-replacement-mode", default="class_plus_prototype", choices=["prototype_only", "class_plus_prototype"])
-    parser.add_argument("--prototype-json", default="../../code/ucf_compact_class_prototypes.json")
+    parser.add_argument("--prompt-replacement-mode", default="manual_caption", choices=["prototype_only", "class_plus_prototype", "manual_caption"])
+    parser.add_argument("--prototype-json", default="../../code/ucf_weighted_class_prompts.json")
     parser.add_argument("--prompt-weights-json", default=None)
     parser.add_argument("--prototype-source", default="manual", choices=["manual", "compact", "long_event_only"])
     parser.add_argument(

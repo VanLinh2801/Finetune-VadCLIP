@@ -1,0 +1,90 @@
+Comprehensive Normal visual bank diagnostics
+Diagnostic only: no training and no loss changes
+Device: cuda
+Model: /content/drive/MyDrive/Finetune VadCLIP/model_ucf.pth
+Feature root: /content/UCFClipFeatures
+
+  0%|                                               | 0.00/335M [00:00<?, ?iB/s]
+  0%|                                       | 464k/335M [00:00<01:14, 4.71MiB/s]
+  2%|▋                                     | 6.50M/335M [00:00<00:08, 39.1MiB/s]
+  7%|██▋                                    | 23.1M/335M [00:00<00:03, 101MiB/s]
+ 11%|████▍                                  | 38.0M/335M [00:00<00:02, 123MiB/s]
+ 15%|█████▉                                 | 51.0M/335M [00:00<00:02, 127MiB/s]
+ 19%|███████▍                               | 63.5M/335M [00:00<00:02, 129MiB/s]
+ 23%|████████▊                              | 75.8M/335M [00:00<00:02, 124MiB/s]
+ 27%|██████████▍                            | 89.2M/335M [00:00<00:01, 129MiB/s]
+ 31%|████████████▎                           | 103M/335M [00:00<00:01, 134MiB/s]
+ 35%|█████████████▊                          | 116M/335M [00:01<00:01, 130MiB/s]
+ 38%|███████████████▎                        | 128M/335M [00:01<00:01, 123MiB/s]
+ 42%|████████████████▊                       | 141M/335M [00:01<00:01, 126MiB/s]
+ 46%|██████████████████▎                     | 153M/335M [00:01<00:01, 110MiB/s]
+ 49%|███████████████████▋                    | 164M/335M [00:01<00:01, 113MiB/s]
+ 52%|████████████████████▉                   | 175M/335M [00:01<00:01, 100MiB/s]
+ 55%|█████████████████████▌                 | 185M/335M [00:01<00:01, 84.7MiB/s]
+ 59%|██████████████████████▉                | 197M/335M [00:01<00:01, 92.9MiB/s]
+ 62%|████████████████████████▎              | 208M/335M [00:02<00:01, 99.2MiB/s]
+ 65%|█████████████████████████▍             | 218M/335M [00:02<00:01, 99.6MiB/s]
+ 68%|███████████████████████████▍            | 229M/335M [00:02<00:01, 104MiB/s]
+ 72%|████████████████████████████▊           | 241M/335M [00:02<00:00, 108MiB/s]
+ 75%|██████████████████████████████          | 251M/335M [00:02<00:00, 104MiB/s]
+ 79%|███████████████████████████████▌        | 264M/335M [00:02<00:00, 106MiB/s]
+ 83%|█████████████████████████████████       | 276M/335M [00:02<00:00, 112MiB/s]
+ 86%|██████████████████████████████████▎     | 287M/335M [00:02<00:00, 107MiB/s]
+ 89%|███████████████████████████████████▌    | 298M/335M [00:02<00:00, 106MiB/s]
+ 93%|█████████████████████████████████████▏  | 311M/335M [00:02<00:00, 117MiB/s]
+ 96%|██████████████████████████████████████▌ | 323M/335M [00:03<00:00, 104MiB/s]
+100%|████████████████████████████████████████| 335M/335M [00:03<00:00, 109MiB/s]
+Normal train source: rows=8000 | unique_videos=800
+  Normal feature batches processed: 100/500
+  Normal feature batches processed: 200/500
+  Normal feature batches processed: 300/500
+  Normal feature batches processed: 400/500
+  Normal feature batches processed: 500/500
+Balanced candidates: 64000 | unique_videos=800 | max_per_video=80
+Development split: 640 videos, 51200 features
+Held-out split: 160 videos, 12800 features
+
+Fitting development banks...
+
+Fitting final banks from all Normal training videos...
+
+Running baseline inference on the test set...
+  Test videos processed: 50/290
+  Test videos processed: 100/290
+  Test videos processed: 150/290
+  Test videos processed: 200/290
+  Test videos processed: 250/290
+
+--------------------------------------------------------------------------------
+Bank: old_style | size=32
+  Held-out Normal coverage: 93.17% | threshold=0.6626
+  False-high vs missed anomaly: AUC=44.38 | gap=-0.0235
+  False-high vs true-high:      AUC=61.51 | gap=+0.0418
+  Best diagnostic rescore: gamma=1.00 | AUC=88.02 (+0.00) | AP=33.57 (+0.01)
+
+--------------------------------------------------------------------------------
+Bank: expanded | size=256
+  Held-out Normal coverage: 89.72% | threshold=0.7251
+  False-high vs missed anomaly: AUC=45.20 | gap=-0.0176
+  False-high vs true-high:      AUC=60.01 | gap=+0.0339
+  Best diagnostic rescore: gamma=1.00 | AUC=88.03 (+0.01) | AP=33.58 (+0.02)
+
+--------------------------------------------------------------------------------
+Bank: hybrid | size=2304
+  Held-out Normal coverage: 78.88% | threshold=0.7688
+  False-high vs missed anomaly: AUC=46.93 | gap=-0.0076
+  False-high vs true-high:      AUC=58.98 | gap=+0.0205
+  Best diagnostic rescore: gamma=1.00 | AUC=88.02 (+0.00) | AP=33.56 (+0.00)
+
+--------------------------------------------------------------------------------
+Bank: old_style_top1_reference | size=32
+  False-high vs missed anomaly: AUC=42.33 | gap=-0.0303
+  False-high vs true-high:      AUC=57.77 | gap=+0.0318
+  Best diagnostic rescore: gamma=1.00 | AUC=88.02 (+0.00) | AP=33.57 (+0.01)
+
+Acceptance report
+  old_style: FAIL | positive_classes=4/13
+  expanded: FAIL | positive_classes=5/13
+  hybrid: FAIL | positive_classes=6/13
+
+Saved diagnostics to: /content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/normal_bank

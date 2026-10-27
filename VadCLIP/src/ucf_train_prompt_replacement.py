@@ -17,7 +17,11 @@ from ucf_train_class_prototype import (
     length_to_int,
     text_regularization_loss,
 )
-from utils.prompt_replacement import build_compact_prompt_groups
+from utils.prompt_replacement import (
+    build_compact_prompt_groups,
+    build_multi_prompt_groups,
+    build_multi_prompt_weights,
+)
 from utils.tools import get_batch_label, get_prompt_text
 
 
@@ -25,6 +29,31 @@ def get_autocast_context(device, use_amp):
     if device == "cuda" and use_amp:
         return torch.autocast(device_type="cuda", dtype=torch.float16)
     return nullcontext()
+
+
+def resolve_prompt_mode(args):
+    if args.prompt_mode:
+        return args.prompt_mode
+    return args.prompt_replacement_mode
+
+
+def build_prompt_groups(args, label_map):
+    prompt_mode = resolve_prompt_mode(args)
+    if args.prototype_source == "compact":
+        return build_compact_prompt_groups(
+            args.prototype_json,
+            label_map,
+            prompt_mode if prompt_mode in ("prototype_only", "class_plus_prototype") else "class_plus_prototype",
+            args.compact_prototype_types,
+        )
+    if args.prototype_source == "manual":
+        return build_multi_prompt_groups(
+            args.prototype_json,
+            label_map,
+            "manual",
+            prompt_mode=prompt_mode,
+        )
+    raise ValueError(f"Unknown prototype_source: {args.prototype_source}")
 
 
 def train(model, normal_loader, anomaly_loader, testloader, args, label_map, device):
@@ -46,28 +75,30 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
 
     for clip_param in model.clipmodel.parameters():
         clip_param.requires_grad = False
+    model.text_prompt_embeddings.weight.requires_grad = args.train_learnable_prompt
 
     class_prompt_text = get_prompt_text(label_map)
-    prompt_groups = build_compact_prompt_groups(
-        args.prototype_json,
-        label_map,
-        args.prompt_replacement_mode,
-        args.compact_prototype_types,
-    )
+    prompt_groups = build_prompt_groups(args, label_map)
+    prompt_weights = build_multi_prompt_weights(args.prompt_weights_json, label_map, device)
 
+    print("Train learnable prefix/postfix:", args.train_learnable_prompt)
     optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=args.lr)
     scheduler = MultiStepLR(optimizer, args.scheduler_milestones, args.scheduler_rate)
     use_amp = bool(args.use_amp and device == "cuda")
     scaler = torch.amp.GradScaler("cuda", enabled=use_amp)
     best_score = 0
+    epochs_without_improvement = 0
 
     print(
-        "Prompt replacement config:",
-        "| mode:", args.prompt_replacement_mode,
-        "| compact_prototype_types:", args.compact_prototype_types,
+        "Class prototype p_c config:",
+        "| source:", args.prototype_source,
+        "| mode:", resolve_prompt_mode(args),
         "| prompt_groups:", len(prompt_groups),
         "| prompts_per_class:", sorted(set(len(group) for group in prompt_groups)),
+        "| weighted_mean:", prompt_weights is not None,
         "| prototype_json:", args.prototype_json,
+        "| prompt_weights_json:", args.prompt_weights_json,
+        "| use_pretrained_model:", args.use_pretrained_model,
     )
 
     for e in range(args.max_epoch):
@@ -89,7 +120,13 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
             text_labels = get_batch_label(text_labels_raw, class_prompt_text, label_map).to(device, non_blocking=True)
 
             with get_autocast_context(device, use_amp):
-                text_features, logits1, logits2 = model(visual_features, None, prompt_groups, feat_lengths)
+                text_features, logits1, logits2 = model(
+                    visual_features,
+                    None,
+                    prompt_groups,
+                    feat_lengths,
+                    prompt_weights=prompt_weights,
+                )
 
             loss1 = CLAS2(logits1.float(), text_labels.float(), feat_lengths, device)
             loss2 = CLASM(logits2.float(), text_labels.float(), feat_lengths, device)
@@ -114,7 +151,17 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
                     "| loss2:", loss_total2 / (i + 1),
                     "| loss3:", loss_total3 / (i + 1),
                 )
-                auc, ap = test(model, testloader, args.visual_length, prompt_groups, gt, gtsegments, gtlabels, device)
+                auc, ap = test(
+                    model,
+                    testloader,
+                    args.visual_length,
+                    prompt_groups,
+                    gt,
+                    gtsegments,
+                    gtlabels,
+                    device,
+                    prompt_weights=prompt_weights,
+                )
                 if auc > best_score:
                     best_score = auc
                     torch.save(model.state_dict(), args.checkpoint_path)
@@ -128,11 +175,36 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
             "| loss3:", loss_total3 / num_steps,
         )
         torch.save(model.state_dict(), args.save_cur_path)
-        epoch_checkpoint_path = Path(args.epoch_checkpoint_dir) / f"model_epoch_{e + 1:03d}_prompt_replacement.pth"
+        epoch_checkpoint_path = Path(args.epoch_checkpoint_dir) / f"model_epoch_{e + 1:03d}_prompt_prototype_pc.pth"
         torch.save(model.state_dict(), epoch_checkpoint_path)
         print("Saved epoch checkpoint:", epoch_checkpoint_path)
 
-    if best_score > 0:
+        if args.early_stopping_patience > 0:
+            auc, ap = test(
+                model,
+                testloader,
+                args.visual_length,
+                prompt_groups,
+                gt,
+                gtsegments,
+                gtlabels,
+                device,
+                prompt_weights=prompt_weights,
+            )
+            print(f"epoch {e + 1} eval AUC={auc:.4f} AP={ap:.4f}")
+            if auc > best_score:
+                best_score = auc
+                epochs_without_improvement = 0
+                torch.save(model.state_dict(), args.checkpoint_path)
+                print("New best checkpoint:", args.checkpoint_path)
+            else:
+                epochs_without_improvement += 1
+                print(f"No AUC improvement ({epochs_without_improvement}/{args.early_stopping_patience})")
+                if epochs_without_improvement >= args.early_stopping_patience:
+                    print("Early stopping.")
+                    break
+
+    if best_score > 0 and Path(args.checkpoint_path).exists():
         model.load_state_dict(torch.load(args.checkpoint_path, map_location=device), strict=False)
     else:
         model.load_state_dict(torch.load(args.save_cur_path, map_location=device), strict=False)

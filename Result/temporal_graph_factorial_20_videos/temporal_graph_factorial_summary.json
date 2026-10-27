@@ -1,0 +1,46 @@
+{
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_scratch.pth",
+  "videos": 20,
+  "shuffle_repeats": 5,
+  "metric": "macro mean classifier score gap: true_high minus false_high, per selected video",
+  "condition_notes": {
+    "original_similarity_adj_only": "Original temporal output; actual similarity adjacency; self-only distance adjacency. Both graph branches and their learned transforms remain present.",
+    "original_distance_adj_only": "Original temporal output; self-only similarity adjacency; actual distance adjacency. Both graph branches and their learned transforms remain present.",
+    "original_self_only_adjacency": "Original temporal output; both graph adjacencies are identity. Graph-layer convolution residuals remain active.",
+    "shuffle_full_recomputed_graph": "Shuffled input; similarity adjacency recomputed; distance adjacency remains positional as in normal forward.",
+    "shuffle_original_graph_links": "Shuffled input; both original adjacency matrices are permuted to preserve links between the same snippet identities.",
+    "shuffle_self_only_adjacency": "Shuffled input; both graph adjacencies are identity. Graph-layer convolution residuals remain active."
+  },
+  "original_full": {
+    "macro_true_high_minus_false_high": 0.04020964964292943,
+    "videos_positive_gap": 10
+  },
+  "original_similarity_adj_only": {
+    "macro_true_high_minus_false_high": 0.006047722697257995,
+    "videos_positive_gap": 13
+  },
+  "original_distance_adj_only": {
+    "macro_true_high_minus_false_high": 0.04135625711642206,
+    "videos_positive_gap": 10
+  },
+  "original_self_only_adjacency": {
+    "macro_true_high_minus_false_high": 0.007060581445693969,
+    "videos_positive_gap": 11
+  },
+  "shuffle_full_recomputed_graph": {
+    "macro_true_high_minus_false_high": -0.0054626434575766325,
+    "videos_positive_gap": 11
+  },
+  "shuffle_original_graph_links": {
+    "macro_true_high_minus_false_high": 0.004393677925691009,
+    "videos_positive_gap": 11
+  },
+  "shuffle_self_only_adjacency": {
+    "macro_true_high_minus_false_high": 0.007328145205974579,
+    "videos_positive_gap": 15
+  },
+  "files": {
+    "scores": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/temporal_graph_leakage/temporal_graph_factorial_20_videos/temporal_graph_factorial_scores.csv",
+    "gaps": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/temporal_graph_leakage/temporal_graph_factorial_20_videos/temporal_graph_factorial_gaps.csv"
+  }
+}

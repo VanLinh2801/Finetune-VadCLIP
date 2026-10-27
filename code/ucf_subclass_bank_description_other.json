@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "name": "ucf_crime_description_derived_variable_subclasses",
+    "dataset": "UCF-Crime",
+    "language": "English",
+    "classes_count": 14,
+    "abnormal_subclasses_count": 78,
+    "subclasses_per_class": "variable",
+    "fallback_descriptor": "Other",
+    "source": "Manual taxonomy derived only from non-empty GPT video descriptions in the UCA-aligned UCF-Crime train split",
+    "source_train_descriptions": 1162,
+    "source_abnormal_train_descriptions": 574,
+    "normal_policy": "Normal is kept as one original class prompt and is not divided into subclasses",
+    "design": "Each abnormal subclass has exactly two whitespace-separated words: the original class name followed by one visually grounded descriptor"
+  },
+  "class_subclass_counts": {
+    "Normal": 1,
+    "Abuse": 6,
+    "Arrest": 5,
+    "Arson": 5,
+    "Assault": 5,
+    "Burglary": 6,
+    "Explosion": 4,
+    "Fighting": 5,
+    "RoadAccidents": 9,
+    "Robbery": 7,
+    "Shooting": 6,
+    "Shoplifting": 6,
+    "Stealing": 7,
+    "Vandalism": 7
+  },
+  "classes": {
+    "Normal": [
+      "Normal"
+    ],
+    "Abuse": [
+      "Abuse Child",
+      "Abuse Wheelchair",
+      "Abuse Custodial",
+      "Abuse Group",
+      "Abuse Grounded",
+      "Abuse Other"
+    ],
+    "Arrest": [
+      "Arrest Grounded",
+      "Arrest Escorted",
+      "Arrest Vehicle",
+      "Arrest Group",
+      "Arrest Other"
+    ],
+    "Arson": [
+      "Arson Vehicle",
+      "Arson Building",
+      "Arson Vegetation",
+      "Arson Outdoor",
+      "Arson Other"
+    ],
+    "Assault": [
+      "Assault Individual",
+      "Assault Group",
+      "Assault Armed",
+      "Assault Grounded",
+      "Assault Other"
+    ],
+    "Burglary": [
+      "Burglary Door",
+      "Burglary Window",
+      "Burglary Vehicle",
+      "Burglary ATM",
+      "Burglary Interior",
+      "Burglary Other"
+    ],
+    "Explosion": [
+      "Explosion Vehicle",
+      "Explosion Building",
+      "Explosion Roadside",
+      "Explosion Other"
+    ],
+    "Fighting": [
+      "Fighting Pair",
+      "Fighting Group",
+      "Fighting Grappling",
+      "Fighting Grounded",
+      "Fighting Other"
+    ],
+    "RoadAccidents": [
+      "RoadAccidents Pedestrian",
+      "RoadAccidents Motorcycle",
+      "RoadAccidents Bicycle",
+      "RoadAccidents Multivehicle",
+      "RoadAccidents Truck",
+      "RoadAccidents Bus",
+      "RoadAccidents Rollover",
+      "RoadAccidents Barrier",
+      "RoadAccidents Other"
+    ],
+    "Robbery": [
+      "Robbery Armed",
+      "Robbery Counter",
+      "Robbery Street",
+      "Robbery Vehicle",
+      "Robbery Bag",
+      "Robbery Group",
+      "Robbery Other"
+    ],
+    "Shooting": [
+      "Shooting Indoor",
+      "Shooting Outdoor",
+      "Shooting Vehicle",
+      "Shooting Crowd",
+      "Shooting Police",
+      "Shooting Other"
+    ],
+    "Shoplifting": [
+      "Shoplifting Bag",
+      "Shoplifting Clothing",
+      "Shoplifting Shelf",
+      "Shoplifting Counter",
+      "Shoplifting Group",
+      "Shoplifting Other"
+    ],
+    "Stealing": [
+      "Stealing Vehicle",
+      "Stealing Motorcycle",
+      "Stealing Bicycle",
+      "Stealing Bag",
+      "Stealing Cargo",
+      "Stealing Indoor",
+      "Stealing Other"
+    ],
+    "Vandalism": [
+      "Vandalism Vehicle",
+      "Vandalism Glass",
+      "Vandalism Graffiti",
+      "Vandalism Building",
+      "Vandalism Structure",
+      "Vandalism Group",
+      "Vandalism Other"
+    ]
+  }
+}

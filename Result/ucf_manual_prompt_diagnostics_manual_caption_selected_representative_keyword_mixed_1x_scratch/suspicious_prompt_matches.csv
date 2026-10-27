@@ -1,0 +1,15 @@
+class_name,prompt_index,prompt_text,own_class_similarity,best_other_class,best_other_similarity,other_minus_own,nearest_same_class_prompt_similarity
+Abuse,0,abuse helpless victim physical harm,1.0,Assault,0.9244566559791565,-0.0755433440208435,nan
+Assault,0,assault one-sided physical attack,1.0,Abuse,0.9244566559791565,-0.0755433440208435,nan
+Arson,0,arson person setting fire,1.0,Abuse,0.9167402386665344,-0.08325976133346558,nan
+Arrest,0,arrest officers restraining suspect,1.0,Assault,0.9087029099464417,-0.09129709005355835,nan
+Explosion,0,explosion a structure bursting apart from explosive force,1.0,Assault,0.8994918465614319,-0.10050815343856812,nan
+Fighting,0,fighting a public fight where both sides are physically attacking,1.0000001192092896,Vandalism,0.8705819845199585,-0.12941813468933105,nan
+Vandalism,0,vandalism a vandal hitting a sign until it bends,1.0000001192092896,Fighting,0.8705819845199585,-0.12941813468933105,nan
+Shooting,0,shooting a shooting incident involving a visible gun,1.0,Fighting,0.8375357389450073,-0.16246426105499268,nan
+Stealing,0,stealing a person secretly stealing an unattended object,1.0,Fighting,0.8167906999588013,-0.18320930004119873,nan
+Shoplifting,0,shoplifting a person secretly taking merchandise from a store without paying,1.0000001192092896,Robbery,0.7558619379997253,-0.2441381812095642,nan
+Robbery,0,robbery a robbery where someone uses intimidation or force to steal property,1.0000001192092896,Shoplifting,0.7558618783950806,-0.24413824081420898,nan
+Burglary,0,burglary burglar carrying property,1.0000001192092896,Abuse,0.7481151819229126,-0.25188493728637695,nan
+RoadAccidents,0,roadAccidents a car or motorcycle accident causing road damage,1.0,Explosion,0.7449472546577454,-0.25505274534225464,nan
+Normal,0,normal normal daily activity with people walking calmly in public areas,1.0000001192092896,Shoplifting,0.587788462638855,-0.41221165657043457,nan

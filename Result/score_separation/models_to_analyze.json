@@ -1,0 +1,30 @@
+[
+  {
+    "name": "baseline_self_train",
+    "model_type": "baseline",
+    "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_scratch.pth"
+  },
+  {
+    "name": "baseline_abnormal_topk",
+    "model_type": "baseline",
+    "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_abnormal_topk_epoch_eval_scratch.pth"
+  },
+  {
+    "name": "weighted_prompt_no_regularize",
+    "model_type": "multi_prompt",
+    "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_multi_prompt_manual_caption_analyze_prompt_auc8715_weighted_keyword5x_weighted_no_regularize_scratch.pth",
+    "prototype_source": "manual",
+    "prototype_json": "/content/drive/MyDrive/Finetune VadCLIP/code/ucf_weighted_class_prompts_auc8715.json",
+    "prompt_weights_json": "/content/drive/MyDrive/Finetune VadCLIP/code/ucf_weighted_class_prompts_auc8715.json",
+    "prompt_mode": "manual_caption"
+  },
+  {
+    "name": "weighted_prompt_abnormal_topk",
+    "model_type": "multi_prompt",
+    "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_multi_prompt_manual_caption_analyze_prompt_auc8715_weighted_keyword5x_weighted_abn_bg_scratch.pth",
+    "prototype_source": "manual",
+    "prototype_json": "/content/drive/MyDrive/Finetune VadCLIP/code/ucf_weighted_class_prompts_auc8715.json",
+    "prompt_weights_json": "/content/drive/MyDrive/Finetune VadCLIP/code/ucf_weighted_class_prompts_auc8715.json",
+    "prompt_mode": "manual_caption"
+  }
+]

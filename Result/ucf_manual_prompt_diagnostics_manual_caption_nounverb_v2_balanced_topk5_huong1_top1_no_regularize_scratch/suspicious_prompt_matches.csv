@@ -1,0 +1,15 @@
+class_name,prompt_index,prompt_text,own_class_similarity,best_other_class,best_other_similarity,other_minus_own,nearest_same_class_prompt_similarity
+Robbery,0,robbery robber holding hostage cash,0.9999998807907104,Shoplifting,0.8390707969665527,-0.16092908382415771,nan
+Shoplifting,0,shoplifting shopper hiding merchandise,1.0000001192092896,Robbery,0.8390707969665527,-0.16092932224273682,nan
+Fighting,0,fighting people fighting together,0.9999999403953552,Assault,0.8294923901557922,-0.170507550239563,nan
+Assault,0,assault attacker punching victim,1.0,Fighting,0.8294923901557922,-0.17050760984420776,nan
+Arrest,0,arrest officer locking handcuffs,0.9999999403953552,Robbery,0.8215257525444031,-0.17847418785095215,nan
+RoadAccidents,0,roadAccidents crashed vehicles lanes,0.9999998807907104,Explosion,0.7942543029785156,-0.20574557781219482,nan
+Explosion,0,explosion structure collapsing explosion,1.0,RoadAccidents,0.7942543029785156,-0.20574569702148438,nan
+Stealing,0,stealing owner distracted theft,0.9999999403953552,Abuse,0.7870885133743286,-0.2129114270210266,nan
+Abuse,0,abuse caregiver abusing resident,1.0000001192092896,Stealing,0.7870885133743286,-0.21291160583496094,nan
+Arson,0,arson accelerant flames ground,1.0,Explosion,0.7705775499343872,-0.2294224500656128,nan
+Burglary,0,burglary burglar carrying property,1.0,Robbery,0.7417593002319336,-0.2582406997680664,nan
+Shooting,0,shooting shooter gripping pistol,1.0,Assault,0.7414807081222534,-0.2585192918777466,nan
+Vandalism,0,vandalism vandal defacing wall paint,1.0,Abuse,0.6529520750045776,-0.34704792499542236,nan
+Normal,0,normal kids playing outdoors,0.9999999403953552,RoadAccidents,0.041434746235609055,-0.9585651755332947,nan

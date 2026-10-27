@@ -1,0 +1,17 @@
+{
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/model_ucf.pth",
+  "feature_root": "/content/UCFClipFeatures",
+  "train_chunks": 16100,
+  "train_bank_snippets": 64399,
+  "train_bank_videos": 1610,
+  "test_videos": 290,
+  "balanced_test_queries": 4615,
+  "top_k_ratio": 0.15,
+  "neighbors": 20,
+  "candidate_policy": {
+    "high_snippets_per_chunk": 4,
+    "uniform_snippets_per_chunk": 4,
+    "max_bank_snippets_per_video": 40
+  },
+  "test_ground_truth_usage": "Diagnostic grouping only; never used to build the train bank."
+}

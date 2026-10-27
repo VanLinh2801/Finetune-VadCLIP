@@ -1,0 +1,38 @@
+{
+  "baseline": {
+    "classifier_auc": 87.6629003818651,
+    "classifier_ap": 32.95806261054258,
+    "alignment_auc": 86.47461920989556,
+    "alignment_ap": 28.743570199765955,
+    "best_auc": 87.6629003818651,
+    "best_branch": "classifier",
+    "ano_auc": 69.8332174539754,
+    "avg_mAP": 7.3383189700669265,
+    "mAP@0.1": 13.04380489976161,
+    "mAP@0.2": 9.573143465654987,
+    "mAP@0.3": 6.167316560234381,
+    "mAP@0.4": 4.342476659704922,
+    "mAP@0.5": 3.5648532649787326
+  },
+  "subclass": {
+    "classifier_auc": 86.82095451271512,
+    "classifier_ap": 29.850994684887024,
+    "alignment_auc": 85.48198783893316,
+    "alignment_ap": 27.558874671848855,
+    "best_auc": 86.82095451271512,
+    "best_branch": "classifier",
+    "ano_auc": 67.75001632320969,
+    "avg_mAP": 5.490518682868128,
+    "mAP@0.1": 12.376928701368598,
+    "mAP@0.2": 6.853481106581097,
+    "mAP@0.3": 4.177508033995181,
+    "mAP@0.4": 2.5766114503879,
+    "mAP@0.5": 1.4680641220078625
+  },
+  "config": {
+    "aggregation": "max",
+    "temperature": 1.0,
+    "checkpoint": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_subclass_scratch_max_10x/epoch_010.pth",
+    "baseline_checkpoint": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_scratch.pth"
+  }
+}

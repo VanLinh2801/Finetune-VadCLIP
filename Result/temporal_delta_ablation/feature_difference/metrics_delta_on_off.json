@@ -1,0 +1,50 @@
+{
+  "temporal_checkpoint": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_temporal_score_feature_difference_scratch.pth",
+  "temporal_mode": "feature_difference",
+  "test_videos": 290,
+  "delta_on": {
+    "classifier_auc": 87.40117480837056,
+    "classifier_ap": 32.69772412631796,
+    "alignment_auc": 85.98228968519972,
+    "alignment_ap": 27.32798483126534,
+    "best_auc": 87.40117480837056,
+    "best_branch": "classifier",
+    "ano_auc": 69.07549650031189,
+    "avg_mAP": 7.089133471936923,
+    "mAP@0.1": 12.334352787043263,
+    "mAP@0.2": 10.237903787293675,
+    "mAP@0.3": 6.218791096249097,
+    "mAP@0.4": 3.852020448911049,
+    "mAP@0.5": 2.8025992401875266
+  },
+  "delta_off": {
+    "classifier_auc": 87.39135279431916,
+    "classifier_ap": 32.700205945822646,
+    "alignment_auc": 85.98228968519972,
+    "alignment_ap": 27.32798483126534,
+    "best_auc": 87.39135279431916,
+    "best_branch": "classifier",
+    "ano_auc": 69.05803579838893,
+    "avg_mAP": 7.089133471936923,
+    "mAP@0.1": 12.334352787043263,
+    "mAP@0.2": 10.237903787293675,
+    "mAP@0.3": 6.218791096249097,
+    "mAP@0.4": 3.852020448911049,
+    "mAP@0.5": 2.8025992401875266
+  },
+  "delta_on_minus_off": {
+    "classifier_auc": 0.00982201405139449,
+    "classifier_ap": -0.0024818195046876212,
+    "alignment_auc": 0.0,
+    "alignment_ap": 0.0,
+    "best_auc": 0.00982201405139449,
+    "ano_auc": 0.0174607019229569,
+    "avg_mAP": 0.0,
+    "mAP@0.1": 0.0,
+    "mAP@0.2": 0.0,
+    "mAP@0.3": 0.0,
+    "mAP@0.4": 0.0,
+    "mAP@0.5": 0.0
+  },
+  "note": "Both evaluations use the same learned VadCLIP weights. Only the direct temporal correction added to logits1 is toggled. Alignment logits2 are computed from base_logits1 and should therefore remain unchanged."
+}

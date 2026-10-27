@@ -1,10 +1,6 @@
-# =========================
-# General
-# =========================
+# OS / IDE
 .DS_Store
 Thumbs.db
-
-# OS / IDE
 .vscode/
 .idea/
 *.suo
@@ -12,7 +8,7 @@ Thumbs.db
 *.userosscache
 *.sln.docstates
 
-# Python
+# Python and notebook caches
 __pycache__/
 *.py[cod]
 *.pyd
@@ -27,7 +23,7 @@ __pycache__/
 .env.*
 *.env
 
-# Logs / outputs
+# Logs and generated outputs
 *.log
 logs/
 log/
@@ -39,39 +35,43 @@ lightning_logs/
 tensorboard/
 tb_logs/
 
-# Weights / checkpoints (do not commit large model artifacts)
+# Model weights and checkpoints
 *.pt
 *.pth
 *.ckpt
 *.bin
 *.safetensors
 
-# Numpy arrays used for GT/eval dumps (often large)
+# Large ground-truth and evaluation arrays
 **/gt*.npy
 **/gt*.npz
 
-# HuggingFace / caches (optional)
+# Caches
 .cache/
 **/.cache/
 
-# =========================
-# Repo-specific heavy artifacts
-# =========================
-
-# UCF data: annotations + pre-extracted features
+# UCF data and feature archives
 UCF Annotation/
 UCFClipFeatures/
+UCFClipFeatures.zip
+UCFClipFeatures.tar
+UCFClipFeatures.tar.gz
 
-# UCF checkpoint diagnostics dumps
+# Generated diagnostics and embedding caches
 ucf_checkpoint_diagnostics*/
-
-# Top-level weight file observed in this repo
-model_ucf.pth
-
-# Generated caches / embeddings / caption dumps inside notebooks folder
 code/*embeddings_cache*.json
 code/*prototype_embeddings_cache*.json
 code/*gpt_video_descriptions*.json
 code/*gpt_video_descriptions*.csv
 
-# (If you generate additional cached JSON/embeddings later, add patterns here.)
+# Large raw analysis exports. Keep small summaries, charts, and reports trackable.
+Result/**/*.npz
+Result/**/snippet_index_scores.csv
+Result/**/stage_scores_by_snippet.csv
+Result/**/topk_selection_details.csv
+Result/**/topk_selection_frequency.json
+Result/**/snippet_class_attribution_*.csv
+Result/**/all_snippets_temporal_delta.csv
+Result/**/per_snippet_scores.csv
+Result/**/train_bank_index.csv
+Result/**/high_score_index_sequences.json

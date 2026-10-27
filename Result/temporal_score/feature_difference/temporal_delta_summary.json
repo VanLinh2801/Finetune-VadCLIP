@@ -1,0 +1,186 @@
+{
+  "topk_ratio": 0.15,
+  "selection_basis": "uncorrected classifier score from the trained temporal model",
+  "selected_snippets": 10537,
+  "delta_logit_by_group": {
+    "true_high_abnormal_video": {
+      "count": 1559,
+      "mean": -0.004570415568875681,
+      "median": -0.0027320305816829205,
+      "p10": -0.016968874633312224,
+      "p90": 0.009449864737689499,
+      "positive_fraction": 0.3790891597177678
+    },
+    "false_high_abnormal_video": {
+      "count": 2837,
+      "mean": -0.005618162363595935,
+      "median": -0.0010889220284298062,
+      "p10": -0.017817835137248036,
+      "p90": 0.015005544759333135,
+      "positive_fraction": 0.4437786394078252
+    },
+    "false_high_normal_video": {
+      "count": 6141,
+      "mean": -0.04287464702882741,
+      "median": -0.001518892589956522,
+      "p10": -0.27148550748825073,
+      "p90": 0.024956492707133293,
+      "positive_fraction": 0.4585572382348152
+    }
+  },
+  "paired_abnormal_video_true_high_minus_false_high_delta": {
+    "count": 68,
+    "mean": 9.603635336576886e-05,
+    "median": 3.46939717322432e-05,
+    "p10": -0.020757741678055424,
+    "p90": 0.014252678572288874,
+    "positive_fraction": 0.5
+  },
+  "adjusted_top15_anomaly_fraction_macro_video_mean": 0.1716778539793081,
+  "all_snippets": {
+    "count": 69368,
+    "delta_logit": {
+      "count": 69368,
+      "mean": -0.011099281641972887,
+      "median": -0.001041292678564787,
+      "p10": -0.02540619298815727,
+      "p90": 0.015346166118979456,
+      "positive_fraction": 0.4519374927920655
+    },
+    "delta_logit_by_snippet_group": {
+      "anomaly_snippet_abnormal_video": {
+        "count": 5400,
+        "mean": -0.004741302197012205,
+        "median": -0.001452342956326902,
+        "p10": -0.019664513133466243,
+        "p90": 0.013748415559530259,
+        "positive_fraction": 0.43907407407407406
+      },
+      "normal_snippet_abnormal_video": {
+        "count": 23474,
+        "mean": -0.01040119859140618,
+        "median": -0.0009378191316500306,
+        "p10": -0.024568777345120904,
+        "p90": 0.01470544645562768,
+        "positive_fraction": 0.4546732555167419
+      },
+      "normal_video_snippet": {
+        "count": 40494,
+        "mean": -0.012351810177849575,
+        "median": -0.0010511136497370899,
+        "p10": -0.02695658877491951,
+        "p90": 0.01590689141303301,
+        "positive_fraction": 0.45206697288487185
+      }
+    },
+    "delta_logit_by_selection_region": {
+      "all": {
+        "anomaly_snippet_abnormal_video": {
+          "count": 5400,
+          "mean": -0.004741302197012205,
+          "median": -0.001452342956326902,
+          "p10": -0.019664513133466243,
+          "p90": 0.013748415559530259,
+          "positive_fraction": 0.43907407407407406
+        },
+        "normal_snippet_abnormal_video": {
+          "count": 23474,
+          "mean": -0.01040119859140618,
+          "median": -0.0009378191316500306,
+          "p10": -0.024568777345120904,
+          "p90": 0.01470544645562768,
+          "positive_fraction": 0.4546732555167419
+        },
+        "normal_video_snippet": {
+          "count": 40494,
+          "mean": -0.012351810177849575,
+          "median": -0.0010511136497370899,
+          "p10": -0.02695658877491951,
+          "p90": 0.01590689141303301,
+          "positive_fraction": 0.45206697288487185
+        }
+      },
+      "base_top15": {
+        "anomaly_snippet_abnormal_video": {
+          "count": 1559,
+          "mean": -0.004570415568875681,
+          "median": -0.0027320305816829205,
+          "p10": -0.016968874633312224,
+          "p90": 0.009449864737689499,
+          "positive_fraction": 0.3790891597177678
+        },
+        "normal_snippet_abnormal_video": {
+          "count": 2837,
+          "mean": -0.005618162363595935,
+          "median": -0.0010889220284298062,
+          "p10": -0.017817835137248036,
+          "p90": 0.015005544759333135,
+          "positive_fraction": 0.4437786394078252
+        },
+        "normal_video_snippet": {
+          "count": 6141,
+          "mean": -0.04287464702882741,
+          "median": -0.001518892589956522,
+          "p10": -0.27148550748825073,
+          "p90": 0.024956492707133293,
+          "positive_fraction": 0.4585572382348152
+        }
+      },
+      "outside_base_top15": {
+        "anomaly_snippet_abnormal_video": {
+          "count": 3841,
+          "mean": -0.004810662325433148,
+          "median": -0.0008061876287683845,
+          "p10": -0.02089178003370762,
+          "p90": 0.015406397171318531,
+          "positive_fraction": 0.46342098411871907
+        },
+        "normal_snippet_abnormal_video": {
+          "count": 20637,
+          "mean": -0.01105872990789102,
+          "median": -0.0009068821091204882,
+          "p10": -0.02622966468334198,
+          "p90": 0.01463500671088696,
+          "positive_fraction": 0.45617095508068034
+        },
+        "normal_video_snippet": {
+          "count": 34353,
+          "mean": -0.006895496577818868,
+          "median": -0.0009993348503485322,
+          "p10": -0.022233889624476432,
+          "p90": 0.01417720764875412,
+          "positive_fraction": 0.4509067621459552
+        }
+      },
+      "adjusted_top15": {
+        "anomaly_snippet_abnormal_video": {
+          "count": 1553,
+          "mean": -0.0040911778572298215,
+          "median": -0.00267097819596529,
+          "p10": -0.01677771210670471,
+          "p90": 0.009556002169847488,
+          "positive_fraction": 0.3844172569220863
+        },
+        "normal_snippet_abnormal_video": {
+          "count": 2843,
+          "mean": -0.005013319729455782,
+          "median": -0.0009608895052224398,
+          "p10": -0.016886693239212037,
+          "p90": 0.015138230845332156,
+          "positive_fraction": 0.4502286317270489
+        },
+        "normal_video_snippet": {
+          "count": 6141,
+          "mean": -0.03992558139936249,
+          "median": -0.0011814730241894722,
+          "p10": -0.2620675265789032,
+          "p90": 0.02547122910618782,
+          "positive_fraction": 0.4706073929327471
+        }
+      }
+    },
+    "csv": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/temporal_score/feature_difference/all_snippets_temporal_delta.csv"
+  },
+  "videos": 290,
+  "snippet_csv": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/temporal_score/feature_difference/baseline_top15_temporal_delta_by_snippet.csv"
+}

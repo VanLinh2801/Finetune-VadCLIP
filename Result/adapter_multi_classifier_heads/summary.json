@@ -1,0 +1,121 @@
+{
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_adapter_multi_classifier_scratch.pth",
+  "test_videos": 290,
+  "evaluated_frames": 1109888,
+  "mil_k_rule": "floor(snippet_count / 16) + 1",
+  "global_metrics": [
+    {
+      "scope": "global",
+      "score": "head_1",
+      "auc": 86.31588883301669,
+      "ap": 28.807091501438197,
+      "frames": 1109888
+    },
+    {
+      "scope": "global",
+      "score": "head_2",
+      "auc": 86.34679511164146,
+      "ap": 28.04555784722178,
+      "frames": 1109888
+    },
+    {
+      "scope": "global",
+      "score": "aggregate_raw_mean",
+      "auc": 86.41170258657505,
+      "ap": 28.577099603957745,
+      "frames": 1109888
+    },
+    {
+      "scope": "global",
+      "score": "aggregate_probability_mean",
+      "auc": 86.46925641394773,
+      "ap": 28.905655866949807,
+      "frames": 1109888
+    },
+    {
+      "scope": "global",
+      "score": "aggregate_probability_max",
+      "auc": 86.33588005957627,
+      "ap": 27.912388024278545,
+      "frames": 1109888
+    }
+  ],
+  "head_correlations": [
+    {
+      "left": "head_1",
+      "right": "head_2",
+      "pearson_frame_score": 0.974866910678669
+    }
+  ],
+  "head_topk_overlap": [
+    {
+      "left": "head_1",
+      "right": "head_2",
+      "videos": 140,
+      "mean_overlap_fraction_of_k": 0.7210221391800126,
+      "mean_jaccard": 0.6247325313872266
+    }
+  ],
+  "topk_group_summary": [
+    {
+      "group": "head_1_all",
+      "videos": 140,
+      "mean_selected_count": 13.4,
+      "precision_any": 0.3683913326809603,
+      "precision_majority": 0.36057997736960495,
+      "mean_anomaly_fraction": 0.3598791107758812,
+      "recall_anomaly_snippets": 0.13059926147584597,
+      "anomaly_frame_coverage": 0.133689557451578
+    },
+    {
+      "group": "head_1_unique",
+      "videos": 140,
+      "mean_selected_count": 3.6785714285714284,
+      "precision_any": 0.36370129870129864,
+      "precision_majority": 0.34354978354978355,
+      "mean_anomaly_fraction": 0.3484929653679653,
+      "recall_anomaly_snippets": 0.02846489789085215,
+      "anomaly_frame_coverage": 0.027995278248451015
+    },
+    {
+      "group": "head_2_all",
+      "videos": 140,
+      "mean_selected_count": 13.4,
+      "precision_any": 0.36548280043254855,
+      "precision_majority": 0.36011192131166947,
+      "mean_anomaly_fraction": 0.3566949266000319,
+      "recall_anomaly_snippets": 0.12754443246694092,
+      "anomaly_frame_coverage": 0.13083483322960626
+    },
+    {
+      "group": "head_2_unique",
+      "videos": 140,
+      "mean_selected_count": 3.6785714285714284,
+      "precision_any": 0.3254978354978355,
+      "precision_majority": 0.32095238095238093,
+      "mean_anomaly_fraction": 0.3162648809523809,
+      "recall_anomaly_snippets": 0.025410068881947093,
+      "anomaly_frame_coverage": 0.02514055402647924
+    },
+    {
+      "group": "intersection",
+      "videos": 140,
+      "mean_selected_count": 9.721428571428572,
+      "precision_any": 0.385168671198083,
+      "precision_majority": 0.37932451535392714,
+      "mean_anomaly_fraction": 0.37835085665968016,
+      "recall_anomaly_snippets": 0.10213436358499382,
+      "anomaly_frame_coverage": 0.10569427920312702
+    },
+    {
+      "group": "union",
+      "videos": 140,
+      "mean_selected_count": 17.07857142857143,
+      "precision_any": 0.36280758231311483,
+      "precision_majority": 0.35554044468883433,
+      "mean_anomaly_fraction": 0.35365486355630765,
+      "recall_anomaly_snippets": 0.15600933035779307,
+      "anomaly_frame_coverage": 0.15883011147805728
+    }
+  ]
+}

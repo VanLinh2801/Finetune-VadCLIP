@@ -1,0 +1,168 @@
+{
+  "dataset": "ucf-crime",
+  "version": 1,
+  "constraints": {
+    "focus": "subject and action",
+    "articles": false,
+    "adjectives": false
+  },
+  "classes": {
+    "normal": [
+      "person walks", "people talk", "customer browses shelves",
+      "cashier scans items", "driver parks vehicle", "worker carries box",
+      "pedestrian crosses road", "cyclist rides bicycle", "passenger waits",
+      "shopper pays cashier", "vehicle travels road", "people enter building",
+      "people leave building", "worker opens door", "person uses phone",
+      "child walks beside adult", "group stands", "vendor serves customer",
+      "person sits", "employee arranges products"
+    ],
+    "abuse": [
+      "person hits victim", "person pushes victim", "person kicks victim",
+      "person drags victim", "person restrains victim", "person strikes child",
+      "caregiver hits resident", "adult shakes child", "person slaps victim",
+      "aggressor grabs victim", "person throws victim", "person pins victim",
+      "crowd attacks victim", "person chases victim", "person forces victim down",
+      "aggressor pulls victim", "person beats victim", "person shoves victim",
+      "person punches victim", "group surrounds victim and strikes"
+    ],
+    "arrest": [
+      "officer handcuffs suspect", "police restrain suspect",
+      "officer escorts suspect", "police surround suspect",
+      "officer pins suspect", "police place suspect inside vehicle",
+      "officer searches suspect", "police chase suspect",
+      "officer grabs suspect", "police block suspect",
+      "officer forces suspect down", "police hold suspect",
+      "officer leads suspect away", "police capture suspect",
+      "officer pulls suspect from vehicle", "police secure suspect wrists",
+      "officer stops suspect", "police remove suspect from scene",
+      "officer detains suspect", "police transport suspect"
+    ],
+    "arson": [
+      "person ignites object", "person lights material", "person sets vehicle on fire",
+      "person sets building on fire", "person pours fuel and ignites",
+      "person throws fire toward property", "person burns container",
+      "person starts fire near doorway", "person ignites pile",
+      "person carries fuel and lights object", "person burns vehicle interior",
+      "person lights cloth near property", "person ignites trash",
+      "person starts fire and leaves", "person feeds material into fire",
+      "person spreads fuel across floor", "person lights fuel trail",
+      "person throws object with flames", "person burns storefront",
+      "person ignites property"
+    ],
+    "assault": [
+      "person punches person", "person kicks person", "person strikes person",
+      "person pushes person down", "person attacks passerby",
+      "person hits person with object", "person tackles person",
+      "person grabs person and strikes", "person chokes person",
+      "person throws person down", "person charges toward person",
+      "person swings object at person", "person knocks person down",
+      "person stomps person", "person slaps person", "person shoves person",
+      "person lunges at person", "person pins person", "group attacks person",
+      "person pursues person and strikes"
+    ],
+    "burglary": [
+      "person breaks window and enters", "person forces door open",
+      "person climbs through window", "person enters building through opening",
+      "person pries lock", "person cuts lock", "person searches room",
+      "person removes property from building", "person carries items from house",
+      "person opens cabinet and takes contents", "person enters shop after closing",
+      "person climbs fence and enters property", "person breaks door panel",
+      "person crawls through entrance", "person unlocks door with tool",
+      "person enters garage and removes items", "person searches drawers",
+      "person exits building carrying property", "person reaches through window",
+      "person damages entrance and enters"
+    ],
+    "explosion": [
+      "object explodes", "vehicle explodes", "container explodes",
+      "building erupts", "fireball expands", "smoke bursts from object",
+      "debris scatters after blast", "flames burst from vehicle",
+      "structure bursts apart", "object detonates near people",
+      "blast throws debris", "vehicle erupts into flames",
+      "container bursts and releases smoke", "ground erupts",
+      "fire spreads after blast", "people flee after explosion",
+      "blast shakes structure", "smoke rises after detonation",
+      "flames emerge after detonation", "object fragments after blast"
+    ],
+    "fighting": [
+      "people exchange punches", "people kick each other",
+      "people grapple", "people push each other", "people strike each other",
+      "group attacks group", "people wrestle", "people chase and fight",
+      "people swing objects at each other", "people knock each other down",
+      "people grab and punch", "people shove and strike",
+      "crowd joins fight", "people circle and attack",
+      "people tackle each other", "people block and counterattack",
+      "people throw punches", "people stomp and kick",
+      "people collide and grapple", "groups exchange blows"
+    ],
+    "roadAccidents": [
+      "vehicle hits vehicle", "vehicle hits pedestrian", "vehicle hits bicycle",
+      "vehicle overturns", "vehicle leaves road", "vehicle crashes into barrier",
+      "vehicle collides with motorcycle", "motorcycle hits vehicle",
+      "vehicle strikes pole", "vehicle crashes into building",
+      "vehicles collide at intersection", "vehicle rolls after collision",
+      "motorcycle falls after impact", "vehicle rear ends vehicle",
+      "vehicle crosses lane and collides", "truck hits car",
+      "bus hits vehicle", "vehicle swerves and crashes",
+      "cyclist collides with vehicle", "pedestrian falls after impact"
+    ],
+    "robbery": [
+      "person threatens victim and takes property", "person grabs bag from victim",
+      "person points weapon and demands money", "person takes wallet from victim",
+      "person forces cashier to surrender money", "person snatches phone from victim",
+      "person attacks victim and takes belongings", "person takes cash from register",
+      "person blocks victim and steals bag", "group surrounds victim and takes property",
+      "person holds victim and removes wallet", "person threatens clerk and takes cash",
+      "person pulls bag from shopper", "person steals property using weapon",
+      "person grabs necklace from victim", "person demands belongings from victim",
+      "person enters shop and threatens cashier", "person takes purse by force",
+      "person knocks victim down and steals", "group attacks victim and steals"
+    ],
+    "shooting": [
+      "person fires gun", "person shoots victim", "person aims gun and fires",
+      "person fires toward crowd", "person fires from vehicle",
+      "person shoots toward building", "person draws gun and fires",
+      "person fires while running", "person fires at vehicle",
+      "person raises weapon and shoots", "people exchange gunfire",
+      "person shoots and flees", "person fires through doorway",
+      "person fires across street", "person shoots from entrance",
+      "person fires rounds", "person fires toward person",
+      "person points firearm and shoots", "group fires weapons",
+      "person discharges gun"
+    ],
+    "shoplifting": [
+      "shopper hides product", "shopper places product inside bag",
+      "shopper conceals item under clothing", "shopper takes product from shelf and leaves",
+      "shopper pockets product", "shopper removes tag from product",
+      "shopper carries item past cashier without paying", "shopper hides merchandise in clothing",
+      "shopper transfers product into bag", "shopper takes item without paying",
+      "shopper conceals package", "shopper removes product from display and exits",
+      "shopper places merchandise inside pocket", "shopper hides bottle in bag",
+      "shopper walks past register with product", "shopper takes items and leaves",
+      "shopper covers product and removes it", "shopper passes item to companion",
+      "shopper conceals goods near shelf", "shopper exits store carrying goods without paying"
+    ],
+    "stealing": [
+      "person takes bag after owner leaves", "person removes phone from table",
+      "person takes bicycle", "person steals package", "person takes property from vehicle",
+      "person removes wallet from pocket", "person grabs belongings and leaves",
+      "person takes object from desk", "person removes item from backpack",
+      "person steals luggage", "person takes parcel from doorway",
+      "person reaches into bag and removes property", "person takes vehicle keys",
+      "person removes equipment and leaves", "person takes phone from victim",
+      "person steals object from counter", "person picks pocket",
+      "person takes property while owner leaves", "person removes bag from chair",
+      "person carries stolen property away"
+    ],
+    "vandalism": [
+      "person breaks window", "person damages vehicle", "person kicks door",
+      "person sprays paint on wall", "person smashes object",
+      "person throws object at property", "person scratches vehicle",
+      "person breaks sign", "person strikes structure with tool",
+      "person tears fixture from wall", "person overturns property",
+      "person damages storefront", "person breaks camera",
+      "person writes on wall", "person dents vehicle",
+      "person destroys display", "person cuts fence", "person breaks light",
+      "person damages door", "group destroys property"
+    ]
+  }
+}

@@ -1,0 +1,706 @@
+{
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_scratch.pth",
+  "test_videos": 290,
+  "test_frames": 1109888,
+  "top_k_ratio_per_video": 0.15,
+  "top_k_selected_snippets": 10537,
+  "top_k_group_counts": {
+    "true_high": 1553,
+    "false_high": 8984
+  },
+  "conditions": {
+    "full": "Unmodified VadCLIP inference.",
+    "temporal_self_only_fixed_graph": "Every temporal query sees only itself; original graph adjacency is held fixed.",
+    "temporal_self_only_rebuilt_graph": "Every temporal query sees only itself; similarity adjacency is recomputed from that representation.",
+    "graph_identity": "Full temporal features; both graph adjacencies are identity, so graph layers do not exchange information across snippets.",
+    "temporal_and_graph_identity": "Self-only temporal attention followed by identity graph adjacency.",
+    "temporal_bypass_fixed_graph": "Bypass temporal Transformer blocks, retain positional embeddings and original graph adjacency.",
+    "temporal_bypass_rebuilt_graph": "Bypass temporal Transformer blocks, retain positional embeddings and recompute similarity adjacency."
+  },
+  "metric_protocol": "AUC/AP are frame-level: each snippet classifier score is repeated for its 16 source frames and compared with the original frame GT. Snippet groups are selected once from full-model top-k per video, then labeled using GT for post-hoc analysis only.",
+  "limitations": [
+    "Identity graph adjacency removes cross-snippet graph message passing but keeps graph projections, residuals, nonlinearities, and fusion.",
+    "Temporal bypass changes feature distribution; its score effect is an intervention sensitivity check, not a standalone trained-model performance estimate.",
+    "Feature distance and classifier score impact are separate quantities; a feature change alone does not establish task usefulness."
+  ],
+  "frame_level_metrics": {
+    "full": {
+      "auc": 87.71808228727794,
+      "ap": 33.132329719606204
+    },
+    "temporal_self_only_fixed_graph": {
+      "auc": 87.59743894630283,
+      "ap": 33.26073563795499
+    },
+    "temporal_self_only_rebuilt_graph": {
+      "auc": 87.59683883464477,
+      "ap": 33.26195764617022
+    },
+    "graph_identity": {
+      "auc": 84.57886023594097,
+      "ap": 28.55058439348028
+    },
+    "temporal_and_graph_identity": {
+      "auc": 84.13433682030987,
+      "ap": 27.901384470086743
+    },
+    "temporal_bypass_fixed_graph": {
+      "auc": 56.558614824710006,
+      "ap": 9.227488505363215
+    },
+    "temporal_bypass_rebuilt_graph": {
+      "auc": 56.557537318649075,
+      "ap": 9.226819757467469
+    }
+  },
+  "top_k_group_analysis": {
+    "true_high": {
+      "snippet_count": 1553,
+      "videos": 85,
+      "score_deltas": {
+        "temporal_self_only_fixed_graph": {
+          "count": 1553,
+          "mean": 0.007390618276943895,
+          "median": 0.00028437376022338867,
+          "p10": -0.00032781362533569294,
+          "p90": 0.021593940258026124,
+          "positive_fraction": 0.7862202189311011
+        },
+        "temporal_self_only_rebuilt_graph": {
+          "count": 1553,
+          "mean": 0.007398992893958361,
+          "median": 0.00028502941131591797,
+          "p10": -0.00032709091901779127,
+          "p90": 0.02153767347335815,
+          "positive_fraction": 0.7855763039278815
+        },
+        "graph_identity": {
+          "count": 1553,
+          "mean": 0.1871346990216262,
+          "median": 0.2405964732170105,
+          "p10": 0.008403193950653117,
+          "p90": 0.3196616530418396,
+          "positive_fraction": 0.9008370895041854
+        },
+        "temporal_and_graph_identity": {
+          "count": 1553,
+          "mean": 0.1914829959120201,
+          "median": 0.24206960201263428,
+          "p10": -0.008173811435699339,
+          "p90": 0.3318941116333008,
+          "positive_fraction": 0.8982614294913072
+        },
+        "temporal_bypass_fixed_graph": {
+          "count": 1553,
+          "mean": 0.8272960662619311,
+          "median": 0.9370158910751343,
+          "p10": 0.5559189796447754,
+          "p90": 0.9832027077674865,
+          "positive_fraction": 0.9845460399227302
+        },
+        "temporal_bypass_rebuilt_graph": {
+          "count": 1553,
+          "mean": 0.8272959051976977,
+          "median": 0.9370085000991821,
+          "p10": 0.555921995639801,
+          "p90": 0.9831915497779846,
+          "positive_fraction": 0.9845460399227302
+        }
+      },
+      "logit_deltas": {
+        "temporal_self_only_fixed_graph": {
+          "count": 1553,
+          "mean": 0.2022787762106578,
+          "median": 0.12760305404663086,
+          "p10": -0.07099275588989258,
+          "p90": 0.550729751586914,
+          "positive_fraction": 0.7868641339343206
+        },
+        "temporal_self_only_rebuilt_graph": {
+          "count": 1553,
+          "mean": 0.20215006019135712,
+          "median": 0.12725496292114258,
+          "p10": -0.07109384536743163,
+          "p90": 0.5493913650512695,
+          "positive_fraction": 0.7855763039278815
+        },
+        "graph_identity": {
+          "count": 1553,
+          "mean": 4.141534457284254,
+          "median": 4.558236598968506,
+          "p10": 0.03554520905017866,
+          "p90": 7.983162307739257,
+          "positive_fraction": 0.9008370895041854
+        },
+        "temporal_and_graph_identity": {
+          "count": 1553,
+          "mean": 4.160589556577355,
+          "median": 4.583384037017822,
+          "p10": -0.034991526603698205,
+          "p90": 7.996068000793457,
+          "positive_fraction": 0.8982614294913072
+        },
+        "temporal_bypass_fixed_graph": {
+          "count": 1553,
+          "mean": 8.32120541235131,
+          "median": 8.785036087036133,
+          "p10": 3.9683669090270994,
+          "p90": 12.300997161865233,
+          "positive_fraction": 0.9845460399227302
+        },
+        "temporal_bypass_rebuilt_graph": {
+          "count": 1553,
+          "mean": 8.321173753649362,
+          "median": 8.784096717834473,
+          "p10": 3.9683565139770507,
+          "p90": 12.30090980529785,
+          "positive_fraction": 0.9845460399227302
+        }
+      },
+      "feature_changes": {
+        "clip_position_to_temporal_cosine": {
+          "count": 1553,
+          "mean": 0.4914591394542343,
+          "median": 0.4929545521736145,
+          "p10": 0.4433176279067993,
+          "p90": 0.5343470573425293,
+          "positive_fraction": 1.0
+        },
+        "clip_position_to_temporal_relative_l2": {
+          "count": 1553,
+          "mean": 1.3862663783416085,
+          "median": 1.381881833076477,
+          "p10": 1.2964536428451539,
+          "p90": 1.4922901391983032,
+          "positive_fraction": 1.0
+        },
+        "full_temporal_to_self_only_cosine": {
+          "count": 1553,
+          "mean": 0.9800985781745764,
+          "median": 0.9852226972579956,
+          "p10": 0.9647029042243958,
+          "p90": 0.9943196177482605,
+          "positive_fraction": 1.0
+        },
+        "full_temporal_to_self_only_relative_l2": {
+          "count": 1553,
+          "mean": 0.1862212835384697,
+          "median": 0.17397662997245789,
+          "p10": 0.10731513053178787,
+          "p90": 0.2683683395385742,
+          "positive_fraction": 1.0
+        },
+        "temporal_to_graph_output_cosine": {
+          "count": 1553,
+          "mean": 0.014278331270899579,
+          "median": 0.013006584718823433,
+          "p10": -0.032433594763278964,
+          "p90": 0.06359283924102783,
+          "positive_fraction": 0.6258853831294269
+        },
+        "temporal_to_graph_output_relative_l2": {
+          "count": 1553,
+          "mean": 5.729518261557614,
+          "median": 5.721399307250977,
+          "p10": 5.159445476531983,
+          "p90": 6.334847640991211,
+          "positive_fraction": 1.0
+        },
+        "graph_output_to_classifier_input_cosine": {
+          "count": 1553,
+          "mean": 0.9728287902863963,
+          "median": 0.9731468558311462,
+          "p10": 0.9702735185623169,
+          "p90": 0.9748652696609497,
+          "positive_fraction": 1.0
+        },
+        "graph_output_to_classifier_input_relative_l2": {
+          "count": 1553,
+          "mean": 0.23967610318777413,
+          "median": 0.23872770369052887,
+          "p10": 0.23055239915847778,
+          "p90": 0.25140414834022523,
+          "positive_fraction": 1.0
+        }
+      }
+    },
+    "false_high": {
+      "snippet_count": 8984,
+      "videos": 276,
+      "score_deltas": {
+        "temporal_self_only_fixed_graph": {
+          "count": 8984,
+          "mean": 0.009804882090085966,
+          "median": 2.274340658914298e-06,
+          "p10": -0.0033263697288930414,
+          "p90": 0.020289236307144153,
+          "positive_fraction": 0.5803650934995548
+        },
+        "temporal_self_only_rebuilt_graph": {
+          "count": 8984,
+          "mean": 0.00980298681171989,
+          "median": 2.2249651010497473e-06,
+          "p10": -0.0033243617042899125,
+          "p90": 0.020392769575119016,
+          "positive_fraction": 0.5795859305431879
+        },
+        "graph_identity": {
+          "count": 8984,
+          "mean": -0.1860545796498935,
+          "median": -0.3408171981573105,
+          "p10": -0.4708681792020798,
+          "p90": 0.2838826358318329,
+          "positive_fraction": 0.3136687444345503
+        },
+        "temporal_and_graph_identity": {
+          "count": 8984,
+          "mean": -0.18225707310788458,
+          "median": -0.3347967565059662,
+          "p10": -0.47146664261817933,
+          "p90": 0.2871933400630951,
+          "positive_fraction": 0.3136687444345503
+        },
+        "temporal_bypass_fixed_graph": {
+          "count": 8984,
+          "mean": 0.2629253384838941,
+          "median": -0.003157898783683777,
+          "p10": -0.09486719891428948,
+          "p90": 0.9304004609584808,
+          "positive_fraction": 0.47039180765805877
+        },
+        "temporal_bypass_rebuilt_graph": {
+          "count": 8984,
+          "mean": 0.2629216868621417,
+          "median": -0.003157943021506071,
+          "p10": -0.09487429037690162,
+          "p90": 0.9303895711898804,
+          "positive_fraction": 0.47039180765805877
+        }
+      },
+      "logit_deltas": {
+        "temporal_self_only_fixed_graph": {
+          "count": 8984,
+          "mean": 0.14516789652738896,
+          "median": 0.03166365623474121,
+          "p10": -0.19426124244928358,
+          "p90": 0.48090658187866187,
+          "positive_fraction": 0.5804764024933214
+        },
+        "temporal_self_only_rebuilt_graph": {
+          "count": 8984,
+          "mean": 0.14499162615028907,
+          "median": 0.03115558624267578,
+          "p10": -0.1947751760482788,
+          "p90": 0.47907593250274655,
+          "positive_fraction": 0.5795859305431879
+        },
+        "graph_identity": {
+          "count": 8984,
+          "mean": -3.5198111760770887,
+          "median": -3.1800707578659058,
+          "p10": -11.848503684997558,
+          "p90": 4.426317405700683,
+          "positive_fraction": 0.3136687444345503
+        },
+        "temporal_and_graph_identity": {
+          "count": 8984,
+          "mean": -3.503585250937908,
+          "median": -3.1642383337020874,
+          "p10": -11.839014530181885,
+          "p90": 4.444393634796142,
+          "positive_fraction": 0.3136687444345503
+        },
+        "temporal_bypass_fixed_graph": {
+          "count": 8984,
+          "mean": -0.08963768591545357,
+          "median": -0.35372376441955566,
+          "p10": -7.833392333984375,
+          "p90": 8.386077117919921,
+          "positive_fraction": 0.47039180765805877
+        },
+        "temporal_bypass_rebuilt_graph": {
+          "count": 8984,
+          "mean": -0.08966492748058809,
+          "median": -0.3535881042480469,
+          "p10": -7.833361577987671,
+          "p90": 8.384583473205566,
+          "positive_fraction": 0.47039180765805877
+        }
+      },
+      "feature_changes": {
+        "clip_position_to_temporal_cosine": {
+          "count": 8984,
+          "mean": 0.5068130227882259,
+          "median": 0.5018645524978638,
+          "p10": 0.46128548085689547,
+          "p90": 0.5531581461429596,
+          "positive_fraction": 1.0
+        },
+        "clip_position_to_temporal_relative_l2": {
+          "count": 8984,
+          "mean": 1.3734332689632291,
+          "median": 1.375290334224701,
+          "p10": 1.2644644737243653,
+          "p90": 1.4864555239677428,
+          "positive_fraction": 1.0
+        },
+        "full_temporal_to_self_only_cosine": {
+          "count": 8984,
+          "mean": 0.9751699415275218,
+          "median": 0.9876711964607239,
+          "p10": 0.9663363575935364,
+          "p90": 0.9966458201408386,
+          "positive_fraction": 1.0
+        },
+        "full_temporal_to_self_only_relative_l2": {
+          "count": 8984,
+          "mean": 0.18505359181631706,
+          "median": 0.15824111551046371,
+          "p10": 0.08224894031882286,
+          "p90": 0.2646565943956375,
+          "positive_fraction": 1.0
+        },
+        "temporal_to_graph_output_cosine": {
+          "count": 8984,
+          "mean": -0.00475900954599965,
+          "median": -0.0002212291583418846,
+          "p10": -0.06482330188155173,
+          "p90": 0.046499412506818764,
+          "positive_fraction": 0.49833036509349954
+        },
+        "temporal_to_graph_output_relative_l2": {
+          "count": 8984,
+          "mean": 5.876596650266265,
+          "median": 5.824686050415039,
+          "p10": 4.667937183380127,
+          "p90": 7.190968418121338,
+          "positive_fraction": 1.0
+        },
+        "graph_output_to_classifier_input_cosine": {
+          "count": 8984,
+          "mean": 0.9733569967566276,
+          "median": 0.9735116362571716,
+          "p10": 0.9705469906330109,
+          "p90": 0.9759342312812805,
+          "positive_fraction": 1.0
+        },
+        "graph_output_to_classifier_input_relative_l2": {
+          "count": 8984,
+          "mean": 0.23559497117014305,
+          "median": 0.23592985421419144,
+          "p10": 0.22363051772117615,
+          "p90": 0.24658986926078796,
+          "positive_fraction": 1.0
+        }
+      }
+    }
+  },
+  "feature_change_by_group": {
+    "other_normal": {
+      "clip_position_to_temporal_cosine": {
+        "count": 54984,
+        "mean": 0.5069798404570666,
+        "median": 0.5043840110301971,
+        "p10": 0.4653848946094513,
+        "p90": 0.5483095169067383,
+        "positive_fraction": 1.0
+      },
+      "clip_position_to_temporal_relative_l2": {
+        "count": 54984,
+        "mean": 1.3823465483265032,
+        "median": 1.382112443447113,
+        "p10": 1.2718352556228638,
+        "p90": 1.4909098744392395,
+        "positive_fraction": 1.0
+      },
+      "full_temporal_to_self_only_cosine": {
+        "count": 54984,
+        "mean": 0.9872943495576271,
+        "median": 0.9921529591083527,
+        "p10": 0.976979672908783,
+        "p90": 0.9980831384658814,
+        "positive_fraction": 1.0
+      },
+      "full_temporal_to_self_only_relative_l2": {
+        "count": 54984,
+        "mean": 0.13863509367194018,
+        "median": 0.1261085718870163,
+        "p10": 0.062108634412288664,
+        "p90": 0.21709979921579362,
+        "positive_fraction": 1.0
+      },
+      "temporal_to_graph_output_cosine": {
+        "count": 54984,
+        "mean": -0.01350337657505734,
+        "median": -0.012117579579353333,
+        "p10": -0.06798379048705101,
+        "p90": 0.039592481404542926,
+        "positive_fraction": 0.38913138367525096
+      },
+      "temporal_to_graph_output_relative_l2": {
+        "count": 54984,
+        "mean": 6.491474717183351,
+        "median": 6.345567941665649,
+        "p10": 5.171753168106079,
+        "p90": 7.876506805419922,
+        "positive_fraction": 1.0
+      },
+      "graph_output_to_classifier_input_cosine": {
+        "count": 54984,
+        "mean": 0.9733846467164481,
+        "median": 0.9733031988143921,
+        "p10": 0.9712407648563385,
+        "p90": 0.9757830917835235,
+        "positive_fraction": 1.0
+      },
+      "graph_output_to_classifier_input_relative_l2": {
+        "count": 54984,
+        "mean": 0.2354427324303083,
+        "median": 0.23650729656219482,
+        "p10": 0.22487094700336457,
+        "p90": 0.24422400444746017,
+        "positive_fraction": 1.0
+      }
+    },
+    "other_anomaly": {
+      "clip_position_to_temporal_cosine": {
+        "count": 3847,
+        "mean": 0.5008621293444245,
+        "median": 0.5010798573493958,
+        "p10": 0.4616203486919403,
+        "p90": 0.5393102288246154,
+        "positive_fraction": 1.0
+      },
+      "clip_position_to_temporal_relative_l2": {
+        "count": 3847,
+        "mean": 1.382989989013092,
+        "median": 1.379376769065857,
+        "p10": 1.2951895713806152,
+        "p90": 1.4756033897399903,
+        "positive_fraction": 1.0
+      },
+      "full_temporal_to_self_only_cosine": {
+        "count": 3847,
+        "mean": 0.9819729982458649,
+        "median": 0.9874767661094666,
+        "p10": 0.9645319700241088,
+        "p90": 0.9962941765785217,
+        "positive_fraction": 1.0
+      },
+      "full_temporal_to_self_only_relative_l2": {
+        "count": 3847,
+        "mean": 0.17319525576196368,
+        "median": 0.1596795618534088,
+        "p10": 0.08624269366264344,
+        "p90": 0.269539886713028,
+        "positive_fraction": 1.0
+      },
+      "temporal_to_graph_output_cosine": {
+        "count": 3847,
+        "mean": -0.00153147245130025,
+        "median": -0.0007515493780374527,
+        "p10": -0.05332502275705337,
+        "p90": 0.052020765841007253,
+        "positive_fraction": 0.49285157265401613
+      },
+      "temporal_to_graph_output_relative_l2": {
+        "count": 3847,
+        "mean": 5.624861315810777,
+        "median": 5.622546672821045,
+        "p10": 4.953156566619873,
+        "p90": 6.3713726043701175,
+        "positive_fraction": 1.0
+      },
+      "graph_output_to_classifier_input_cosine": {
+        "count": 3847,
+        "mean": 0.9738198000950289,
+        "median": 0.9740736484527588,
+        "p10": 0.97135329246521,
+        "p90": 0.9758432865142822,
+        "positive_fraction": 1.0
+      },
+      "graph_output_to_classifier_input_relative_l2": {
+        "count": 3847,
+        "mean": 0.23477287814001743,
+        "median": 0.2338896542787552,
+        "p10": 0.22546754777431488,
+        "p90": 0.24591127932071685,
+        "positive_fraction": 1.0
+      }
+    },
+    "false_high": {
+      "clip_position_to_temporal_cosine": {
+        "count": 8984,
+        "mean": 0.5068130227882259,
+        "median": 0.5018645524978638,
+        "p10": 0.46128548085689547,
+        "p90": 0.5531581461429596,
+        "positive_fraction": 1.0
+      },
+      "clip_position_to_temporal_relative_l2": {
+        "count": 8984,
+        "mean": 1.3734332689632291,
+        "median": 1.375290334224701,
+        "p10": 1.2644644737243653,
+        "p90": 1.4864555239677428,
+        "positive_fraction": 1.0
+      },
+      "full_temporal_to_self_only_cosine": {
+        "count": 8984,
+        "mean": 0.9751699415275218,
+        "median": 0.9876711964607239,
+        "p10": 0.9663363575935364,
+        "p90": 0.9966458201408386,
+        "positive_fraction": 1.0
+      },
+      "full_temporal_to_self_only_relative_l2": {
+        "count": 8984,
+        "mean": 0.18505359181631706,
+        "median": 0.15824111551046371,
+        "p10": 0.08224894031882286,
+        "p90": 0.2646565943956375,
+        "positive_fraction": 1.0
+      },
+      "temporal_to_graph_output_cosine": {
+        "count": 8984,
+        "mean": -0.00475900954599965,
+        "median": -0.0002212291583418846,
+        "p10": -0.06482330188155173,
+        "p90": 0.046499412506818764,
+        "positive_fraction": 0.49833036509349954
+      },
+      "temporal_to_graph_output_relative_l2": {
+        "count": 8984,
+        "mean": 5.876596650266265,
+        "median": 5.824686050415039,
+        "p10": 4.667937183380127,
+        "p90": 7.190968418121338,
+        "positive_fraction": 1.0
+      },
+      "graph_output_to_classifier_input_cosine": {
+        "count": 8984,
+        "mean": 0.9733569967566276,
+        "median": 0.9735116362571716,
+        "p10": 0.9705469906330109,
+        "p90": 0.9759342312812805,
+        "positive_fraction": 1.0
+      },
+      "graph_output_to_classifier_input_relative_l2": {
+        "count": 8984,
+        "mean": 0.23559497117014305,
+        "median": 0.23592985421419144,
+        "p10": 0.22363051772117615,
+        "p90": 0.24658986926078796,
+        "positive_fraction": 1.0
+      }
+    },
+    "true_high": {
+      "clip_position_to_temporal_cosine": {
+        "count": 1553,
+        "mean": 0.4914591394542343,
+        "median": 0.4929545521736145,
+        "p10": 0.4433176279067993,
+        "p90": 0.5343470573425293,
+        "positive_fraction": 1.0
+      },
+      "clip_position_to_temporal_relative_l2": {
+        "count": 1553,
+        "mean": 1.3862663783416085,
+        "median": 1.381881833076477,
+        "p10": 1.2964536428451539,
+        "p90": 1.4922901391983032,
+        "positive_fraction": 1.0
+      },
+      "full_temporal_to_self_only_cosine": {
+        "count": 1553,
+        "mean": 0.9800985781745764,
+        "median": 0.9852226972579956,
+        "p10": 0.9647029042243958,
+        "p90": 0.9943196177482605,
+        "positive_fraction": 1.0
+      },
+      "full_temporal_to_self_only_relative_l2": {
+        "count": 1553,
+        "mean": 0.1862212835384697,
+        "median": 0.17397662997245789,
+        "p10": 0.10731513053178787,
+        "p90": 0.2683683395385742,
+        "positive_fraction": 1.0
+      },
+      "temporal_to_graph_output_cosine": {
+        "count": 1553,
+        "mean": 0.014278331270899579,
+        "median": 0.013006584718823433,
+        "p10": -0.032433594763278964,
+        "p90": 0.06359283924102783,
+        "positive_fraction": 0.6258853831294269
+      },
+      "temporal_to_graph_output_relative_l2": {
+        "count": 1553,
+        "mean": 5.729518261557614,
+        "median": 5.721399307250977,
+        "p10": 5.159445476531983,
+        "p90": 6.334847640991211,
+        "positive_fraction": 1.0
+      },
+      "graph_output_to_classifier_input_cosine": {
+        "count": 1553,
+        "mean": 0.9728287902863963,
+        "median": 0.9731468558311462,
+        "p10": 0.9702735185623169,
+        "p90": 0.9748652696609497,
+        "positive_fraction": 1.0
+      },
+      "graph_output_to_classifier_input_relative_l2": {
+        "count": 1553,
+        "mean": 0.23967610318777413,
+        "median": 0.23872770369052887,
+        "p10": 0.23055239915847778,
+        "p90": 0.25140414834022523,
+        "positive_fraction": 1.0
+      }
+    }
+  },
+  "paired_video_true_minus_false_effect": {
+    "temporal_self_only_fixed_graph": {
+      "paired_video_count": 71,
+      "mean_true_minus_false": -0.015796131469954053,
+      "videos_true_effect_greater": 32,
+      "videos_false_effect_greater": 39
+    },
+    "temporal_self_only_rebuilt_graph": {
+      "paired_video_count": 71,
+      "mean_true_minus_false": -0.015606685891480105,
+      "videos_true_effect_greater": 33,
+      "videos_false_effect_greater": 38
+    },
+    "graph_identity": {
+      "paired_video_count": 71,
+      "mean_true_minus_false": 0.0030195021383538794,
+      "videos_true_effect_greater": 33,
+      "videos_false_effect_greater": 38
+    },
+    "temporal_and_graph_identity": {
+      "paired_video_count": 71,
+      "mean_true_minus_false": 0.0016125297468032903,
+      "videos_true_effect_greater": 34,
+      "videos_false_effect_greater": 37
+    },
+    "temporal_bypass_fixed_graph": {
+      "paired_video_count": 71,
+      "mean_true_minus_false": 0.013607961947413637,
+      "videos_true_effect_greater": 34,
+      "videos_false_effect_greater": 37
+    },
+    "temporal_bypass_rebuilt_graph": {
+      "paired_video_count": 71,
+      "mean_true_minus_false": 0.013632078541070859,
+      "videos_true_effect_greater": 34,
+      "videos_false_effect_greater": 37
+    }
+  },
+  "outputs": {
+    "snippet_scores": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/temporal_graph_leakage/stage_contributions_all_test/stage_scores_by_snippet.csv",
+    "video_group_features": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/temporal_graph_leakage/stage_contributions_all_test/stage_features_by_video_group.csv"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "name": "manual_visual_keyword_5_prompts_per_class",
+    "dataset": "UCF-Crime",
+    "classes": 14,
+    "prompts_per_class": 5,
+    "language": "English",
+    "style": "Short visual-grounded noun-verb keyword prompts for frame-level CLIP alignment.",
+    "created_by": "manual_codex_generation",
+    "design_notes": [
+      "Prompts are newly written using the UCF-Crime class descriptions only as reference, not copied verbatim.",
+      "Each prompt uses concrete nouns and visible verbs that can plausibly appear in a frame or short snippet.",
+      "Prompts avoid weak inference words such as stolen, routine, suspicious, deliberate, sudden, without paying, and anomalous.",
+      "Generic words such as object, item, property, and activity are avoided when a more concrete visual noun is available.",
+      "Similar classes are separated by class-specific visual anchors: arson uses ignition tools and flames; explosion uses blast, fireball, shockwave, debris; road accidents use vehicles and roadway collisions."
+    ]
+  },
+  "classes": {
+    "Abuse": [
+      "adult hitting child",
+      "caregiver striking resident",
+      "aggressor dragging victim",
+      "person pinning victim",
+      "person restraining weaker victim"
+    ],
+    "Arrest": [
+      "police handcuffing suspect",
+      "officer escorting suspect",
+      "police restraining suspect",
+      "officer searching suspect",
+      "patrol car suspect custody"
+    ],
+    "Arson": [
+      "person lighting fuel",
+      "lighter igniting cloth",
+      "accelerant flames ground",
+      "person burning vehicle",
+      "flames spreading storefront"
+    ],
+    "Assault": [
+      "person punching passerby",
+      "person kicking target",
+      "attacker swinging weapon",
+      "person stomping target",
+      "person knocking target down"
+    ],
+    "Burglary": [
+      "intruder prying door",
+      "burglar climbing window",
+      "lock cutting tool",
+      "broken window entry",
+      "intruder searching drawers"
+    ],
+    "Explosion": [
+      "blast fireball debris",
+      "detonation shockwave fragments",
+      "vehicle explosion smoke",
+      "building blast debris",
+      "fireball plume rubble"
+    ],
+    "Fighting": [
+      "people exchanging punches",
+      "group brawl street",
+      "fighters grappling ground",
+      "crowd joining fight",
+      "people kicking each other"
+    ],
+    "Normal": [
+      "pedestrian walking sidewalk",
+      "customer browsing shelf",
+      "cashier scanning products",
+      "vehicle driving roadway",
+      "people standing talking"
+    ],
+    "RoadAccidents": [
+      "vehicle collision roadway",
+      "car hitting pedestrian",
+      "motorcycle sliding road",
+      "vehicle hitting barrier",
+      "crashed vehicles intersection"
+    ],
+    "Robbery": [
+      "weapon threatening cashier",
+      "robber grabbing bag",
+      "masked person taking cash",
+      "victim surrendering wallet",
+      "forceful purse snatching"
+    ],
+    "Shooting": [
+      "person firing gun",
+      "handgun muzzle flash",
+      "rifle aiming crowd",
+      "gunfire street scene",
+      "armed shooter firing"
+    ],
+    "Shoplifting": [
+      "shopper hiding merchandise",
+      "product concealed clothing",
+      "merchandise placed bag",
+      "shopper pocketing product",
+      "tag removed product"
+    ],
+    "Stealing": [
+      "phone grabbed table",
+      "bag taken chair",
+      "wallet removed pocket",
+      "package taken doorway",
+      "bicycle taken sidewalk"
+    ],
+    "Vandalism": [
+      "graffiti spraying wall",
+      "window smashing tool",
+      "vehicle scratching key",
+      "door kicking damage",
+      "sign breaking impact"
+    ]
+  }
+}

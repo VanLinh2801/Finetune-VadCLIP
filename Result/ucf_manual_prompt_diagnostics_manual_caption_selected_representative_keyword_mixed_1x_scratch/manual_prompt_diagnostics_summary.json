@@ -1,0 +1,10 @@
+{
+  "num_test_videos": 290,
+  "num_prompt_groups": 14,
+  "prompts_per_class": 1,
+  "num_suspicious_prompt_rows": 14,
+  "num_per_video_rows": 290,
+  "num_prompt_metric_rows": 14,
+  "num_prompt_by_video_class_rows": 196,
+  "num_drop_or_rewrite_suggestions": 1
+}

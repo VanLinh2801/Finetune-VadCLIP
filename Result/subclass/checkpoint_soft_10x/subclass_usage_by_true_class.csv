@@ -1,0 +1,141 @@
+true_class_name,subclass_index,subclass_text,test_videos_in_class,top1_videos,mean_weight
+Normal,0,Normal pedestrians walking on a sidewalk,150,1,0.10729334483544031
+Normal,1,Normal pedestrians crossing a street,150,3,0.10409532383084297
+Normal,2,Normal vehicles moving through traffic,150,0,0.07353698839743932
+Normal,3,Normal vehicles parked along a road,150,1,0.07320749521255493
+Normal,4,Normal customers browsing store shelves,150,0,0.06775875044365724
+Normal,5,Normal customers paying at a counter,150,1,0.10017567430933316
+Normal,6,Normal people working at desks,150,4,0.10942177832126618
+Normal,7,Normal people talking in a group,150,14,0.14475628430644671
+Normal,8,Normal people waiting in a line,150,126,0.1564879294236501
+Normal,9,Normal people walking through a building,150,0,0.06326642860968908
+Abuse,0,Abuse with a person being slapped,2,0,0.16261404752731323
+Abuse,1,Abuse with a person being shoved,2,0,0.10520255193114281
+Abuse,2,Abuse with a person being dragged,2,0,0.06750853545963764
+Abuse,3,Abuse with a person being restrained,2,0,0.04077828489243984
+Abuse,4,Abuse with a person being grabbed,2,0,0.08972697705030441
+Abuse,5,Abuse with a person being kicked,2,0,0.12274512276053429
+Abuse,6,Abuse with a person being pinned down,2,0,0.11914720013737679
+Abuse,7,Abuse with a child being struck,2,0,0.02697085030376911
+Abuse,8,Abuse with a smaller person being hit,2,2,0.2571011856198311
+Abuse,9,Abuse with a person being pulled by the hair,2,0,0.008205230813473463
+Arrest,0,Arrest with handcuffs on a suspect,5,0,0.12785860002040864
+Arrest,1,Arrest by uniformed police officers,5,0,0.08153020963072777
+Arrest,2,Arrest with a suspect against a wall,5,1,0.13096342459321023
+Arrest,3,Arrest with a suspect on the ground,5,2,0.1588115483522415
+Arrest,4,Arrest beside a police patrol car,5,1,0.0448349348269403
+Arrest,5,Arrest with police holding a suspect's arms,5,1,0.13158057034015655
+Arrest,6,Arrest with officers escorting a suspect,5,0,0.088251394033432
+Arrest,7,Arrest during a police pat-down search,5,0,0.11398303806781769
+Arrest,8,Arrest with multiple officers surrounding a suspect,5,0,0.055011086910963056
+Arrest,9,Arrest with a suspect placed in a patrol car,5,0,0.06717518419027328
+Arson,0,Arson with a lit lighter near property,9,0,0.10143587076001698
+Arson,1,Arson with a lit match near property,9,0,0.12693741669257483
+Arson,2,Arson with fuel poured onto the ground,9,7,0.2612798379527198
+Arson,3,Arson with a person lighting a vehicle,9,0,0.048216023585862584
+Arson,4,Arson with a person lighting a building,9,0,0.039415640756487846
+Arson,5,Arson with flames on a doorway,9,0,0.08354317645231883
+Arson,6,Arson with a burning object in hand,9,0,0.07107925373646948
+Arson,7,Arson with a person igniting a container,9,0,0.00954430369569713
+Arson,8,Arson with a small fire on property,9,2,0.2240753538078732
+Arson,9,Arson with a person setting objects alight,9,0,0.03447310191889604
+Assault,0,Assault with one attacker punching a victim,3,0,0.1372910626232624
+Assault,1,Assault with one attacker kicking a victim,3,0,0.09736292933424313
+Assault,2,Assault on a victim lying on the ground,3,0,0.027061133335034054
+Assault,3,Assault on a person sitting down,3,0,0.02945379540324211
+Assault,4,Assault by multiple attackers around one victim,3,1,0.22230017061034837
+Assault,5,Assault with a blunt object against a victim,3,0,0.039255393048127495
+Assault,6,Assault with an attacker pushing a victim,3,0,0.08150384699304898
+Assault,7,Assault with an attacker grabbing a victim,3,0,0.09153889740506808
+Assault,8,Assault with a victim pinned to the ground,3,0,0.13188348213831583
+Assault,9,Assault with an attacker striking a defenseless person,3,2,0.14234928165872893
+Burglary,0,Burglary through a forced door,13,0,0.07469572284473823
+Burglary,1,Burglary through a broken window,13,0,0.06154605581496771
+Burglary,2,Burglary with a crowbar at an entrance,13,6,0.25185006169172436
+Burglary,3,Burglary through a damaged shop shutter,13,0,0.025222904998092696
+Burglary,4,Burglary with a person forcing a gate,13,0,0.12113641374386273
+Burglary,5,Burglary with a broken door lock,13,0,0.01567444286774844
+Burglary,6,Burglary with a person climbing through a window,13,7,0.29524746307959926
+Burglary,7,Burglary with property carried out of a building,13,0,0.09598949186217326
+Burglary,8,Burglary through a pried-open storefront door,13,0,0.011589361068147879
+Burglary,9,Burglary with a person prying off a window grille,13,0,0.04704807770366852
+Explosion,0,Explosion with a bright blast flash,21,3,0.12195549710165887
+Explosion,1,Explosion with a large fireball,21,2,0.09384229938898768
+Explosion,2,Explosion with flying debris,21,2,0.1149147099682263
+Explosion,3,Explosion with a dense smoke plume,21,1,0.10170115885280427
+Explosion,4,Explosion of a vehicle,21,5,0.10431636905386335
+Explosion,5,Explosion near a building,21,0,0.0714902893773147
+Explosion,6,Explosion inside a building,21,0,0.07534620148085412
+Explosion,7,Explosion along a roadway,21,2,0.11655070916527793
+Explosion,8,Explosion with an outward dust cloud,21,6,0.123664514649482
+Explosion,9,Explosion with shattered windows,21,0,0.07621825273547854
+Fighting,0,Fighting with two people exchanging punches,5,0,0.1626553624868393
+Fighting,1,Fighting with two people exchanging kicks,5,2,0.1541777029633522
+Fighting,2,Fighting with two people grappling,5,0,0.07514393255114556
+Fighting,3,Fighting between two groups of people,5,0,0.026609919592738153
+Fighting,4,Fighting with several people brawling,5,0,0.09482225477695465
+Fighting,5,Fighting with participants pushing each other,5,0,0.07832464575767517
+Fighting,6,Fighting with opponents striking each other,5,3,0.1931222751736641
+Fighting,7,Fighting with people wrestling on the ground,5,0,0.13575177490711213
+Fighting,8,Fighting among people in a crowd,5,0,0.00914519657380879
+Fighting,9,Fighting with multiple pairs exchanging blows,5,0,0.07024690806865692
+RoadAccidents,0,Road accident between two cars,23,0,0.02814368729520103
+RoadAccidents,1,Road accident involving a motorcycle and car,23,5,0.12563247865308885
+RoadAccidents,2,Road accident involving a struck pedestrian,23,1,0.11009941412054974
+RoadAccidents,3,Road accident involving a bicycle and car,23,1,0.10613329368441002
+RoadAccidents,4,Road accident with an overturned vehicle,23,2,0.11581641727167627
+RoadAccidents,5,Road accident with a vehicle hitting a barrier,23,0,0.06968407656835474
+RoadAccidents,6,Road accident involving a truck and car,23,0,0.09359144840551459
+RoadAccidents,7,Road accident with a damaged vehicle at an intersection,23,0,0.0719444920187411
+RoadAccidents,8,Road accident with a fallen motorcycle,23,4,0.12575874931138495
+RoadAccidents,9,Road accident with vehicles stopped after a collision,23,10,0.15319594416929327
+Robbery,0,Robbery with a gun pointed at a cashier,5,0,0.07867923304438591
+Robbery,1,Robbery with a knife held toward a victim,5,0,0.039612560719251635
+Robbery,2,Robbery with a person taking cash from a counter,5,1,0.1637122705578804
+Robbery,3,Robbery with a handbag pulled from a victim,5,0,0.023911680653691293
+Robbery,4,Robbery with a masked person threatening a clerk,5,3,0.2839797616004944
+Robbery,5,Robbery with a gunman facing raised hands,5,0,0.006877605349291116
+Robbery,6,Robbery with a person handing over a wallet,5,0,0.09305830001831054
+Robbery,7,Robbery with attackers surrounding a victim,5,0,0.025863744225353
+Robbery,8,Robbery with a weapon held near a store counter,5,1,0.21761150956153869
+Robbery,9,Robbery with an armed person demanding money,5,0,0.06669330820441247
+Shooting,0,Shooting with a handgun aimed at a person,23,0,0.0835462641780791
+Shooting,1,Shooting with a rifle aimed across a street,23,4,0.12052292684498041
+Shooting,2,Shooting with a visible muzzle flash,23,1,0.06581005065337471
+Shooting,3,Shooting with a person firing a pistol,23,2,0.11849523821602696
+Shooting,4,Shooting with a person firing a rifle,23,6,0.14071605532713558
+Shooting,5,Shooting with smoke from a gun barrel,23,2,0.07374441097288029
+Shooting,6,Shooting with an armed person behind a vehicle,23,6,0.12124185158830622
+Shooting,7,Shooting with two people firing handguns,23,0,0.09904667330176933
+Shooting,8,Shooting with a person firing into a crowd,23,0,0.0724822668277699
+Shooting,9,Shooting with a person firing across a street,23,2,0.10439426127983176
+Shoplifting,0,Shoplifting with merchandise hidden in a bag,21,0,0.01292559064348184
+Shoplifting,1,Shoplifting with merchandise hidden in clothing,21,0,0.006719721617021908
+Shoplifting,2,Shoplifting with a product slipped into a pocket,21,0,0.1063421079445453
+Shoplifting,3,Shoplifting with a shelf item hidden under an arm,21,0,0.009066798222539503
+Shoplifting,4,Shoplifting with products concealed in a handbag,21,20,0.5305303803512028
+Shoplifting,5,Shoplifting with an item hidden under a jacket,21,0,0.006992496198065402
+Shoplifting,6,Shoplifting with a person pocketing store goods,21,1,0.20095900020429067
+Shoplifting,7,Shoplifting with a person concealing boxed merchandise,21,0,0.013141328186195875
+Shoplifting,8,Shoplifting with display goods hidden in clothing,21,0,0.059949339677890144
+Shoplifting,9,Shoplifting with merchandise concealed near a counter,21,0,0.0533732327056073
+Stealing,0,Stealing an unattended bag,5,0,0.07163525000214577
+Stealing,1,Stealing a parked bicycle,5,4,0.40112348198890685
+Stealing,2,Stealing a parked motorcycle,5,1,0.3286193132400513
+Stealing,3,Stealing objects from an open vehicle,5,0,0.007712114858441055
+Stealing,4,Stealing a phone from a table,5,0,0.0311135096475482
+Stealing,5,Stealing a wallet from a pocket,5,0,0.02159727429971099
+Stealing,6,Stealing a handbag left on a chair,5,0,0.006433607020881027
+Stealing,7,Stealing a package from a doorstep,5,0,0.009586298698559403
+Stealing,8,Stealing an unattended laptop,5,0,0.020927374437451362
+Stealing,9,Stealing cash from a desk,5,0,0.10125181004405022
+Vandalism,0,Vandalism by spray painting a wall,5,0,0.008130735531449319
+Vandalism,1,Vandalism by smashing a window,5,0,0.16357382833957673
+Vandalism,2,Vandalism by scratching a vehicle,5,0,0.0714153841137886
+Vandalism,3,Vandalism by kicking a parked car,5,0,0.018262697011232377
+Vandalism,4,Vandalism by breaking a storefront,5,0,0.01432500807568431
+Vandalism,5,Vandalism by striking a street sign,5,0,0.008224391518160701
+Vandalism,6,Vandalism by damaging a door,5,4,0.3513808995485306
+Vandalism,7,Vandalism by cutting a fence,5,0,0.20631483793258668
+Vandalism,8,Vandalism by throwing an object at glass,5,1,0.11770623065531254
+Vandalism,9,Vandalism by breaking a public fixture,5,0,0.040665991976857184

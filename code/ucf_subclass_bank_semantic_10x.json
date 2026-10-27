@@ -1,0 +1,194 @@
+{
+  "metadata": {
+    "name": "ucf_crime_semantic_subclasses_10x",
+    "dataset": "UCF-Crime",
+    "language": "English",
+    "classes_count": 14,
+    "subclasses_per_class": 10,
+    "source": "User-provided class-level semantic subclass labels",
+    "design": "Short label-like semantic subclasses. Each subclass represents a distinct visual or contextual mode rather than a descriptive prompt."
+  },
+  "classes": {
+    "Normal": [
+      "Pedestrian Activity",
+      "Street Crossing",
+      "Normal Traffic",
+      "Parked Vehicles",
+      "Store Browsing",
+      "Counter Transaction",
+      "Office Activity",
+      "Social Gathering",
+      "Queueing Activity",
+      "Indoor Walking"
+    ],
+
+    "Abuse": [
+      "Physical Abuse",
+      "Punching Abuse",
+      "Kicking Abuse",
+      "Pushing Abuse",
+      "Dragging Abuse",
+      "Grounded-Victim Abuse",
+      "Repeated-Hit Abuse",
+      "Restraint Abuse",
+      "Group Abuse",
+      "Indoor Abuse"
+    ],
+
+    "Arrest": [
+      "Handcuff Arrest",
+      "Ground Restraint Arrest",
+      "Multi-Officer Arrest",
+      "Street Arrest",
+      "Indoor Arrest",
+      "Roadside Arrest",
+      "Vehicle-Side Arrest",
+      "Pursuit Arrest",
+      "Surrender Arrest",
+      "Escort Arrest"
+    ],
+
+    "Arson": [
+      "Vehicle Arson",
+      "Building Arson",
+      "Storefront Arson",
+      "Indoor Arson",
+      "Outdoor Arson",
+      "Object Arson",
+      "Ignition Arson",
+      "Fire-Spreading Arson",
+      "Roadside Arson",
+      "Property Arson"
+    ],
+
+    "Assault": [
+      "Punching Assault",
+      "Kicking Assault",
+      "Weapon Assault",
+      "Push-Down Assault",
+      "Ground Assault",
+      "Chasing Assault",
+      "Rear Assault",
+      "Group Assault",
+      "Street Assault",
+      "Indoor Assault"
+    ],
+
+    "Burglary": [
+      "Door-Entry Burglary",
+      "Window-Entry Burglary",
+      "Forced-Entry Burglary",
+      "Store Burglary",
+      "Residential Burglary",
+      "Night Burglary",
+      "Indoor Burglary",
+      "Property-Search Burglary",
+      "Item-Removal Burglary",
+      "Escape Burglary"
+    ],
+
+    "Explosion": [
+      "Vehicle Explosion",
+      "Building Explosion",
+      "Indoor Explosion",
+      "Outdoor Explosion",
+      "Roadside Explosion",
+      "Fireball Explosion",
+      "Smoke Explosion",
+      "Structural Explosion",
+      "Industrial Explosion",
+      "Multiple-Blast Explosion"
+    ],
+
+    "Fighting": [
+      "One-on-One Fight",
+      "Group Fight",
+      "Punching Fight",
+      "Kicking Fight",
+      "Grappling Fight",
+      "Ground Fight",
+      "Street Fight",
+      "Indoor Fight",
+      "Crowd Fight",
+      "Chasing Fight"
+    ],
+
+    "RoadAccidents": [
+      "Vehicle Collision",
+      "Car-Motorcycle Collision",
+      "Vehicle-Pedestrian Collision",
+      "Motorcycle Crash",
+      "Single-Vehicle Crash",
+      "Intersection Collision",
+      "Rear-End Collision",
+      "Side-Impact Collision",
+      "Vehicle Rollover",
+      "Roadside Crash"
+    ],
+
+    "Robbery": [
+      "Armed Robbery",
+      "Street Robbery",
+      "Store Robbery",
+      "Counter Robbery",
+      "Vehicle Robbery",
+      "Group Robbery",
+      "Physical-Force Robbery",
+      "Threatened-Victim Robbery",
+      "Grab-and-Run Robbery",
+      "Indoor Robbery"
+    ],
+
+    "Shooting": [
+      "Handgun Shooting",
+      "Rifle Shooting",
+      "Street Shooting",
+      "Indoor Shooting",
+      "Vehicle Shooting",
+      "Drive-By Shooting",
+      "Close-Range Shooting",
+      "Multiple-Shooter Shooting",
+      "Crowd Shooting",
+      "Repeated-Fire Shooting"
+    ],
+
+    "Shoplifting": [
+      "Shelf Shoplifting",
+      "Pocket Shoplifting",
+      "Bag Shoplifting",
+      "Clothing Shoplifting",
+      "Counter Shoplifting",
+      "Concealment Shoplifting",
+      "Grab-and-Leave Shoplifting",
+      "Group Shoplifting",
+      "Aisle Shoplifting",
+      "Checkout-Avoidance Shoplifting"
+    ],
+
+    "Stealing": [
+      "Object Stealing",
+      "Bag Stealing",
+      "Phone Stealing",
+      "Bicycle Stealing",
+      "Vehicle Stealing",
+      "Pocket Stealing",
+      "Unattended-Item Stealing",
+      "Grab-and-Run Stealing",
+      "Indoor Stealing",
+      "Street Stealing"
+    ],
+
+    "Vandalism": [
+      "Vehicle Vandalism",
+      "Building Vandalism",
+      "Window Vandalism",
+      "Property Vandalism",
+      "Graffiti Vandalism",
+      "Object-Breaking Vandalism",
+      "Storefront Vandalism",
+      "Street Vandalism",
+      "Indoor Vandalism",
+      "Group Vandalism"
+    ]
+  }
+}

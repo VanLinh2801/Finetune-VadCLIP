@@ -1,0 +1,19 @@
+{
+  "model_type": "baseline",
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_scratch.pth",
+  "alignment_trained": true,
+  "videos": 290,
+  "classifier_auc": 87.71808228727794,
+  "classifier_ap": 33.132329719606204,
+  "alignment_auc": 86.51959869815397,
+  "alignment_ap": 28.232835308593963,
+  "best_branch": "classifier",
+  "best_auc": 87.71808228727794,
+  "ano_auc": 69.93729439498416,
+  "avg_mAP": 7.567442825918247,
+  "mAP@0.1": 14.11969693309811,
+  "mAP@0.2": 9.470776851429823,
+  "mAP@0.3": 6.627781780216649,
+  "mAP@0.4": 4.274574647661884,
+  "mAP@0.5": 3.34438391718477
+}

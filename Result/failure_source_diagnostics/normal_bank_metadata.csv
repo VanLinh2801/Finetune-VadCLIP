@@ -1,0 +1,13 @@
+﻿model,bank_stage,normal_train_rows,normal_train_unique_videos,normal_features_used,prototype_count,kmeans_inertia
+baseline_self_train,raw_clip,500,373,50000,32,12015.513671875
+baseline_self_train,final_visual,500,373,50000,32,11323.2255859375
+baseline_self_train,classifier_input,500,373,50000,32,11252.673828125
+baseline_abnormal_topk,raw_clip,500,373,50000,32,12015.513671875
+baseline_abnormal_topk,final_visual,500,373,50000,32,12172.2138671875
+baseline_abnormal_topk,classifier_input,500,373,50000,32,12103.5087890625
+weighted_prompt_no_regularize,raw_clip,500,373,50000,32,12015.513671875
+weighted_prompt_no_regularize,final_visual,500,373,50000,32,13544.7666015625
+weighted_prompt_no_regularize,classifier_input,500,373,50000,32,13427.2705078125
+weighted_prompt_abnormal_topk,raw_clip,500,373,50000,32,12015.513671875
+weighted_prompt_abnormal_topk,final_visual,500,373,50000,32,12361.6689453125
+weighted_prompt_abnormal_topk,classifier_input,500,373,50000,32,12460.4296875

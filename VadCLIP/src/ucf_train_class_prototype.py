@@ -19,12 +19,21 @@ from utils.tools import get_batch_label, get_prompt_text
 
 
 class UCFPrototypeDataset(data.Dataset):
-    def __init__(self, clip_dim, file_path, test_mode, feature_root, normal=False):
+    def __init__(
+        self,
+        clip_dim,
+        file_path,
+        test_mode,
+        feature_root,
+        normal=False,
+        return_sample_id=False,
+    ):
         with open(file_path, "r", encoding="utf-8") as f:
             self.rows = list(csv.DictReader(f))
         self.clip_dim = clip_dim
         self.test_mode = test_mode
         self.feature_root = Path(feature_root)
+        self.return_sample_id = return_sample_id
 
         if normal and not test_mode:
             self.rows = [row for row in self.rows if row["label"] == "Normal"]
@@ -63,7 +72,10 @@ class UCFPrototypeDataset(data.Dataset):
         else:
             clip_feature, clip_length = tools.process_split(clip_feature, self.clip_dim)
 
-        return torch.tensor(clip_feature), row["label"], clip_length, row["video_id"]
+        item = (torch.tensor(clip_feature), row["label"], clip_length, row["video_id"])
+        if self.return_sample_id:
+            return (*item, Path(row["path"]).stem)
+        return item
 
 
 def length_to_int(length, max_length):

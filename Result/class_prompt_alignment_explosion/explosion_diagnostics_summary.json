@@ -1,0 +1,221 @@
+{
+  "target_class": "Explosion",
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_multi_prompt_manual_caption_analyze_prompt_weighted_no_regularize_scratch.pth",
+  "baseline_model_path": "/content/drive/MyDrive/Finetune VadCLIP/model_ucf.pth",
+  "prompt_json": "/content/drive/MyDrive/Finetune VadCLIP/code/ucf_weighted_class_prompts.json",
+  "prompt_weights_json": "/content/drive/MyDrive/Finetune VadCLIP/code/ucf_weighted_class_prompts.json",
+  "prompt_mode": "manual_caption",
+  "num_target_videos": 21,
+  "score_drift_mean": {
+    "delta_classifier_auc": 0.36396684295843107,
+    "delta_classifier_positive_mean": -0.05250115805427499,
+    "delta_classifier_negative_mean": -0.04874223012510421,
+    "delta_classifier_margin": -0.0037589279291707846,
+    "delta_alignment_auc": 5.156291011247855,
+    "delta_alignment_positive_mean": 0.016423698514699936,
+    "delta_alignment_negative_mean": 2.4978115799881162e-05,
+    "delta_alignment_margin": 0.016398720398900054
+  },
+  "worst_classifier_auc_videos": [
+    {
+      "video_id": "Explosion007_x264",
+      "delta_classifier_auc": -20.83834605328442,
+      "delta_classifier_positive_mean": -0.0651429295539856,
+      "delta_classifier_negative_mean": 0.007364988327026367,
+      "delta_classifier_margin": -0.07250791788101196
+    },
+    {
+      "video_id": "Explosion004_x264",
+      "delta_classifier_auc": -9.396240889911773,
+      "delta_classifier_positive_mean": 0.006301403045654297,
+      "delta_classifier_negative_mean": 0.002746284008026123,
+      "delta_classifier_margin": 0.003555119037628174
+    },
+    {
+      "video_id": "Explosion028_x264",
+      "delta_classifier_auc": -7.61904761904762,
+      "delta_classifier_positive_mean": -0.21244806051254272,
+      "delta_classifier_negative_mean": -0.07247531414031982,
+      "delta_classifier_margin": -0.1399727463722229
+    },
+    {
+      "video_id": "Explosion016_x264",
+      "delta_classifier_auc": -6.681696188942567,
+      "delta_classifier_positive_mean": -0.3932895250618458,
+      "delta_classifier_negative_mean": -0.4285511374473572,
+      "delta_classifier_margin": 0.0352616123855114
+    },
+    {
+      "video_id": "Explosion039_x264",
+      "delta_classifier_auc": -5.9522049765952225,
+      "delta_classifier_positive_mean": 0.004804670810699463,
+      "delta_classifier_negative_mean": 0.009967148303985596,
+      "delta_classifier_margin": -0.005162477493286133
+    },
+    {
+      "video_id": "Explosion033_x264",
+      "delta_classifier_auc": -3.745159426289618,
+      "delta_classifier_positive_mean": -0.11133944988250732,
+      "delta_classifier_negative_mean": -0.15290965139865875,
+      "delta_classifier_margin": 0.04157020151615143
+    },
+    {
+      "video_id": "Explosion013_x264",
+      "delta_classifier_auc": -3.1977638015373913,
+      "delta_classifier_positive_mean": -0.04798424243927002,
+      "delta_classifier_negative_mean": -0.17998993396759033,
+      "delta_classifier_margin": 0.1320056915283203
+    },
+    {
+      "video_id": "Explosion010_x264",
+      "delta_classifier_auc": -3.1294946738692317,
+      "delta_classifier_positive_mean": -0.446494460105896,
+      "delta_classifier_negative_mean": -0.16346031427383423,
+      "delta_classifier_margin": -0.28303414583206177
+    },
+    {
+      "video_id": "Explosion021_x264",
+      "delta_classifier_auc": -1.965946989643676,
+      "delta_classifier_positive_mean": -0.0024397969245910645,
+      "delta_classifier_negative_mean": -0.061314284801483154,
+      "delta_classifier_margin": 0.05887448787689209
+    },
+    {
+      "video_id": "Explosion025_x264",
+      "delta_classifier_auc": -1.547619047619051,
+      "delta_classifier_positive_mean": -0.0006190887070260942,
+      "delta_classifier_negative_mean": -0.0005609846557490528,
+      "delta_classifier_margin": -5.8104051277041435e-05
+    }
+  ],
+  "top_positive_prompt_counts": [
+    {
+      "class_name": "Arson",
+      "prompt_index": 4,
+      "prompt_text": "arson deliberate ignition object",
+      "count": 5
+    },
+    {
+      "class_name": "Explosion",
+      "prompt_index": 3,
+      "prompt_text": "explosion sudden blast cloud",
+      "count": 3
+    },
+    {
+      "class_name": "Stealing",
+      "prompt_index": 4,
+      "prompt_text": "stealing person carrying stolen item",
+      "count": 3
+    },
+    {
+      "class_name": "Burglary",
+      "prompt_index": 4,
+      "prompt_text": "burglary burglar carrying property",
+      "count": 2
+    },
+    {
+      "class_name": "RoadAccidents",
+      "prompt_index": 2,
+      "prompt_text": "roadAccidents motorbike sliding traffic",
+      "count": 2
+    },
+    {
+      "class_name": "Normal",
+      "prompt_index": 3,
+      "prompt_text": "normal shoppers browsing checkout",
+      "count": 2
+    },
+    {
+      "class_name": "RoadAccidents",
+      "prompt_index": 0,
+      "prompt_text": "roadAccidents vehicle collision roadway",
+      "count": 1
+    },
+    {
+      "class_name": "RoadAccidents",
+      "prompt_index": 4,
+      "prompt_text": "roadAccidents crashed vehicles lanes",
+      "count": 1
+    },
+    {
+      "class_name": "Robbery",
+      "prompt_index": 4,
+      "prompt_text": "robbery force taking property",
+      "count": 1
+    },
+    {
+      "class_name": "Vandalism",
+      "prompt_index": 1,
+      "prompt_text": "vandalism smashing window property",
+      "count": 1
+    }
+  ],
+  "top_negative_prompt_counts": [
+    {
+      "class_name": "Normal",
+      "prompt_index": 3,
+      "prompt_text": "normal shoppers browsing checkout",
+      "count": 4
+    },
+    {
+      "class_name": "RoadAccidents",
+      "prompt_index": 0,
+      "prompt_text": "roadAccidents vehicle collision roadway",
+      "count": 3
+    },
+    {
+      "class_name": "Explosion",
+      "prompt_index": 3,
+      "prompt_text": "explosion sudden blast cloud",
+      "count": 3
+    },
+    {
+      "class_name": "Stealing",
+      "prompt_index": 4,
+      "prompt_text": "stealing person carrying stolen item",
+      "count": 3
+    },
+    {
+      "class_name": "Vandalism",
+      "prompt_index": 1,
+      "prompt_text": "vandalism smashing window property",
+      "count": 2
+    },
+    {
+      "class_name": "Burglary",
+      "prompt_index": 4,
+      "prompt_text": "burglary burglar carrying property",
+      "count": 1
+    },
+    {
+      "class_name": "Arson",
+      "prompt_index": 4,
+      "prompt_text": "arson deliberate ignition object",
+      "count": 1
+    },
+    {
+      "class_name": "RoadAccidents",
+      "prompt_index": 4,
+      "prompt_text": "roadAccidents crashed vehicles lanes",
+      "count": 1
+    },
+    {
+      "class_name": "Normal",
+      "prompt_index": 1,
+      "prompt_text": "normal vehicles moving normally",
+      "count": 1
+    },
+    {
+      "class_name": "Robbery",
+      "prompt_index": 4,
+      "prompt_text": "robbery force taking property",
+      "count": 1
+    },
+    {
+      "class_name": "Robbery",
+      "prompt_index": 3,
+      "prompt_text": "robbery robber intimidation theft",
+      "count": 1
+    }
+  ]
+}

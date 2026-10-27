@@ -19,6 +19,7 @@ from ucf_train_class_prototype import (
     text_regularization_loss,
 )
 from utils.prompt_replacement import build_multi_prompt_groups, build_multi_prompt_weights
+from utils.topk_tracker import TopKSelectionTracker
 from utils.tools import get_batch_label, get_prompt_text
 
 
@@ -89,8 +90,19 @@ def normal_topk_suppression_loss(logits1, logits2, labels, lengths, top_k_ratio,
     return torch.stack(losses).mean()
 
 
-def abnormal_background_suppression_loss(logits1, logits2, labels, lengths, top_k_ratio, score_branch, device):
+def abnormal_background_suppression_loss(
+    logits1, logits2, labels, lengths, top_k_ratio, margin, score_branch, device
+):
+    """Intra-video high/low top-k separation margin on abnormal videos.
+
+    For each abnormal sample, select k highest and k lowest scores (indices from
+    detached scores), then enforce:
+        min(high_k) >= max(low_k) + margin
+    via hinge loss:
+        relu(max(low_k) - min(high_k) + margin)
+    """
     losses = []
+    margin = float(margin)
     branches = get_anomaly_score_branches(logits1, logits2, score_branch)
     for _, scores in branches:
         branch_losses = []
@@ -100,12 +112,14 @@ def abnormal_background_suppression_loss(logits1, logits2, labels, lengths, top_
                 continue
             valid_length = max(1, min(int(length), scores.shape[1]))
             top_k = valid_topk_count(valid_length, top_k_ratio)
-            if top_k >= valid_length:
+            if 2 * top_k > valid_length:
                 continue
-            top_indices = torch.topk(scores[i, :valid_length], k=top_k, largest=True).indices
-            background_mask = torch.ones(valid_length, dtype=torch.bool, device=scores.device)
-            background_mask[top_indices] = False
-            branch_losses.append(scores[i, :valid_length][background_mask].mean())
+            valid_scores = scores[i, :valid_length]
+            high_indices = torch.topk(valid_scores.detach(), k=top_k, largest=True).indices
+            low_indices = torch.topk(valid_scores.detach(), k=top_k, largest=False).indices
+            high_vals = valid_scores[high_indices]
+            low_vals = valid_scores[low_indices]
+            branch_losses.append(F.relu(low_vals.max() - high_vals.min() + margin))
         if branch_losses:
             losses.append(torch.stack(branch_losses).mean())
     if not losses:
@@ -156,6 +170,7 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
 
     for clip_param in model.clipmodel.parameters():
         clip_param.requires_grad = False
+    model.text_prompt_embeddings.weight.requires_grad = args.train_learnable_prompt
 
     class_prompt_text = get_prompt_text(label_map)
     prompt_groups = build_multi_prompt_groups(
@@ -173,11 +188,22 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
             f"shape {(len(prompt_groups), len(prompt_groups[0]))}"
         )
 
+    print("Train learnable prefix/postfix:", args.train_learnable_prompt)
     optimizer = torch.optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=args.lr)
     scheduler = MultiStepLR(optimizer, args.scheduler_milestones, args.scheduler_rate)
     use_amp = bool(args.use_amp and device == "cuda")
     scaler = torch.amp.GradScaler("cuda", enabled=use_amp)
     best_score = 0
+    epochs_without_improvement = 0
+    topk_tracker = (
+        TopKSelectionTracker(
+            args.topk_tracking_output_dir,
+            branches=args.topk_tracking_branches,
+            scope=args.topk_tracking_scope,
+        )
+        if args.track_topk
+        else None
+    )
 
     print(
         "Multi-prompt config:",
@@ -194,6 +220,8 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
         "| regularize_top_k_ratio:", args.regularize_top_k_ratio,
         "| lambda_normal_topk:", args.lambda_normal_topk,
         "| lambda_abnormal_bg:", args.lambda_abnormal_bg,
+        "| abnormal_bg_margin:", args.abnormal_bg_margin,
+        "| abnormal_bg_warmup_epochs:", args.abnormal_bg_warmup_epochs,
         "| lambda_ranking_margin:", args.lambda_ranking_margin,
         "| ranking_margin:", args.ranking_margin,
         "| prototype_json:", args.prototype_json,
@@ -212,8 +240,16 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
         loss_total_margin = 0
 
         for i in range(min(len(normal_loader), len(anomaly_loader))):
-            normal_features, normal_label, normal_lengths, _ = next(normal_iter)
-            anomaly_features, anomaly_label, anomaly_lengths, _ = next(anomaly_iter)
+            normal_batch = next(normal_iter)
+            anomaly_batch = next(anomaly_iter)
+            if topk_tracker is not None:
+                normal_features, normal_label, normal_lengths, _, normal_sample_ids = normal_batch
+                anomaly_features, anomaly_label, anomaly_lengths, _, anomaly_sample_ids = anomaly_batch
+            else:
+                normal_features, normal_label, normal_lengths, _ = normal_batch
+                anomaly_features, anomaly_label, anomaly_lengths, _ = anomaly_batch
+                normal_sample_ids = []
+                anomaly_sample_ids = []
 
             visual_features = torch.cat([normal_features, anomaly_features], dim=0).to(device, non_blocking=True)
             text_labels_raw = list(normal_label) + list(anomaly_label)
@@ -229,6 +265,16 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
                     feat_lengths,
                     return_prompt_logits=True,
                     prompt_weights=prompt_weights,
+                )
+            if topk_tracker is not None:
+                topk_tracker.update_from_batch(
+                    e + 1,
+                    list(normal_sample_ids) + list(anomaly_sample_ids),
+                    text_labels_raw,
+                    text_labels,
+                    feat_lengths,
+                    logits1,
+                    logits2,
                 )
 
             loss1 = CLAS2(logits1.float(), text_labels.float(), feat_lengths, device)
@@ -257,6 +303,7 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
                 text_labels.float(),
                 feat_lengths,
                 args.regularize_top_k_ratio,
+                args.abnormal_bg_margin,
                 args.regularize_score_branch,
                 device,
             )
@@ -270,13 +317,16 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
                 args.regularize_score_branch,
                 device,
             )
+            lambda_abnormal_bg = (
+                0.0 if e < args.abnormal_bg_warmup_epochs else args.lambda_abnormal_bg
+            )
             loss = (
                 loss1
                 + loss2
                 + loss3
                 + args.lambda_consistency * loss_consistency
                 + args.lambda_normal_topk * loss_normal
-                + args.lambda_abnormal_bg * loss_abn_bg
+                + lambda_abnormal_bg * loss_abn_bg
                 + args.lambda_ranking_margin * loss_margin
             )
 
@@ -323,10 +373,37 @@ def train(model, normal_loader, anomaly_loader, testloader, args, label_map, dev
             "| loss_abnormal_bg:", loss_total_abn_bg / num_steps,
             "| loss_ranking_margin:", loss_total_margin / num_steps,
         )
+        if topk_tracker is not None:
+            topk_tracker.end_epoch(e + 1)
         torch.save(model.state_dict(), args.save_cur_path)
         epoch_checkpoint_path = Path(args.epoch_checkpoint_dir) / f"model_epoch_{e + 1:03d}_multi_prompt.pth"
         torch.save(model.state_dict(), epoch_checkpoint_path)
         print("Saved epoch checkpoint:", epoch_checkpoint_path)
+
+        if args.early_stopping_patience > 0:
+            auc, ap = test(model, testloader, args.visual_length, prompt_groups, gt, gtsegments, gtlabels, device)
+            print(
+                "epoch:", e + 1,
+                "| validation_auc:", auc,
+                "| validation_ap:", ap,
+                "| best_auc:", best_score,
+            )
+            if auc > best_score:
+                best_score = auc
+                epochs_without_improvement = 0
+                torch.save(model.state_dict(), args.checkpoint_path)
+                print("Saved best checkpoint:", args.checkpoint_path)
+            else:
+                epochs_without_improvement += 1
+                print(
+                    "Early stopping counter:",
+                    epochs_without_improvement,
+                    "/",
+                    args.early_stopping_patience,
+                )
+                if epochs_without_improvement >= args.early_stopping_patience:
+                    print("Early stopping triggered.")
+                    break
 
     if best_score > 0:
         model.load_state_dict(torch.load(args.checkpoint_path, map_location=device), strict=False)
@@ -373,11 +450,25 @@ if __name__ == "__main__":
     if args.num_workers > 0:
         dataloader_kwargs["persistent_workers"] = True
 
-    normal_dataset = UCFPrototypeDataset(args.visual_length, args.train_list, False, args.feature_root, True)
+    normal_dataset = UCFPrototypeDataset(
+        args.visual_length,
+        args.train_list,
+        False,
+        args.feature_root,
+        True,
+        return_sample_id=args.track_topk,
+    )
     normal_loader = DataLoader(
         normal_dataset, batch_size=args.batch_size, shuffle=True, drop_last=True, **dataloader_kwargs
     )
-    anomaly_dataset = UCFPrototypeDataset(args.visual_length, args.train_list, False, args.feature_root, False)
+    anomaly_dataset = UCFPrototypeDataset(
+        args.visual_length,
+        args.train_list,
+        False,
+        args.feature_root,
+        False,
+        return_sample_id=args.track_topk,
+    )
     anomaly_loader = DataLoader(
         anomaly_dataset, batch_size=args.batch_size, shuffle=True, drop_last=True, **dataloader_kwargs
     )

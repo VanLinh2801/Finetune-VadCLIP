@@ -1,0 +1,251 @@
+{
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_scratch.pth",
+  "top_k_ratio": 0.15,
+  "abnormal_videos_analyzed": 140,
+  "videos_with_all_three_groups": 71,
+  "max_graph_replay_error": 0.0,
+  "stage_delta": {
+    "raw_clip": {
+      "n": 71,
+      "mean": -0.0026625596301656372,
+      "median": -0.0021528005599975586,
+      "ci95_low": -0.012359120869614333,
+      "ci95_high": 0.0070340016092830596
+    },
+    "temporal": {
+      "n": 71,
+      "mean": 0.010377477172394874,
+      "median": 0.0030731558799743652,
+      "ci95_low": -0.006927123662798509,
+      "ci95_high": 0.027682078007588255
+    },
+    "final_visual": {
+      "n": 71,
+      "mean": 0.023052918659129614,
+      "median": 0.019176483154296875,
+      "ci95_low": 0.0020192313780962694,
+      "ci95_high": 0.04408660594016296
+    }
+  },
+  "raw_to_final_delta_change": {
+    "n": 71,
+    "mean": 0.02571547828929525,
+    "median": 0.018232405185699463,
+    "ci95_low": 0.011877842793045316,
+    "ci95_high": 0.039553113785545185
+  },
+  "raw_to_final_positive_change_fraction": 0.8169014084507042,
+  "exposure": {
+    "false_high": {
+      "temporal_anomaly_mass": {
+        "n": 126,
+        "mean": 0.09531046292125395,
+        "median": 0.005260132483910003,
+        "ci95_low": 0.06780004060030384,
+        "ci95_high": 0.12282088524220405
+      },
+      "temporal_excess": {
+        "n": 126,
+        "mean": 0.002391824004488384,
+        "median": 0.0,
+        "ci95_low": -0.0016307571643932946,
+        "ci95_high": 0.006414405173370063
+      },
+      "similarity_graph_anomaly_mass": {
+        "n": 126,
+        "mean": 0.1820954871633847,
+        "median": 0.13785288134746462,
+        "ci95_low": 0.15796298514559803,
+        "ci95_high": 0.20622798918117136
+      },
+      "similarity_graph_excess": {
+        "n": 126,
+        "mean": -0.0006048282635556213,
+        "median": 0.0003142765369908563,
+        "ci95_low": -0.004434343427102472,
+        "ci95_high": 0.0032246868999912287
+      },
+      "distance_graph_anomaly_mass": {
+        "n": 126,
+        "mean": 0.07852748574415204,
+        "median": 0.032429331954928226,
+        "ci95_low": 0.059172599732312745,
+        "ci95_high": 0.09788237175599133
+      },
+      "distance_graph_excess": {
+        "n": 126,
+        "mean": -0.10417282998109237,
+        "median": -0.07146041908938633,
+        "ci95_low": -0.1304337869732238,
+        "ci95_high": -0.07791187298896093
+      }
+    },
+    "true_low": {
+      "temporal_anomaly_mass": {
+        "n": 140,
+        "mean": 0.04532837896515641,
+        "median": 0.027847607408758412,
+        "ci95_low": 0.03334647003684402,
+        "ci95_high": 0.0573102878934688
+      },
+      "temporal_excess": {
+        "n": 140,
+        "mean": 0.0017365728123079492,
+        "median": 0.0004573489504507001,
+        "ci95_low": 0.00045373914650911093,
+        "ci95_high": 0.0030194064781067873
+      },
+      "similarity_graph_anomaly_mass": {
+        "n": 140,
+        "mean": 0.20498590839844616,
+        "median": 0.1409263734522348,
+        "ci95_low": 0.17729782426257873,
+        "ci95_high": 0.2326739925343136
+      },
+      "similarity_graph_excess": {
+        "n": 140,
+        "mean": -0.0036156353719212727,
+        "median": -0.000620092814019261,
+        "ci95_low": -0.006861907392620178,
+        "ci95_high": -0.0003693633512223669
+      },
+      "distance_graph_anomaly_mass": {
+        "n": 140,
+        "mean": 0.042214841788745204,
+        "median": 0.02429556890660771,
+        "ci95_low": 0.032289012724226775,
+        "ci95_high": 0.05214067085326363
+      },
+      "distance_graph_excess": {
+        "n": 140,
+        "mean": -0.16638670200263492,
+        "median": -0.10993117638784314,
+        "ci95_low": -0.1916070269897751,
+        "ci95_high": -0.14116637701549473
+      }
+    }
+  },
+  "paired_exposure_false_high_minus_true_low": {
+    "temporal_anomaly_mass": {
+      "n": 126,
+      "mean": 0.05170802472692045,
+      "median": -0.004104015188407752,
+      "ci95_low": 0.020217048949995903,
+      "ci95_high": 0.083199000503845
+    },
+    "temporal_excess": {
+      "n": 126,
+      "mean": 0.0008466084006273792,
+      "median": -0.000268822297660522,
+      "ci95_low": -0.003163656867831922,
+      "ci95_high": 0.00485687366908668
+    },
+    "similarity_graph_anomaly_mass": {
+      "n": 126,
+      "mean": 0.0028051843911100793,
+      "median": 0.0016583412223649119,
+      "ci95_low": -0.0034761594318011737,
+      "ci95_high": 0.009086528214021332
+    },
+    "similarity_graph_excess": {
+      "n": 126,
+      "mean": 0.00011830465668556854,
+      "median": 0.0007378275629551299,
+      "ci95_low": -0.0039273399078325645,
+      "ci95_high": 0.004163949221203701
+    },
+    "distance_graph_anomaly_mass": {
+      "n": 126,
+      "mean": 0.03813264980320336,
+      "median": 0.0018900497379604037,
+      "ci95_low": 0.018525999069766604,
+      "ci95_high": 0.05773930053664012
+    },
+    "distance_graph_excess": {
+      "n": 126,
+      "mean": 0.03544576974912006,
+      "median": 0.003893361294815072,
+      "ci95_low": 0.015592355754240554,
+      "ci95_high": 0.055299183743999565
+    }
+  },
+  "intervention": {
+    "false_high": {
+      "remove_anomaly_score_change": {
+        "n": 126,
+        "mean": -0.004648554818893941,
+        "median": 3.990374113384046e-08,
+        "ci95_low": -0.00991970690688796,
+        "ci95_high": 0.0006225972691000763
+      },
+      "remove_normal_score_change": {
+        "n": 126,
+        "mean": 0.0009872734766235454,
+        "median": 3.574386475578187e-06,
+        "ci95_low": -0.00032881181120224105,
+        "ci95_high": 0.002303358764449332
+      },
+      "remove_anomaly_true_high_affinity_change": {
+        "n": 71,
+        "mean": -0.010488041820706085,
+        "median": -0.0028322520463362985,
+        "ci95_low": -0.014826437208444756,
+        "ci95_high": -0.006149646432967414
+      }
+    },
+    "true_low": {
+      "remove_anomaly_score_change": {
+        "n": 140,
+        "mean": -0.005399975695145276,
+        "median": -0.0015363553299333598,
+        "ci95_low": -0.008242372939958234,
+        "ci95_high": -0.0025575784503323188
+      },
+      "remove_normal_score_change": {
+        "n": 140,
+        "mean": 0.000645130717509205,
+        "median": 0.0001272758071342211,
+        "ci95_low": -0.0015687272208039032,
+        "ci95_high": 0.0028589886558223134
+      },
+      "remove_anomaly_true_high_affinity_change": {
+        "n": 85,
+        "mean": -0.004337360659267674,
+        "median": -0.0019719243049621583,
+        "ci95_low": -0.005840007220649357,
+        "ci95_high": -0.0028347140978859904
+      }
+    }
+  },
+  "paired_intervention_false_high_minus_true_low": {
+    "remove_anomaly_score_change": {
+      "n": 126,
+      "mean": 0.00013754694529253983,
+      "median": 0.001000263245300175,
+      "ci95_low": -0.005566251402301857,
+      "ci95_high": 0.005841345292886937
+    },
+    "remove_normal_score_change": {
+      "n": 126,
+      "mean": 0.001260089892997901,
+      "median": 3.1551935809834554e-05,
+      "ci95_low": -0.0008107607468200008,
+      "ci95_high": 0.003330940532815803
+    },
+    "remove_anomaly_true_high_affinity_change": {
+      "n": 71,
+      "mean": -0.006368128586196042,
+      "median": -0.001108231385806938,
+      "ci95_low": -0.010021482162893315,
+      "ci95_high": -0.002714775009498769
+    }
+  },
+  "exposure_affinity_correlations": {
+    "temporal_excess_vs_delta_raw_to_final": -0.13909712196000892,
+    "temporal_excess_vs_delta_temporal_to_final": 0.009992285913967416,
+    "similarity_graph_excess_vs_delta_raw_to_final": 0.51166283299168,
+    "similarity_graph_excess_vs_delta_temporal_to_final": 0.5278276337003825,
+    "distance_graph_excess_vs_delta_raw_to_final": 0.49576625977238437,
+    "distance_graph_excess_vs_delta_temporal_to_final": 0.2811405237835214
+  }
+}

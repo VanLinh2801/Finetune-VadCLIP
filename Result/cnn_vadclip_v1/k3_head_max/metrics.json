@@ -1,0 +1,19 @@
+{
+  "model_type": "cnn",
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_cnn_vadclip/cnn_vadclip_v1/k3_head_max/epoch_010.pth",
+  "alignment_trained": true,
+  "videos": 290,
+  "classifier_auc": 85.36537095285497,
+  "classifier_ap": 25.50308270977906,
+  "alignment_auc": 84.51338678999032,
+  "alignment_ap": 24.357367785938038,
+  "best_branch": "classifier",
+  "best_auc": 85.36537095285497,
+  "ano_auc": 64.34806066582273,
+  "avg_mAP": 6.426726144501858,
+  "mAP@0.1": 12.54222524400894,
+  "mAP@0.2": 8.54745352191957,
+  "mAP@0.3": 5.18813938204727,
+  "mAP@0.4": 3.540034329783985,
+  "mAP@0.5": 2.3157782447495214
+}

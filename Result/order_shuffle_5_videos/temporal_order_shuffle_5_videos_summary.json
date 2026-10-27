@@ -1,0 +1,110 @@
+{
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_scratch.pth",
+  "shuffle_repeats": 5,
+  "shuffle_scope": "within each 256-snippet model window; features preserved; scores mapped back to original snippet indices",
+  "selected_segments": {
+    "Arrest039_x264": {
+      "false_high": [
+        876,
+        938
+      ],
+      "true_high": [
+        592,
+        627
+      ]
+    },
+    "Assault010_x264": {
+      "false_high": [
+        937,
+        963
+      ],
+      "true_high": [
+        712,
+        729
+      ]
+    },
+    "Burglary032_x264": {
+      "false_high": [
+        715,
+        737
+      ],
+      "true_high": [
+        203,
+        229
+      ]
+    },
+    "Shooting047_x264": {
+      "false_high": [
+        43,
+        59
+      ],
+      "true_high": [
+        154,
+        178
+      ]
+    },
+    "Vandalism028_x264": {
+      "false_high": [
+        99,
+        113
+      ],
+      "true_high": [
+        115,
+        122
+      ]
+    }
+  },
+  "paired_true_minus_false_gaps": {
+    "Arrest039_x264_classifier": {
+      "original_true_minus_false_gap": -0.25133180618286133,
+      "shuffled_true_minus_false_gap": -0.5309396833181381,
+      "gap_change": -0.2796078771352768
+    },
+    "Arrest039_x264_alignment": {
+      "original_true_minus_false_gap": -0.48646700382232666,
+      "shuffled_true_minus_false_gap": -0.7312873899936676,
+      "gap_change": -0.24482038617134094
+    },
+    "Assault010_x264_classifier": {
+      "original_true_minus_false_gap": 0.05473685264587402,
+      "shuffled_true_minus_false_gap": 0.0003241896629333496,
+      "gap_change": -0.054412662982940674
+    },
+    "Assault010_x264_alignment": {
+      "original_true_minus_false_gap": 0.0006009340286254883,
+      "shuffled_true_minus_false_gap": 4.172325134277344e-05,
+      "gap_change": -0.0005592107772827148
+    },
+    "Burglary032_x264_classifier": {
+      "original_true_minus_false_gap": -0.09227597713470459,
+      "shuffled_true_minus_false_gap": 0.08707398176193237,
+      "gap_change": 0.17934995889663696
+    },
+    "Burglary032_x264_alignment": {
+      "original_true_minus_false_gap": -0.0004246830940246582,
+      "shuffled_true_minus_false_gap": 0.0009082555770874023,
+      "gap_change": 0.0013329386711120605
+    },
+    "Shooting047_x264_classifier": {
+      "original_true_minus_false_gap": 0.001717984676361084,
+      "shuffled_true_minus_false_gap": -0.000605463981628418,
+      "gap_change": -0.002323448657989502
+    },
+    "Shooting047_x264_alignment": {
+      "original_true_minus_false_gap": 0.0016314983367919922,
+      "shuffled_true_minus_false_gap": 7.49826431274414e-05,
+      "gap_change": -0.0015565156936645508
+    },
+    "Vandalism028_x264_classifier": {
+      "original_true_minus_false_gap": 0.0374828577041626,
+      "shuffled_true_minus_false_gap": 0.003147721290588379,
+      "gap_change": -0.03433513641357422
+    },
+    "Vandalism028_x264_alignment": {
+      "original_true_minus_false_gap": 0.0015928149223327637,
+      "shuffled_true_minus_false_gap": -2.2649765014648438e-06,
+      "gap_change": -0.0015950798988342285
+    }
+  },
+  "csv_path": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/temporal_graph_leakage/order_shuffle_5_videos/temporal_order_shuffle_5_videos.csv"
+}

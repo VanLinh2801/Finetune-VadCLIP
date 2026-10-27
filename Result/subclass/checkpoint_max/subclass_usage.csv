@@ -1,0 +1,71 @@
+class_name,subclass_index,subclass_text,top1_all_test_videos,mean_weight_all_test_videos
+Normal,0,Normal pedestrian movement,24,0.08275862068965517
+Normal,1,Normal vehicle traffic,4,0.013793103448275862
+Normal,2,Normal store shopping,13,0.04482758620689655
+Normal,3,Normal workplace activity,0,0.0
+Normal,4,Normal social interaction,249,0.8586206896551725
+Abuse,0,Abuse of a child,26,0.0896551724137931
+Abuse,1,Abuse of a dependent person,1,0.0034482758620689655
+Abuse,2,Abuse by hitting,95,0.3275862068965517
+Abuse,3,Abuse by dragging,151,0.5206896551724138
+Abuse,4,Abuse by restraint,17,0.05862068965517241
+Arrest,0,Arrest with handcuffs,9,0.03103448275862069
+Arrest,1,Arrest by police officers,48,0.16551724137931034
+Arrest,2,Arrest with suspect restraint,87,0.3
+Arrest,3,Arrest with suspect search,64,0.2206896551724138
+Arrest,4,Arrest with police escort,82,0.2827586206896552
+Arson,0,Arson with a lighter,5,0.017241379310344827
+Arson,1,Arson with poured fuel,185,0.6379310344827587
+Arson,2,Arson of a vehicle,11,0.03793103448275862
+Arson,3,Arson of a building,23,0.07931034482758621
+Arson,4,Arson with spreading flames,66,0.22758620689655173
+Assault,0,Assault with punches,22,0.07586206896551724
+Assault,1,Assault with kicks,127,0.4379310344827586
+Assault,2,Assault with a weapon,6,0.020689655172413793
+Assault,3,Assault on a fallen person,9,0.03103448275862069
+Assault,4,Assault by multiple attackers,126,0.43448275862068964
+Burglary,0,Burglary through a door,186,0.6413793103448275
+Burglary,1,Burglary through a window,11,0.03793103448275862
+Burglary,2,Burglary with forced entry,16,0.05517241379310345
+Burglary,3,Burglary inside a building,16,0.05517241379310345
+Burglary,4,Burglary with property removal,61,0.2103448275862069
+Explosion,0,Explosion of a vehicle,13,0.04482758620689655
+Explosion,1,Explosion near a building,16,0.05517241379310345
+Explosion,2,Explosion in an open area,167,0.5758620689655173
+Explosion,3,Explosion with a fireball,9,0.03103448275862069
+Explosion,4,Explosion with flying debris,85,0.29310344827586204
+Fighting,0,Fighting between two people,8,0.027586206896551724
+Fighting,1,Fighting between groups,152,0.5241379310344828
+Fighting,2,Fighting with exchanged punches,71,0.24482758620689654
+Fighting,3,Fighting with mutual grappling,41,0.1413793103448276
+Fighting,4,Fighting in a crowd,18,0.06206896551724138
+RoadAccidents,0,Road accident between vehicles,21,0.07241379310344828
+RoadAccidents,1,Road accident involving a pedestrian,5,0.017241379310344827
+RoadAccidents,2,Road accident involving a motorcycle,104,0.3586206896551724
+RoadAccidents,3,Road accident at an intersection,120,0.41379310344827586
+RoadAccidents,4,Road accident with a crashed vehicle,40,0.13793103448275862
+Robbery,0,Robbery with a firearm,1,0.0034482758620689655
+Robbery,1,Robbery with a knife,32,0.1103448275862069
+Robbery,2,Robbery at a counter,69,0.23793103448275862
+Robbery,3,Robbery of a handbag,83,0.28620689655172415
+Robbery,4,Robbery with a threatened victim,105,0.3620689655172414
+Shooting,0,Shooting with a handgun,106,0.36551724137931035
+Shooting,1,Shooting with a rifle,14,0.04827586206896552
+Shooting,2,Shooting with a muzzle flash,96,0.3310344827586207
+Shooting,3,Shooting toward a person,49,0.16896551724137931
+Shooting,4,Shooting in a crowd,25,0.08620689655172414
+Shoplifting,0,Shoplifting from a shelf,5,0.017241379310344827
+Shoplifting,1,Shoplifting into a bag,31,0.10689655172413794
+Shoplifting,2,Shoplifting inside clothing,2,0.006896551724137931
+Shoplifting,3,Shoplifting small merchandise,19,0.06551724137931035
+Shoplifting,4,Shoplifting near a store counter,233,0.803448275862069
+Stealing,0,Stealing an unattended bag,119,0.4103448275862069
+Stealing,1,Stealing a parked vehicle,26,0.0896551724137931
+Stealing,2,Stealing from a vehicle,16,0.05517241379310345
+Stealing,3,Stealing a bicycle,113,0.3896551724137931
+Stealing,4,Stealing a handheld object,16,0.05517241379310345
+Vandalism,0,Vandalism by smashing glass,61,0.2103448275862069
+Vandalism,1,Vandalism by striking property,55,0.1896551724137931
+Vandalism,2,Vandalism by spraying walls,2,0.006896551724137931
+Vandalism,3,Vandalism by damaging vehicles,149,0.5137931034482759
+Vandalism,4,Vandalism by cutting structures,23,0.07931034482758621

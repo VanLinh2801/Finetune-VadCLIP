@@ -24,6 +24,12 @@ parser.add_argument("--attn-window", default=8, type=int)
 parser.add_argument("--prompt-prefix", default=10, type=int)
 parser.add_argument("--prompt-postfix", default=10, type=int)
 parser.add_argument("--classes-num", default=14, type=int)
+parser.add_argument(
+    "--train-learnable-prompt",
+    default=True,
+    type=str2bool,
+    help="Whether learnable prefix/postfix embeddings receive gradients during training.",
+)
 
 parser.add_argument("--max-epoch", default=10, type=int)
 parser.add_argument("--batch-size", default=64, type=int)
@@ -80,7 +86,26 @@ parser.add_argument(
     "--lambda-abnormal-bg",
     default=0.0,
     type=float,
-    help="Suppress non-top-k background scores in abnormal videos. Disabled when 0.",
+    help=(
+        "Intra-video high/low top-k separation margin on abnormal videos: "
+        "enforce min(top-k highest scores) >= max(top-k lowest scores) + abnormal-bg-margin. "
+        "Disabled when 0."
+    ),
+)
+parser.add_argument(
+    "--abnormal-bg-margin",
+    default=0.20,
+    type=float,
+    help="Margin for intra-video high/low top-k separation on abnormal videos.",
+)
+parser.add_argument(
+    "--abnormal-bg-warmup-epochs",
+    default=0,
+    type=int,
+    help=(
+        "Skip abnormal-bg margin loss for this many initial epochs "
+        "(0-indexed epoch < warmup). Disabled when 0."
+    ),
 )
 parser.add_argument(
     "--lambda-ranking-margin",
@@ -103,8 +128,26 @@ parser.add_argument("--gt-segment-path", default="../list/gt_segment_ucf.npy")
 parser.add_argument("--gt-label-path", default="../list/gt_label_ucf.npy")
 
 parser.add_argument("--eval-steps", default=0, type=int)
+parser.add_argument(
+    "--early-stopping-patience",
+    default=0,
+    type=int,
+    help="Evaluate after each epoch and stop after this many epochs without AUC improvement. Disabled when 0.",
+)
 parser.add_argument("--save-cur-path", default="model/model_cur_multi_prompt_manual_caption_scratch.pth")
 parser.add_argument("--epoch-checkpoint-dir", default="model/epoch_checkpoints_multi_prompt_manual_caption_scratch")
 parser.add_argument("--num-workers", default=4, type=int)
 parser.add_argument("--pin-memory", default=True, type=str2bool)
 parser.add_argument("--use-amp", default=False, type=str2bool)
+parser.add_argument("--track-topk", default=False, type=str2bool)
+parser.add_argument("--topk-tracking-output-dir", default="model/topk_tracking_multi_prompt")
+parser.add_argument(
+    "--topk-tracking-branches",
+    default="both",
+    choices=["classifier", "alignment", "both"],
+)
+parser.add_argument(
+    "--topk-tracking-scope",
+    default="abnormal",
+    choices=["abnormal", "all"],
+)

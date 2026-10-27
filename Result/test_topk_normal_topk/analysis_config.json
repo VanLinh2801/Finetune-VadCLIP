@@ -1,0 +1,9 @@
+{
+  "model_type": "baseline",
+  "checkpoints": [
+    "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_normal_topk_scratch.pth"
+  ],
+  "mil_topk": "k = floor(valid_length / 16) + 1",
+  "gt_any": "at least one of 16 frames is anomalous",
+  "gt_majority": "at least 8 of 16 frames are anomalous"
+}

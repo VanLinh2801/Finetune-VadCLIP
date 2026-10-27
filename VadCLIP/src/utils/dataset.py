@@ -3,14 +3,24 @@ import torch
 import torch.utils.data as data
 import pandas as pd
 import utils.tools as tools
+from pathlib import Path
 
 class UCFDataset(data.Dataset):
-    def __init__(self, clip_dim: int, file_path: str, test_mode: bool, label_map: dict, normal: bool = False):
+    def __init__(
+        self,
+        clip_dim: int,
+        file_path: str,
+        test_mode: bool,
+        label_map: dict,
+        normal: bool = False,
+        return_sample_id: bool = False,
+    ):
         self.df = pd.read_csv(file_path)
         self.clip_dim = clip_dim
         self.test_mode = test_mode
         self.label_map = label_map
         self.normal = normal
+        self.return_sample_id = return_sample_id
         if normal == True and test_mode == False:
             self.df = self.df.loc[self.df['label'] == 'Normal']
             self.df = self.df.reset_index()
@@ -30,6 +40,9 @@ class UCFDataset(data.Dataset):
 
         clip_feature = torch.tensor(clip_feature)
         clip_label = self.df.loc[index]['label']
+        if self.return_sample_id:
+            sample_id = Path(str(self.df.loc[index]['path'])).stem
+            return clip_feature, clip_label, clip_length, sample_id
         return clip_feature, clip_label, clip_length
 
 class XDDataset(data.Dataset):

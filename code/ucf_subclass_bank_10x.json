@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "name": "ucf_crime_visual_subclasses_10x",
+    "dataset": "UCF-Crime",
+    "language": "English",
+    "classes_count": 14,
+    "subclasses_per_class": 10,
+    "source": "Manual class-level revision of the 5x bank; no per-video test descriptions used",
+    "design": "Short, visually grounded subclass phrases with an explicit original-class anchor; separate text embeddings for every subclass"
+  },
+  "classes": {
+    "Normal": [
+      "Normal pedestrians walking on a sidewalk",
+      "Normal pedestrians crossing a street",
+      "Normal vehicles moving through traffic",
+      "Normal vehicles parked along a road",
+      "Normal customers browsing store shelves",
+      "Normal customers paying at a counter",
+      "Normal people working at desks",
+      "Normal people talking in a group",
+      "Normal people waiting in a line",
+      "Normal people walking through a building"
+    ],
+    "Abuse": [
+      "Abuse with a person being slapped",
+      "Abuse with a person being shoved",
+      "Abuse with a person being dragged",
+      "Abuse with a person being restrained",
+      "Abuse with a person being grabbed",
+      "Abuse with a person being kicked",
+      "Abuse with a person being pinned down",
+      "Abuse with a child being struck",
+      "Abuse with a smaller person being hit",
+      "Abuse with a person being pulled by the hair"
+    ],
+    "Arrest": [
+      "Arrest with handcuffs on a suspect",
+      "Arrest by uniformed police officers",
+      "Arrest with a suspect against a wall",
+      "Arrest with a suspect on the ground",
+      "Arrest beside a police patrol car",
+      "Arrest with police holding a suspect's arms",
+      "Arrest with officers escorting a suspect",
+      "Arrest during a police pat-down search",
+      "Arrest with multiple officers surrounding a suspect",
+      "Arrest with a suspect placed in a patrol car"
+    ],
+    "Arson": [
+      "Arson with a lit lighter near property",
+      "Arson with a lit match near property",
+      "Arson with fuel poured onto the ground",
+      "Arson with a person lighting a vehicle",
+      "Arson with a person lighting a building",
+      "Arson with flames on a doorway",
+      "Arson with a burning object in hand",
+      "Arson with a person igniting a container",
+      "Arson with a small fire on property",
+      "Arson with a person setting objects alight"
+    ],
+    "Assault": [
+      "Assault with one attacker punching a victim",
+      "Assault with one attacker kicking a victim",
+      "Assault on a victim lying on the ground",
+      "Assault on a person sitting down",
+      "Assault by multiple attackers around one victim",
+      "Assault with a blunt object against a victim",
+      "Assault with an attacker pushing a victim",
+      "Assault with an attacker grabbing a victim",
+      "Assault with a victim pinned to the ground",
+      "Assault with an attacker striking a defenseless person"
+    ],
+    "Burglary": [
+      "Burglary through a forced door",
+      "Burglary through a broken window",
+      "Burglary with a crowbar at an entrance",
+      "Burglary through a damaged shop shutter",
+      "Burglary with a person forcing a gate",
+      "Burglary with a broken door lock",
+      "Burglary with a person climbing through a window",
+      "Burglary with property carried out of a building",
+      "Burglary through a pried-open storefront door",
+      "Burglary with a person prying off a window grille"
+    ],
+    "Explosion": [
+      "Explosion with a bright blast flash",
+      "Explosion with a large fireball",
+      "Explosion with flying debris",
+      "Explosion with a dense smoke plume",
+      "Explosion of a vehicle",
+      "Explosion near a building",
+      "Explosion inside a building",
+      "Explosion along a roadway",
+      "Explosion with an outward dust cloud",
+      "Explosion with shattered windows"
+    ],
+    "Fighting": [
+      "Fighting with two people exchanging punches",
+      "Fighting with two people exchanging kicks",
+      "Fighting with two people grappling",
+      "Fighting between two groups of people",
+      "Fighting with several people brawling",
+      "Fighting with participants pushing each other",
+      "Fighting with opponents striking each other",
+      "Fighting with people wrestling on the ground",
+      "Fighting among people in a crowd",
+      "Fighting with multiple pairs exchanging blows"
+    ],
+    "RoadAccidents": [
+      "Road accident between two cars",
+      "Road accident involving a motorcycle and car",
+      "Road accident involving a struck pedestrian",
+      "Road accident involving a bicycle and car",
+      "Road accident with an overturned vehicle",
+      "Road accident with a vehicle hitting a barrier",
+      "Road accident involving a truck and car",
+      "Road accident with a damaged vehicle at an intersection",
+      "Road accident with a fallen motorcycle",
+      "Road accident with vehicles stopped after a collision"
+    ],
+    "Robbery": [
+      "Robbery with a gun pointed at a cashier",
+      "Robbery with a knife held toward a victim",
+      "Robbery with a person taking cash from a counter",
+      "Robbery with a handbag pulled from a victim",
+      "Robbery with a masked person threatening a clerk",
+      "Robbery with a gunman facing raised hands",
+      "Robbery with a person handing over a wallet",
+      "Robbery with attackers surrounding a victim",
+      "Robbery with a weapon held near a store counter",
+      "Robbery with an armed person demanding money"
+    ],
+    "Shooting": [
+      "Shooting with a handgun aimed at a person",
+      "Shooting with a rifle aimed across a street",
+      "Shooting with a visible muzzle flash",
+      "Shooting with a person firing a pistol",
+      "Shooting with a person firing a rifle",
+      "Shooting with smoke from a gun barrel",
+      "Shooting with an armed person behind a vehicle",
+      "Shooting with two people firing handguns",
+      "Shooting with a person firing into a crowd",
+      "Shooting with a person firing across a street"
+    ],
+    "Shoplifting": [
+      "Shoplifting with merchandise hidden in a bag",
+      "Shoplifting with merchandise hidden in clothing",
+      "Shoplifting with a product slipped into a pocket",
+      "Shoplifting with a shelf item hidden under an arm",
+      "Shoplifting with products concealed in a handbag",
+      "Shoplifting with an item hidden under a jacket",
+      "Shoplifting with a person pocketing store goods",
+      "Shoplifting with a person concealing boxed merchandise",
+      "Shoplifting with display goods hidden in clothing",
+      "Shoplifting with merchandise concealed near a counter"
+    ],
+    "Stealing": [
+      "Stealing an unattended bag",
+      "Stealing a parked bicycle",
+      "Stealing a parked motorcycle",
+      "Stealing objects from an open vehicle",
+      "Stealing a phone from a table",
+      "Stealing a wallet from a pocket",
+      "Stealing a handbag left on a chair",
+      "Stealing a package from a doorstep",
+      "Stealing an unattended laptop",
+      "Stealing cash from a desk"
+    ],
+    "Vandalism": [
+      "Vandalism by spray painting a wall",
+      "Vandalism by smashing a window",
+      "Vandalism by scratching a vehicle",
+      "Vandalism by kicking a parked car",
+      "Vandalism by breaking a storefront",
+      "Vandalism by striking a street sign",
+      "Vandalism by damaging a door",
+      "Vandalism by cutting a fence",
+      "Vandalism by throwing an object at glass",
+      "Vandalism by breaking a public fixture"
+    ]
+  }
+}
