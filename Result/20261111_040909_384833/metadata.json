@@ -1,0 +1,69 @@
+{
+  "no_l1_checkpoint": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_multiscale_cnn/mscnn_k2_9_nogelu_s234/epoch_010.pth",
+  "l1_checkpoint": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_multiscale_cnn/mscnn_k2_9_l1e4_s234/epoch_010.pth",
+  "epoch": 10,
+  "test_list": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/list/ucf_CLIP_rgbtest_relative.csv",
+  "gt_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/list/gt_ucf.npy",
+  "test_list_sha256": "2f96eccfc9d9e7a64e572e85c500e760386a9b75b744f220cc6c606da251f18b",
+  "videos": 290,
+  "gt_frames": 1109888,
+  "top_k": [
+    128,
+    64,
+    32
+  ],
+  "selection_rule": "abs(delta_w), or delta_w>0; selection uses FC weights only, not test GT",
+  "frame_score": "original FC per frame with selected response channels and unchanged biases, then softmax",
+  "caution": "Exploratory test-set results, not validation; do not select K on test and report as unbiased.",
+  "kernel_identity": "channel indices are not comparable across independently trained models",
+  "weight_summaries": [
+    {
+      "model": "no_l1",
+      "epoch": 10,
+      "lambda_fc_l1": 0.0,
+      "lambda_source": "legacy_default_zero",
+      "channels": 256,
+      "fc_weight_l1": 15.10354995727539,
+      "abs_delta": {
+        "mean": 0.03665410964686089,
+        "p10": 0.004252621438354254,
+        "p50": 0.029662844724953175,
+        "p90": 0.07956657186150551,
+        "min": 0.0002413913607597351,
+        "max": 0.11323031038045883
+      },
+      "delta_positive_count": 134,
+      "delta_negative_count": 122,
+      "abs_delta_below_0_001_count": 5,
+      "video_counts": {
+        "all": 290,
+        "normal": 150,
+        "abnormal": 140
+      }
+    },
+    {
+      "model": "l1",
+      "epoch": 10,
+      "lambda_fc_l1": 0.0001,
+      "lambda_source": "checkpoint",
+      "channels": 256,
+      "fc_weight_l1": 15.085853576660156,
+      "abs_delta": {
+        "mean": 0.03662308562479666,
+        "p10": 0.004242005292326212,
+        "p50": 0.02965946216136217,
+        "p90": 0.07949890941381454,
+        "min": 0.0001594163477420807,
+        "max": 0.11317698657512665
+      },
+      "delta_positive_count": 134,
+      "delta_negative_count": 122,
+      "abs_delta_below_0_001_count": 4,
+      "video_counts": {
+        "all": 290,
+        "normal": 150,
+        "abnormal": 140
+      }
+    }
+  ]
+}

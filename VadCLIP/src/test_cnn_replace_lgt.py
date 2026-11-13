@@ -4,6 +4,30 @@ import torch
 
 from model_cnn_replace_lgt import TemporalCNNBackbone
 from ucf_cnn_common import aggregate_video_logits, alignment_mil_loss, text_regularization_loss
+from ucf_train_cnn_replace_lgt import TrainingLossStopper, build_parser
+
+
+class TrainingLossStopperTests(unittest.TestCase):
+    def test_best_checkpoint_and_patience_are_independent(self):
+        stopper = TrainingLossStopper(patience=2, min_delta=0.01, min_epochs=5)
+        self.assertTrue(stopper.update(1, 1.0))
+        self.assertTrue(stopper.update(2, 0.995))
+        self.assertEqual(stopper.best_epoch, 2)
+        self.assertEqual(stopper.stale_epochs, 1)
+        self.assertTrue(stopper.update(3, 0.99))
+        self.assertEqual(stopper.best_epoch, 3)
+        self.assertEqual(stopper.stale_epochs, 2)
+        self.assertFalse(stopper.should_stop(3))
+        self.assertTrue(stopper.should_stop(5))
+
+    def test_training_does_not_require_test_labels(self):
+        args = build_parser().parse_args([
+            "--feature-root", "features", "--train-list", "train.csv",
+            "--epoch-checkpoint-dir", "checkpoints", "--output-model-path", "model.pth",
+            "--results-dir", "results",
+        ])
+        self.assertFalse(hasattr(args, "test_list"))
+        self.assertFalse(hasattr(args, "gt_path"))
 
 
 class TemporalCNNReplaceLGTTests(unittest.TestCase):

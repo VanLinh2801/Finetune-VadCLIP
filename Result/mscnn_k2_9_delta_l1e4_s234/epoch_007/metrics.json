@@ -1,0 +1,27 @@
+{
+  "model_type": "multiscale_video_cnn",
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_multiscale_cnn/mscnn_k2_9_delta_l1e4_s234/epoch_007.pth",
+  "videos": 290,
+  "frames": 1109888,
+  "classifier_auc": 86.30457849460488,
+  "classifier_ap": 28.387352233009892,
+  "ano_auc": 66.3770267247373,
+  "epoch": 7,
+  "kernel_sizes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "channels_per_branch": 32,
+  "cnn_activation": "none",
+  "fc_l1_target": "delta",
+  "lambda_fc_l1": 0.0001,
+  "video_auc": 96.86666666666667,
+  "video_ap": 97.12314525388814,
+  "video_accuracy": 91.37931034482759
+}

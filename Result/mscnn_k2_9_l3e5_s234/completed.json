@@ -1,0 +1,5 @@
+{
+  "epoch": 10,
+  "final_checkpoint": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_multiscale_cnn/mscnn_k2_9_l3e5_s234/epoch_010.pth",
+  "selection": "fixed final epoch, not test AUC"
+}

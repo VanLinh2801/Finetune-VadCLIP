@@ -1,0 +1,45 @@
+{
+  "feature_root": "/content/UCFClipFeatures",
+  "train_list": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/list/ucf_CLIP_rgb_relative.csv",
+  "test_list": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/list/ucf_CLIP_rgbtest_relative.csv",
+  "gt_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/list/gt_ucf.npy",
+  "results_dir": "/content/drive/MyDrive/Finetune VadCLIP/code/results/train/multiscale_cnn/mscnn_k2_9_l1e4_s234",
+  "evaluate_dir": "/content/drive/MyDrive/Finetune VadCLIP/code/results/evaluate/multiscale_cnn/mscnn_k2_9_l1e4_s234",
+  "analyze_dir": "/content/drive/MyDrive/Finetune VadCLIP/code/results/analyze/multiscale_cnn/mscnn_k2_9_l1e4_s234",
+  "epoch_checkpoint_dir": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_multiscale_cnn/mscnn_k2_9_l1e4_s234",
+  "kernel_sizes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "channels_per_branch": 32,
+  "cnn_activation": "none",
+  "visual_length": 256,
+  "seed": 234,
+  "batch_size": 64,
+  "lr": 1e-05,
+  "weight_decay": 0.01,
+  "lambda_fc_l1": 0.0001,
+  "max_epoch": 10,
+  "scheduler_milestones": [
+    4,
+    8
+  ],
+  "scheduler_rate": 0.1,
+  "grad_clip_norm": 1.0,
+  "evaluate_epochs": [
+    5,
+    7,
+    10
+  ],
+  "num_workers": 2,
+  "expected_train_views": 16100,
+  "expected_test_videos": 290,
+  "micro_batch": 8,
+  "device": "cuda"
+}

@@ -1,0 +1,36 @@
+{
+  "definition": "Top fraction selected per video; a position is positive if any of its 16 frames is anomalous. Missed means outside top fraction, not necessarily low score.",
+  "top_ratio": 0.15,
+  "top15_anomaly_fraction_micro": 0.3434940855323021,
+  "top15_anomaly_fraction_macro": 0.3673697930289328,
+  "groups": {
+    "true_high_abnormal": {
+      "count": 1510,
+      "mean": 0.933804394274839,
+      "p10": 0.7601208925247193,
+      "p50": 0.9999997615814209,
+      "p90": 1.0
+    },
+    "false_high_abnormal": {
+      "count": 2886,
+      "mean": 0.9199321812326616,
+      "p10": 0.6970183253288269,
+      "p50": 0.9999982118606567,
+      "p90": 1.0
+    },
+    "false_high_normal": {
+      "count": 6141,
+      "mean": 0.09696713246831183,
+      "p10": 7.831714299300074e-08,
+      "p50": 0.00023725652135908604,
+      "p90": 0.33634692430496216
+    },
+    "missed_anomaly": {
+      "count": 3890,
+      "mean": 0.866061823484758,
+      "p10": 0.07665142565965656,
+      "p50": 0.9999475479125977,
+      "p90": 1.0
+    }
+  }
+}

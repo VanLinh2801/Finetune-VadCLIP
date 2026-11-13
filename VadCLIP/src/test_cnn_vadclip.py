@@ -4,9 +4,24 @@ import torch
 
 from model_cnn_vadclip import TemporalCNNClassifier, TemporalConvBlock
 from ucf_cnn_common import aggregate_video_logits, alignment_mil_loss, text_regularization_loss
+from ucf_train_cnn_vadclip import TrainingLossStopper
 
 
 class TemporalCNNTests(unittest.TestCase):
+    def test_training_loss_stopper_waits_for_min_epochs_and_lr_reset(self):
+        stopper = TrainingLossStopper(patience=2, min_delta=0.01, min_epochs=5)
+        self.assertTrue(stopper.update(1, 1.0))
+        self.assertTrue(stopper.update(2, 0.995))
+        self.assertTrue(stopper.update(3, 0.994))
+        self.assertFalse(stopper.should_stop(3))
+        stopper.stale_epochs = 0  # A learning-rate reduction gives the model more time.
+        self.assertTrue(stopper.update(4, 0.97))
+        self.assertTrue(stopper.update(5, 0.965))
+        self.assertFalse(stopper.should_stop(5))
+        self.assertTrue(stopper.update(6, 0.964))
+        self.assertTrue(stopper.should_stop(6))
+        self.assertEqual(stopper.best_epoch, 6)
+
     def test_pooling_ignores_padding_and_uses_ceil(self):
         logits = torch.full((2, 32, 1), -2.0, requires_grad=True)
         with torch.no_grad():
@@ -92,6 +107,22 @@ class TemporalCNNTests(unittest.TestCase):
         scores[:, :8].sum().backward()
         self.assertIsNotNone(model.blocks[0].skip_projection.weight.grad)
         self.assertIsNotNone(model.blocks[1].conv2.weight.grad)
+
+    def test_equal_projection_and_channels_256_and_512(self):
+        for width in (256, 512):
+            with self.subTest(width=width):
+                model = TemporalCNNClassifier(projection_width=width, hidden_width=width, kernel_size=5)
+                self.assertEqual(tuple(model.projection[0].weight.shape), (width, 512))
+                self.assertEqual(tuple(model.blocks[0].conv1.weight.shape), (width, width, 5))
+                self.assertEqual(tuple(model.blocks[1].conv2.weight.shape), (width, width, 5))
+                self.assertIsInstance(model.blocks[0].skip_projection, torch.nn.Identity)
+                scores = model(torch.randn(2, 10, 512), torch.tensor([7, 10]))
+                self.assertEqual(tuple(scores.shape), (2, 10, 1))
+                self.assertTrue(torch.isfinite(scores).all())
+                self.assertEqual(float(scores[0, 7:].detach().abs().sum()), 0.0)
+                scores[:, :7].sum().backward()
+                self.assertIsNotNone(model.projection[0].weight.grad)
+                self.assertIsNotNone(model.blocks[0].conv1.weight.grad)
 
     def test_default_projection_preserves_old_checkpoint_keys(self):
         original = TemporalCNNClassifier(hidden_width=128, kernel_size=5)

@@ -24,8 +24,10 @@ def build_parser():
     parser.add_argument("--gt-path", required=True)
     parser.add_argument("--gt-segment-path", required=True)
     parser.add_argument("--gt-label-path", required=True)
-    parser.add_argument("--kernel-size", type=int, choices=(1, 3, 5, 7, 9), default=3)
-    parser.add_argument("--score-mode", choices=("scoring_head", "kernel_response"), default="scoring_head")
+    parser.add_argument("--kernel-size", type=int, default=3,
+                        help="Positive temporal size; single_conv supports odd and even sizes")
+    parser.add_argument("--cnn-architecture", choices=("two_block", "single_conv"), default="two_block")
+    parser.add_argument("--score-mode", choices=("scoring_head", "kernel_response", "competitive_response", "competitive_response_gelu"), default="scoring_head")
     parser.add_argument("--residual-mode", choices=("on", "off"), default="on")
     parser.add_argument("--projection-width", type=int, default=128)
     parser.add_argument("--cnn-channels", type=int, default=128)
@@ -41,7 +43,8 @@ def load_model(args, device):
     if args.model_type == "cnn":
         model = CLIPVADCNN(*common, kernel_size=args.kernel_size, score_mode=args.score_mode,
                            use_residual=args.residual_mode == "on",
-                           projection_width=args.projection_width, hidden_width=args.cnn_channels)
+                           projection_width=args.projection_width, hidden_width=args.cnn_channels,
+                           cnn_architecture=args.cnn_architecture)
     else:
         model = CLIPVAD(*common)
     model.load_state_dict(torch.load(args.model_path, map_location=device, weights_only=True), strict=True)
@@ -83,7 +86,7 @@ def evaluate(args):
     if args.model_type == "cnn" and train_config.get("residual_mode", "on") != args.residual_mode:
         raise ValueError("Residual mode does not match the training config")
     if args.model_type == "cnn" and args.train_config_json:
-        for key in ("projection_width", "cnn_channels", "kernel_size", "score_mode"):
+        for key in ("projection_width", "cnn_channels", "kernel_size", "score_mode", "cnn_architecture"):
             expected = train_config.get(key, 128 if key in ("projection_width", "cnn_channels") else None)
             if expected is not None and expected != getattr(args, key):
                 raise ValueError(f"{key} does not match the training config")
@@ -191,11 +194,15 @@ def evaluate(args):
     metrics = {
         "model_type": args.model_type,
         "model_path": str(args.model_path),
+        "cnn_architecture": args.cnn_architecture if args.model_type == "cnn" else None,
         "kernel_size": args.kernel_size if args.model_type == "cnn" else None,
+        "temporal_padding_left": (args.kernel_size - 1) // 2 if args.model_type == "cnn" and args.cnn_architecture == "single_conv" else None,
+        "temporal_padding_right": args.kernel_size // 2 if args.model_type == "cnn" and args.cnn_architecture == "single_conv" else None,
         "score_mode": args.score_mode if args.model_type == "cnn" else None,
-        "residual_mode": args.residual_mode if args.model_type == "cnn" else None,
-        "projection_width": args.projection_width if args.model_type == "cnn" else None,
+        "residual_mode": args.residual_mode if args.model_type == "cnn" and args.cnn_architecture == "two_block" else None,
+        "projection_width": args.projection_width if args.model_type == "cnn" and args.cnn_architecture == "two_block" else None,
         "cnn_channels": args.cnn_channels if args.model_type == "cnn" else None,
+        "competitive_group_channels": args.cnn_channels // 2 if args.model_type == "cnn" and args.score_mode in ("competitive_response", "competitive_response_gelu") else None,
         "alignment_trained": alignment_trained,
         "videos": len(dataset),
         "classifier_auc": float(classifier_auc),

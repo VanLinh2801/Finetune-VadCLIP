@@ -1,0 +1,13 @@
+{
+  "model_type": "baseline_self_trained",
+  "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/model_ucf_paper_scratch.pth",
+  "videos": 290,
+  "frames": 1109888,
+  "classifier_auc": 87.71808258383074,
+  "classifier_ap": 33.13232980281841,
+  "ano_auc": 69.93729439498415,
+  "epoch": null,
+  "kernel_sizes": null,
+  "channels_per_branch": null,
+  "cnn_activation": null
+}

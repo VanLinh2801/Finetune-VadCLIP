@@ -1,0 +1,5 @@
+scope,side,true_false_winner_histogram_overlap
+own,abnormal,0.8924544453620911
+own,normal,0.808744490146637
+fixed_reference,abnormal,0.8973491787910461
+fixed_reference,normal,0.8418458700180054

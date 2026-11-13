@@ -1,0 +1,34 @@
+{
+  "reference_model": "competitive_e010",
+  "comparison_reference": "competitive_e010",
+  "models": [
+    {
+      "name": "competitive_e001",
+      "model_type": "cnn",
+      "epoch": 1,
+      "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_cnn_single_conv/cnn_compete_gelu_s234/epoch_001.pth",
+      "train_config_json": "/content/drive/MyDrive/Finetune VadCLIP/code/results/train/cnn_compete_gelu_s234/config.json"
+    },
+    {
+      "name": "competitive_e004",
+      "model_type": "cnn",
+      "epoch": 4,
+      "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_cnn_single_conv/cnn_compete_gelu_s234/epoch_004.pth",
+      "train_config_json": "/content/drive/MyDrive/Finetune VadCLIP/code/results/train/cnn_compete_gelu_s234/config.json"
+    },
+    {
+      "name": "competitive_e008",
+      "model_type": "cnn",
+      "epoch": 8,
+      "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_cnn_single_conv/cnn_compete_gelu_s234/epoch_008.pth",
+      "train_config_json": "/content/drive/MyDrive/Finetune VadCLIP/code/results/train/cnn_compete_gelu_s234/config.json"
+    },
+    {
+      "name": "competitive_e010",
+      "model_type": "cnn",
+      "epoch": 10,
+      "model_path": "/content/drive/MyDrive/Finetune VadCLIP/VadCLIP/src/model/epoch_checkpoints_cnn_single_conv/cnn_compete_gelu_s234/epoch_010.pth",
+      "train_config_json": "/content/drive/MyDrive/Finetune VadCLIP/code/results/train/cnn_compete_gelu_s234/config.json"
+    }
+  ]
+}
